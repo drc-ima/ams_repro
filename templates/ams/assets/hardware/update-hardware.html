@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% load ams_tags %}
+{% load bootstrap3 %}
+{% block title %} Edit {{ object.description }}{% endblock %}
+{% block preloader %} Hardware Update Loading...{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-8 align-self-left">
+                <a href="{% url 'ams:assets-hardware-detail' slug=hardware.slug %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;<h3 class="text-themecolor pull-left">{{ object.description }} Details</h3>
+            </div>
+        </div>
+        <div class="row">
+                    <!-- column -->
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title m-b-0">Details</h5>
+                        </div><p>
+                        <div class="card-text">
+                            <form action="" method="post" class="form-horizontal form-material">
+                                {% csrf_token %}
+                                {% bootstrap_form form %}
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-success">Save</button>
+                                    </div>
+                                 </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+    </div>
+{% endblock %}

@@ -1,0 +1,236 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <title>{% block title %}Layout {% endblock %}| Akaditi Asset Manager</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'node_modules/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="{% static 'css/colors/default.css' %}" id="theme" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="fix-header card-no-border fix-sidebar">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">{% block preloader %}Akaditi Asset Manager{% endblock %}</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="{% static 'images/logo-icon.png' %}" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="{% static 'images/logo-light-icon.png' %}" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="{% static 'images/logo-text.png' %}" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="{% static 'images/logo-light-text.png' %}" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="#"><i class="fa fa-bars"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="fa fa-times"></i></a> </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                                <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="{% url 'ams:settings' %}" aria-expanded="false"><img src="{% static 'images/users/1.jpg' %}" alt="user" class="" /> <span class="hidden-md-down">Elvis Lartey &nbsp;</span> </a>
+                            </li>
+                            <li class="nav-item dropdown u-pro">
+                                <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="{% url 'users:logout' %}" aria-expanded="false"><span class="hidden-md-down">Logout &nbsp;</span> </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                            <li> <a class="waves-effect waves-dark" href="#{# {% url 'ams:dashboard' %} #}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
+                            </li>
+                            <li> <a class="waves-effect waves-dark" href="{% url 'ams:staff-list' %}" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Staff</span></a>
+                            </li>
+                            <li class="chapter">
+                                <a class="waves-effect waves-dark" href="#{# {% url 'ams:assets-list' %} #}" data-type="chapter-link">
+                                    <div class="simple menu-toggler" data-toggle="collapse" data-target="#xs-classes-links">
+                                        <i class="fa fa-table"></i>
+                                        <span class="hide-menu link-name">Assets</span>
+                                    </div>
+                                </a>
+                                <ul class="links collapse" id="xs-classes-links">
+                                    <li class="link">
+                                        <a href="{% url 'ams:assets-hardware-list' %}" data-type="entity-link">
+                                            <span class="fa fa-desktop"></span>
+                                                Hardware
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="{% url 'ams:assets-software-list' %}" data-type="entity-link">
+                                            <span class="fa fa-code"></span>
+                                            Software
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="{% url 'ams:assets-information-list' %}" data-type="entity-link">
+                                            <span class="fa fa-code"></span>
+                                            Information
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="{% url 'ams:assets-infrastructure-list' %}" data-type="entity-link">
+                                            <span class="fa fa-code"></span>
+                                            Infrastructure
+                                        </a>
+                                    </li>
+                                    <hr>
+                                    <li class="link">
+                                        <a href="{% url 'ams:assets-list' %}" data-type="entity-link">
+                                            <span class="fa fa-code"></span>
+                                            All Assets
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="#{# {% url 'ams:assets-infrastructure-list' %} #}" data-type="entity-link">
+                                            <span class="fa fa-code"></span>
+                                            Owners
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li> <a class="waves-effect waves-dark" href="{% url 'ams:department-list' %}" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Departments</span></a>
+                            </li>
+                            <li> <a class="waves-effect waves-dark" href="{% url 'ams:settings' %}" aria-expanded="false"><i class="fa  fa-cogs"></i><span class="hide-menu">Settings</span></a>
+                            </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                  <!-- ============================================================== -->
+                <!--Put Body Here-->
+                {% block content %}{% endblock %}
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer">
+                © 2018 Akaditi Asset Manager
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="{% static  'node_modules/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'node_modules/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'node_modules/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/perfect-scrollbar.jquery.min.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'js/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <!-- jQuery peity -->
+    <script src="{% static 'node_modules/peity/jquery.peity.min.js' %}"></script>
+    <script src="{% static 'node_modules/peity/jquery.peity.init.js' %}"></script>
+    {% block js %}{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+{% load ams_tags %}
+{% block title %} Archived Departments {% endblock %}
+{% block preloader %} Archives Loading {% endblock %}
+{% block content %}
+     <!-- Container fluid  -->
+            <!-- ============================================================== -->
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-3 align-self-left">
+                <a href="{% url 'ams:department-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
+            </div>
+            <div class="col-md-5 align-self-left"><h3>Archived Departments</h3></div>
+            <!--
+            <div class="col-md-7 align-self-left">
+                <i class="btn waves-effect waves-light pull-right font-30" data-toggle="modal" data-target="#newdepartment"><span class="fa fa-plus-circle"></span></i>
+                                        Modal
+                <div class="modal fade" id="newdepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Add Department</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                {# {% depar_form %} #}
+                            </div>
+                                    <!--<div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- column -->
+                    {% if object_list %}
+                        {% for department in object_list %}
+                            <div class="col-3">
+                                    <div class="card border border-info">
+                                        <div class="card-body">
+                                            <div>
+                                                <h5 class="card-title m-b-0 text-center">{{ department.name }}</h5>
+                                            </div><p>
+                                            <div class="ml-auto">
+                                                    <h6 class="nav-item dropdown card-subtitle text-center">
+                                                            {{ department.team_leads }}
+                                                    </h6>
+                                                    <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+                                            </div>
+                                            <p class="card-text">{{ department.description }}</p>
+                                            <hr>
+                                            <h6 class="align-left">{{ department.deleted_at }}</h6>
+
+
+                                        </div>
+                                    </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Nothing Yet!</div>
+                                <h6 class="card-text">
+                                    There are no archives added to this system yet
+                                </h6>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+        </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+{% endblock %}

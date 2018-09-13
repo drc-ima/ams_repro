@@ -1,0 +1,14 @@
+{% load bootstrap3 %}
+{% load static from staticfiles %}
+<form action="{% url 'ams:department-add' %}" method="post" class="form-horizontal form-material"><p>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</form>
+{% block js %}
+<script src="{% static 'js/stretchy.js' %}" data-filter="#id_description" async></script>
+{% endblock %}

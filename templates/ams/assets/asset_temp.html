@@ -1,0 +1,17 @@
+{% load static from staticfiles %}
+{% load bootstrap3 %}
+
+<form action="{% url 'ams:assign-assets' %}" class="form-horizontal form-material" method="POST">
+
+    {% csrf_token %}
+        {% bootstrap_form form %}
+    <button class="btn btn-success">Assign</button>
+
+</form>
+<script src="{% static 'easy_select2/vendor/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript">
+  window.onerror = function (msg) {
+    $("body").attr("JSError", msg);
+  }
+</script>
+{{ form.media.js }}

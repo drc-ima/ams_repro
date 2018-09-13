@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+{% load bootstrap3 %}
+{% block title %} {{ object.first_name }} Details {% endblock %}
+{% block preloader %} Staff Details Loading...{% endblock %}
+{% block content %}
+    <!--Put Body Here-->
+    <div class="row page-titles">
+        <div class="col-md-3 align-self-left">
+                <a href="{% url 'ams:staff-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
+            </div>
+        <div class="col-md-5 align-self-left"><h3>{{ object.first_name }} {{ object.last_name }}'s Details</h3></div>
+    </div>
+    <div class="row">
+                    <!-- column -->
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h5 class="card-title m-b-0">General Information</h5>
+                    </div><p>
+                    <div class="card-text">
+                        Full Name: {{ object.first_name }} {{ object.last_name }} <br>
+                        Official Email: {{ object.work_email }} <br>
+                        Work Phone: {{ object.work_phone }}<br>
+                        Home Phone: {{ object.home_phone }}<br>
+                        Gender: {{ object.gender }}<br>
+                        Residential Address: {{ object.residential_address }}<br>
+                        Date of Birth: {{ object.date_of_birth }}<br>
+                        Department: {{ object.department }}<br>
+                        {% if object.department.team_leads %}
+                        Team Lead: {{ object.department.team_leads }}<br>
+                        {% else %}
+                        Department has no Lead<br>
+                        {% endif %}
+                        Date Added: {{ object.date_added }}
+                        <hr>
+                            <a href="{% url 'ams:staff-update' slug=staff.slug %}" class="btn btn-default">Edit</a>
+                            <a href="{% url 'ams:staff-delete' slug=staff.slug %}" class="btn btn-danger pull-right" data-target="#deleteStaff" data-toggle="modal">Archive</a>
+                                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="row">
+                        <!-- column -->
+                        <div class="col-9">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <h5 class="card-title m-b-0">Assets</h5>
+                                    </div><p>
+                                    <div class="card-text">
+                                    {% if object.asset.all %}
+                                    {% for asset in object.asset.all %}
+                                        {{ asset.description }}<br>
+                                    {% endfor %}
+                                    {% else %}
+                                    This staff is not assigned any asset
+                                    {% endif %}
+                                           <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                        <!-- column -->
+                        <div class="col-9">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <h5 class="card-title m-b-0">Hardware</h5>
+                                    </div><p>
+                                    <div class="card-text">
+                                    {% if object.hardware.all %}
+                                    {% for hardware in object.hardware.all %}
+                                        {{ hardware.description }} <br>
+                                    {% endfor %}
+                                    {% else %}
+                                    There is not hardware assigned to this staff!
+                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- Delete Staff Modal -->
+        <div id="deleteStaff" class="modal" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
+            <div class="modal-dialog" role="document">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title" >Delete {{ object.first_name }}</h5>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'ams:staff-delete' slug=staff.slug %}" method="POST" class="form-horizontal form-material">
+                        {% csrf_token %}
+                        Are you sure you want to archive {{ object.first_name }} {{ object.last_name }}? This action can be reversed later. Take Note. Capish!!
+                        <hr>
+                        <button class="btn btn-danger">Archive</button>
+                        <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
+                    </form>
+                </div>
+
+              </div>
+              </div>
+
+            </div>
+{% endblock %}

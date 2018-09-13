@@ -1,0 +1,24 @@
+{% load bootstrap3 %}
+<form action="{% url 'ams:assets-hardware-add' %}" method="post" class="form-horizontal form-material"><p>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</form>
+
+<!--
+<script>
+      $(function() {
+        $( ".datepicker" ).datepicker({
+          changeMonth: true,
+          changeYear: true,
+          yearRange: "1900:2012",
+          // You can put more options here.
+
+        });
+      });
+  </script>
+-->

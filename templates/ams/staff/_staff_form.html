@@ -1,0 +1,10 @@
+{% load bootstrap3 %}
+<form action="{% url 'ams:staff-add' %}" method="post" class="form-horizontal form-material"><p>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</form>

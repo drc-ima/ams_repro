@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+{% load ams_tags %}
+{% block title %} Staff {% endblock %}
+{% block preloader %} Staff Loading {% endblock %}
+{% block content %}
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Staff</h3>
+            </div>
+            <div class="col-md-7 align-self-center">
+                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#staffModal"><span class="fa fa-plus-square-o"></span></i>
+                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:staff-archive' %}"><span class="fa fa-folder-open-o"></span></a>
+            </div>
+        </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-11 col-xlg-12 col-md-10">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th><h6>First Name</h6></th>
+                                    <th><h6>Work Email</h6></th>
+                                    <th><h6>Actions</h6></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% if object_list %}
+                                {% for staff in object_list %}
+                                <tr>
+                                    <td><a href="{% url 'ams:staff-detail' slug=staff.slug %}" class="font-15">{{ staff.first_name }} {{ staff.last_name }}</a></td>
+                                    <td><span class="font-15">{{ staff.work_email }}</span></td>
+                                    <td><i class="waves-effect waves-light  pull-right font-20" data-toggle="modal" data-target="#assignHardware" style="float:left"><span class="fa fa-desktop"></span></i>&nbsp;&nbsp;<i class="waves-effect waves-light font-20" data-toggle="modal" data-target="#licenseSoftware"><span class="fa fa-code"></span></i>&nbsp;&nbsp;<i class="waves-effect waves-light font-20" data-toggle="modal" data-target="#AllocateTeam"><span class="fa fa-users"></span></i>
+                                </tr>
+
+                                {% endfor %}
+                            {% else %}
+                                There is no staff recorded in this system. Please click on the New+ to add.
+                            {% endif %}
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- Column -->
+                </div>
+            </div>
+        </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+        <div id="staffModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
+            <div class="modal-dialog" role="document">
+
+          <!-- Add Staff Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Add Staff</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    {% staff_form %}
+
+                </div>
+            </div>
+            </div>
+        </div>
+            <!---Assign Hardware Modal-->
+        <div id="assignHardware" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
+            <div class="modal-dialog" role="document">
+
+          <!-- Assign Hardware Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" >Assign Hardware</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        Hello
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+  </div>
+
+{% endblock %}

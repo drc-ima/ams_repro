@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+{% load assets_tags %}
+{% block title %} Dashboard {% endblock %}
+{% block preloader %} Dashboard Loading {% endblock %}
+{% block content %}
+    <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">Dashboard</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Column for Staff and Asset table -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><h6><a href="{% url 'ams:staff' %}">Staff</a></h6></th>
+                                                <th><h6><a href="#">Asset</a></h6></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><h6 class="font-12">Joel Klo</h6></td>
+                                                <td>
+                                                    <h6 class="dropdown text-right">
+                                                        <span class="dropdown-toggle font-12" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assets</span>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                                            <a class="dropdown-item font-12" href="#">Hp Pavilon</a>
+                                                            <a class="dropdown-item font-12" href="#">SoapUI</a>
+                                                            <a class="dropdown-item font-12" href="#">Odoo</a>
+                                                        </div>
+                                                    </h6>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><h6 class="font-12">Sidika Ibrahim</h6></td>
+                                                <td>
+                                                    <h6 class="dropdown text-right">
+                                                        <span class="dropdown-toggle font-12" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assets</span>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                                            <a class="dropdown-item font-12" href="#">Hp Pavilon</a>
+                                                            <a class="dropdown-item font-12" href="#">SoapUI</a>
+                                                            <a class="dropdown-item font-12" href="#">Odoo</a>
+                                                        </div>
+                                                    </h6>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for Asset and Status table-->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><h6>Assets</h6></th>
+                                                <th><h6>Expires On</h6></th>
+                                                <th><h6>Status</h6></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="font-12">SoapUI</td>
+                                                <td class="font-12">21/06/2023</td>
+                                                <td class="font-12">Expired</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End of Staff and Assets Table -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- End of Assets and Status Table -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+            </div>
+    </div>
+{% endblock %}
