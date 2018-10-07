@@ -13,9 +13,10 @@
             <div class="col-md-5 align-self-center">
                 <h3 class="text-themecolor">Departments</h3>
             </div>
-            <div class="col-md-7 align-self-left">
+            <div class="col-md-6 align-self-left">
                 <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#newdepartment"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:department-archive' %}"><span class="fa fa-folder-open-o"></span></a>&nbsp;&nbsp;
+                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#newlead"><span class="fa fa-plus-square"></span></i>
+                <a class="btn waves-effect waves-light pull-right font-20"  href="{% url 'ams:department-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>&nbsp;&nbsp;
                         <!-- Modal -->
                 <div class="modal fade" id="newdepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -28,6 +29,27 @@
                             </div>
                             <div class="modal-body">
                                 {% department_form %}
+                            </div>
+                                    <!--<div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>-->
+                        </div>
+                    </div>
+                </div>
+
+                     <!-- Modal -->
+                <div class="modal fade" id="newlead" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Assign Department Head</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                {% lead_form %}
                             </div>
                                     <!--<div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -52,21 +74,21 @@
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Description</th>
-                                                <th>Lead Start Date</th>
+                                                <th>Team Lead</th>
                                                 <th>Archived On</th>
-                                                <th>Deleted</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        {% if object_list %}
-                                        {% for department in object_list %}
+                                        {% if department_archives %}
+                                        {% for archive in department_archives %}
 
                                             <tr>
-                                                <td><a href="{% url 'ams:department-detail' slug=department.slug %}">{{ department.name }}</a></td>
-                                                <td>{{ department.description }}</td>
-                                                <td>{{ department.lead_start_date }}</td>
-                                                <td>{{ department.deleted_at }}</td>
-                                                <td>{{ department.deleted }}</td>
+                                                <td><a href="{# {% url 'ams:department-archive-detail' slug=department.slug %} #}">{{ archive.name }}</a></td>
+                                                <td>{{ archive.description }}</td>
+                                                <td>{{ archive.team_leads }}</td>
+                                                <td>{# {{ archive.deleted_at }} #}</td>
+
                                             </tr>
 
                                         {% endfor %}
@@ -94,8 +116,8 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- column -->
-                    {% if object_list %}
-                        {% for department in object_list %}
+                    {% if departments %}
+                        {% for department in departments %}
                             <div class="col-3">
                                 <a href="{% url 'ams:department-detail' slug=department.slug %}">
                                     <div class="card border border-info">

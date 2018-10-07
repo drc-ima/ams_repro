@@ -1,8 +1,9 @@
+from braces.views import SelectRelatedMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views import generic
 
-from ams.forms import DepartmentForm
+from ams.forms import DepartmentForm, DepartmentLeadForm
 from ams.models import Department
 
 
@@ -16,12 +17,29 @@ class Add(LoginRequiredMixin, generic.CreateView):
         return super().form_valid(form)
 
 
+class AddLead(LoginRequiredMixin, generic.CreateView):
+    form_class = DepartmentLeadForm
+    template_name = 'ams/department/_lead_form.html'
+    success_url = reverse_lazy('ams:department-list')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
 class List(LoginRequiredMixin, generic.ListView):
     model = Department
     template_name = 'ams/department/department.html'
 
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['departments'] = Department.objects.filter(dele_ted=False)
+        context_data['department_archives'] = Department.objects.filter(dele_ted=True)
+        return context_data
+    """    
     def get_queryset(self):
-        return Department.objects.filter(deleted=False)
+        return Department.objects.filter()
+    """
 
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
@@ -29,12 +47,21 @@ class ArchiveList(LoginRequiredMixin, generic.ListView):
     template_name = 'ams/department/department-archives.html'
 
     def get_queryset(self):
-        return Department.objects.filter(deleted=True)
+        return Department.objects.filter(dele_ted=True)
 
 
-class Detail(LoginRequiredMixin, generic.DetailView):
+class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
     # model = Hardware
     # select_related = ('hardware_staff',)
+    template_name = 'ams/department/department-archive-detail.html'
+
+    def get_queryset(self):
+        return Department.objects.all()
+
+
+class Detail(LoginRequiredMixin, SelectRelatedMixin, generic.DetailView):
+    model = 'department'
+    select_related = ('department_staff', 'team_lead')
     template_name = 'ams/department/details-department.html'
 
     def get_queryset(self):
@@ -56,4 +83,12 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
     # template_name = 'ams/assets/details-hardware.html'
 
     def get_queryset(self):
-        return Department.objects.filter()
+        return Department.objects.delete()
+
+
+class Restore(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:departmenr-list')
+    model = Department
+
+    def get_queryset(self):
+        return Department.objects.undelete()

@@ -11,8 +11,59 @@
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
                         <h3 class="text-themecolor">Settings</h3>
-
                     </div>
+                    {% if user.is_superuser %}
+                    <div class="col-md-7 align-self-left">
+                        <h6 class="btn waves-effect waves-light pull-right" data-toggle="modal" data-target="#allUsers">All Users</h6>
+                    </div>
+                    {% endif %}
+                                <!-- Modal -->
+                        <div class="modal fade" id="allUsers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Users</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+
+
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Username</th>
+                                                            <th>Active</th>
+                                                            <th>Last Login</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {% if object_list %}
+                                                    {% for user in object_list %}
+                                                        <tr>
+                                                            <td><a href="#{# {% url 'ams:department-detail' slug=department.slug %} #}">{{ user.username }}</a></td>
+                                                            <td>{{ user.is_active }}</td>
+                                                            <td>{{ user.last_login }}</td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    {% else %}
+                                                        <h3>There is no users here!.</h3>
+                                                    {% endif %}
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+
+                                    </div>
+                                            <!--<div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>-->
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -26,30 +77,66 @@
                                 <div class="card-body">
                                     <div class="panel-group">
                                         <div class="panel panel-default">
+                                   {% if user.profile.all %}
+                                       {% for profile in user.profile.all %}
                                             <div class="panel-heading">
+
                                                 <div class="panel-title">
+
                                                     <a href="#userDetails" data-toggle="collapse">
                                                         <h6 class="text-center">User Details</h6>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="panel-collapse collapse" id="userDetails">
-                                        <form class="form-horizontal form-material">
-                                                <div class="form-group">
-                                                    <label class="col-md-12 font-15">Full Name</label>
-                                                    <div class="col-md-12">
-                                                        <input type="text" disabled placeholder="Elvis Lartey" class="form-control form-control-line">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                        <label class="col-md-12 font-15">Email</label>
+                                                <form class="form-horizontal form-material">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 font-15">Full Name</label>
                                                         <div class="col-md-12">
-                                                            <input type="text" disabled  placeholder="Elvis.lartey@akaditi.com" class="form-control form-control-line">
+                                                            <input type="text" disabled placeholder="{{ profile.first_name }} {{ profile.last_name }}" class="form-control form-control-line">
                                                         </div>
                                                     </div>
-                                        </form>
-                                    </div>
+
+                                                    <div class="form-group">
+                                                            <label class="col-md-12 font-15">Email</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" disabled  placeholder="{{ profile.email }}" class="form-control form-control-line">
+                                                            </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        {% endfor %}
+                                   {% else %}
+                                       <div class="panel-heading">
+
+                                                <div class="panel-title">
+
+                                                    <a href="#userDetails" data-toggle="collapse">
+                                                        <h6 class="text-center">Create Profile</h6>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="userDetails">
+                                                {% profile_form %}
+                                                <!--
+                                                <form class="form-horizontal form-material">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 font-15">Full Name</label>
+                                                        <div class="col-md-12">
+                                                            <input type="text" disabled placeholder="{# {{ profile.first_name }} {{ profile.last_name }} #}" class="form-control form-control-line">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                            <label class="col-md-12 font-15">Email</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" disabled  placeholder="{# {{ profile.email }} #}" class="form-control form-control-line">
+                                                            </div>
+                                                    </div>
+                                                </form>
+                                            -->
+                                            </div>
+                                   {% endif %}
                                     </div>
                                     </div>
 
@@ -72,7 +159,7 @@
 
                                             <div class="panel-collapse collapse" id="resetPassword">
                                                 {# {% password_change_form %} #}
-                                                    <!--<form class="form-horizontal form-material" action="{% url 'user:password_change' %}" method="POST">
+                                                    <!--<form class="form-horizontal form-material" action="#{# {% url 'user:password_change' %} #}" method="POST">
                                                         {# {% csrf_token %} #}
                                                         {# {{ form.as_table }} #}
                                                             <div class="form-group">
@@ -106,6 +193,7 @@
                             </div>
                         </div>
                     </div>
+                {% if user.is_superuser %}
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
@@ -119,6 +207,7 @@
                                             </div>
                                         </div>
                                         <div class="panel-collapse collapse" id="createUser">
+
                                             {% signup_form %}
                                                 <!---<form class="form-horizontal form-material" action="" method="POST">
                                                     {# {% csrf_token %} #}
@@ -157,5 +246,6 @@
                         </div>
                     </div>
                 </div>
+            {% endif %}
     </div>
 {% endblock %}

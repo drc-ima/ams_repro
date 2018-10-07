@@ -1,13 +1,13 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from ..models import Assets, Hardware, Information
-from ..forms import HardwareForm, InformationForm
+from ..models import Information
+from ..forms import InformationForm, InformationAssignForm
 from django.views import generic
 
 
 class Add(LoginRequiredMixin, generic.CreateView):
     form_class = InformationForm
-    success_url = reverse_lazy('ams:assets-information-list')
+    success_url = reverse_lazy('ams:assets-list')
     template_name = 'ams/assets/information/_information_form.html'
 
     def form_valid(self, form):
@@ -15,6 +15,7 @@ class Add(LoginRequiredMixin, generic.CreateView):
         return super().form_valid(form)
 
 
+"""
 class List(LoginRequiredMixin, generic.ListView):
     model = Information
     template_name = 'ams/assets/information/information.html'
@@ -23,12 +24,14 @@ class List(LoginRequiredMixin, generic.ListView):
         return Information.objects.filter(deleted=False)
 
 
+
 class ArchiveList(LoginRequiredMixin, generic.ListView):
-    model = Information
+    model = Assets
     template_name = 'ams/assets/information/information-archives.html'
 
     def get_queryset(self):
-        return Information.objects.filter(deleted=True)
+        return Assets.objects.filter(deleted=True)
+"""
 
 
 class Detail(LoginRequiredMixin, generic.DetailView):
@@ -43,16 +46,35 @@ class Detail(LoginRequiredMixin, generic.DetailView):
 class Update(generic.UpdateView):
     form_class = InformationForm
     template_name = 'ams/assets/information/update-information.html'
-    success_url = reverse_lazy('ams:assets-information-list')
+    success_url = reverse_lazy('ams:assets-list')
 
     def get_queryset(self):
         return Information.objects.all()
 
 
-class Delete(generic.DeleteView):
+class Archive(generic.DeleteView):
     model = Information
-    success_url = reverse_lazy('ams:assets-information-list')
+    success_url = reverse_lazy('ams:assets-list')
     # template_name = 'ams/assets/details-hardware.html'
 
     def get_queryset(self):
-        return Information.objects.filter()
+        return Information.objects.delete()
+
+
+class Assign(LoginRequiredMixin, generic.CreateView):
+    form_class = InformationAssignForm
+    success_url = reverse_lazy('ams:assets-list')
+    template_name = 'ams/assets/assign/_hardware_assign.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class Restore(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:assets-list')
+    model = Information
+
+    def get_queryset(self):
+        return Information.objects.undelete()
+

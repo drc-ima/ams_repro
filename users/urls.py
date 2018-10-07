@@ -1,10 +1,15 @@
 # from django.contrib.auth.views import PasswordChangeView
 from django.urls import path, include
-from . views import SignupView
+# from django.views.generic import TemplateView
 
-app_name = 'user'
+from ams.views import dashboard
+from . views import SignupView, CreateProfile
+
+app_name = 'users'
 urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('signup/', SignupView.as_view(), name='signup'),
     # path('change-password/', PasswordChangeView.as_view(), name='password_change'),
+    path('dashboard/', dashboard.Count.as_view(template_name='users/dashboard.html'), name='dashboard'),
+    path('profile-create/', CreateProfile.as_view(), name='profile'),
 ]

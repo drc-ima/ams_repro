@@ -25,8 +25,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-</head>
+    {% block wj %}{% endblock %}
+    </head>
 
 <body class="fix-header card-no-border fix-sidebar">
     <!-- ============================================================== -->
@@ -91,7 +91,17 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                                <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="{% url 'ams:settings' %}" aria-expanded="false"><img src="{% static 'images/users/1.jpg' %}" alt="user" class="" /> <span class="hidden-md-down">Elvis Lartey &nbsp;</span> </a>
+                                <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="{% url 'ams:settings' %}" aria-expanded="false">
+                                    <span class="hidden-md-down">
+                                        {% if user.profile.all %}
+                                            {% for profile in user.profile.all %}
+                                                {{ profile.first_name }} {{ profile.last_name }} &nbsp;
+                                            {% endfor %}
+                                        {% else %}
+                                            {{ user.username }} &nbsp;
+                                        {% endif %}
+                                    </span>
+                                </a>
                             </li>
                             <li class="nav-item dropdown u-pro">
                                 <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="{% url 'users:logout' %}" aria-expanded="false"><span class="hidden-md-down">Logout &nbsp;</span> </a>
@@ -112,7 +122,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                            <li> <a class="waves-effect waves-dark" href="#{# {% url 'ams:dashboard' %} #}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
+                            <li> <a class="waves-effect waves-dark" href="{% url 'users:dashboard' %}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
                             </li>
                             <li> <a class="waves-effect waves-dark" href="{% url 'ams:staff-list' %}" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Staff</span></a>
                             </li>
@@ -124,31 +134,33 @@
                                     </div>
                                 </a>
                                 <ul class="links collapse" id="xs-classes-links">
+                                    <!--
                                     <li class="link">
-                                        <a href="{% url 'ams:assets-hardware-list' %}" data-type="entity-link">
+                                        <a href="{# {% url 'ams:assets-hardware-list' %} #}" data-type="entity-link">
                                             <span class="fa fa-desktop"></span>
                                                 Hardware
                                         </a>
                                     </li>
                                     <li class="link">
-                                        <a href="{% url 'ams:assets-software-list' %}" data-type="entity-link">
+                                        <a href="{# {% url 'ams:assets-software-list' %} #}" data-type="entity-link">
                                             <span class="fa fa-code"></span>
                                             Software
                                         </a>
                                     </li>
                                     <li class="link">
-                                        <a href="{% url 'ams:assets-information-list' %}" data-type="entity-link">
+                                        <a href="{# {% url 'ams:assets-information-list' %} #}" data-type="entity-link">
                                             <span class="fa fa-code"></span>
                                             Information
                                         </a>
                                     </li>
                                     <li class="link">
-                                        <a href="{% url 'ams:assets-infrastructure-list' %}" data-type="entity-link">
+                                        <a href="{# {% url 'ams:assets-infrastructure-list' %} #}" data-type="entity-link">
                                             <span class="fa fa-code"></span>
                                             Infrastructure
                                         </a>
                                     </li>
                                     <hr>
+                                    -->
                                     <li class="link">
                                         <a href="{% url 'ams:assets-list' %}" data-type="entity-link">
                                             <span class="fa fa-code"></span>
@@ -197,9 +209,18 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer">
-                © 2018 Akaditi Asset Manager
-            </footer>
+            <div class="footer navbar-fixed-bottom">
+                <div class="row">
+                    <div class="col-md-6">© 2018 Akaditi Asset Manager</div>
+                    <div class="col-md-6">
+                        {% if not user.profile.all %}
+                        <h4 class="text-danger font-bold">Please go to <a href="{% url 'ams:settings' %}">settings</a> and create your profile!</h4>
+                        {% endif %}
+                </div>
+                </div>
+
+
+            </div>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -229,8 +250,27 @@
     <!-- jQuery peity -->
     <script src="{% static 'node_modules/peity/jquery.peity.min.js' %}"></script>
     <script src="{% static 'node_modules/peity/jquery.peity.init.js' %}"></script>
-    {% block js %}{% endblock %}
 
 </body>
+<!--  Notifications Plugin    -->
+    <script src="{% static 'assets/js/bootstrap-notify.js' %}"></script>
+    <script src="{% static 'assets/js/demo.js' %}"></script>
 
+{% block js %}{% endblock %}
+    <script type="text/javascript">
+    	$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: 'ti-gift',
+            	message: "Welcome to <b>Paper Dashboard</b> - a beautiful Bootstrap freebie for your next project."
+
+            },{
+                type: 'success',
+                timer: 4000
+            });
+
+    	});
+	</script>
 </html>

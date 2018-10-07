@@ -1,9 +1,12 @@
-from bootstrap_select import BootstrapSelect
+# from itertools import chain
+
+# from bootstrap_select import BootstrapSelect
 from django import forms
-from easy_select2 import select2_modelform, Select2, Select2Multiple
+# from easy_select2 import select2_modelform, Select2, Select2Multiple
 from ams import models
-from ams.models import Assets, Assign
-from ams.models import GENDER
+# from ams.views import department
+# from ams.models import Assets, Assign
+# from ams.models import GENDER
 
 
 class HardwareForm(forms.ModelForm):
@@ -30,7 +33,7 @@ class InformationForm(forms.ModelForm):
 
     class Meta:
         model = models.Information
-        fields = ('description', 'published_by', 'publish_date', 'attachment')
+        fields = ('description', 'published_by', 'publish_date', 'attachment', 'status')
 
 
 class InfrastructureForm(forms.ModelForm):
@@ -63,14 +66,59 @@ class DepartmentForm(forms.ModelForm):
         self.fields['team_leads'].queryset = models.DepartmentLead.objects.filter(deleted=False)
 
 
+"""
 class AssignForm(forms.ModelForm):
     date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
 
     class Meta:
         model = models.Assign
         fields = ('staff', 'assets', 'date_assigned')
-        widgets = {'assets': Select2,
-                   }
+"""
+
+
+class HardwareAssignForm(forms.ModelForm):
+    date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
+    class Meta:
+        model = models.HardwareAssign
+        fields = ('staff', 'assets', 'date_assigned')
+
+
+class SoftwareAssignForm(forms.ModelForm):
+    date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
+    class Meta:
+        model = models.SoftwareAssign
+        fields = ('staff', 'assets', 'date_assigned')
+
+
+class InformationAssignForm(forms.ModelForm):
+    date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
+    class Meta:
+        model = models.InformationAssign
+        fields = ('staff', 'assets', 'date_assigned')
+
+
+class InfrastructureAssignForm(forms.ModelForm):
+    date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
+    class Meta:
+        model = models.InfrastructureAssign
+        fields = ('staff', 'assets', 'date_assigned')
+
+
+class DepartmentLeadForm(forms.ModelForm):
+    lead_start_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
+    class Meta:
+        model = models.DepartmentLead
+        fields = ('staff', 'lead_start_date')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+
 
 """        
 class Form(forms.Form):

@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'users',
     'djangodeletes',
     'easy_select2',
+    'softdelete',
+    'soft_delete_it',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +133,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR, 'C:\\Users\\drc.alex\\Desktop\\Django_projects\\new_ams\\assets\\',]
-LOGIN_URL = 'user:login'
-LOGIN_REDIRECT_URL = 'ams:staff-list'
-LOGOUT_REDIRECT_URL = 'user:login'
+LOGIN_URL = 'users:login'
+LOGIN_REDIRECT_URL = 'users:dashboard'
+LOGOUT_REDIRECT_URL = 'users:login'

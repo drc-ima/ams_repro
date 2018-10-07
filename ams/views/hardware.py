@@ -1,13 +1,14 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from ..models import Assets, Hardware
+
+from ams import models, forms
 from ..forms import HardwareForm
 from django.views import generic
 
 
 class Add(LoginRequiredMixin, generic.CreateView):
     form_class = HardwareForm
-    success_url = reverse_lazy('ams:assets-hardware-list')
+    success_url = reverse_lazy('ams:assets-list')
     template_name = 'ams/assets/hardware/_hardware_form.html'
 
     def form_valid(self, form):
@@ -15,6 +16,7 @@ class Add(LoginRequiredMixin, generic.CreateView):
         return super().form_valid(form)
 
 
+"""
 class List(LoginRequiredMixin, generic.ListView):
     model = Hardware
     template_name = 'ams/assets/hardware/hardware.html'
@@ -23,12 +25,14 @@ class List(LoginRequiredMixin, generic.ListView):
         return Hardware.objects.filter(deleted=False)
 
 
+
 class ArchiveList(LoginRequiredMixin, generic.ListView):
     model = Hardware
     template_name = 'ams/assets/hardware/hardware-archives.html'
 
     def get_queryset(self):
-        return Hardware.objects.filter(deleted=True)
+        return Hardware.objects.filter(dele_ted=True)
+"""
 
 
 class Detail(LoginRequiredMixin, generic.DetailView):
@@ -37,22 +41,40 @@ class Detail(LoginRequiredMixin, generic.DetailView):
     template_name = 'ams/assets/hardware/details-hardware.html'
 
     def get_queryset(self):
-        return Hardware.objects.all()
+        return models.Hardware.objects.all()
 
 
 class Update(LoginRequiredMixin, generic.UpdateView):
     form_class = HardwareForm
     template_name = 'ams/assets/hardware/update-hardware.html'
-    success_url = reverse_lazy('ams:assets-hardware-list')
+    success_url = reverse_lazy('ams:assets-list')
 
     def get_queryset(self):
-        return Hardware.objects.all()
+        return models.Hardware.objects.all()
 
 
-class Delete(LoginRequiredMixin, generic.DeleteView):
-    model = Hardware
-    success_url = reverse_lazy('ams:assets-hardware-list')
+class Archive(LoginRequiredMixin, generic.DeleteView):
+    model = models
+    success_url = reverse_lazy('ams:assets-list')
     # template_name = 'ams/assets/details-hardware.html'
 
     def get_queryset(self):
-        return Hardware.objects.filter()
+        return models.Hardware.objects.delete()
+
+
+class Assign(LoginRequiredMixin, generic.CreateView):
+    form_class = forms.HardwareAssignForm
+    success_url = reverse_lazy('ams:assets-list')
+    template_name = 'ams/assets/assign/_hardware_assign.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class Restore(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:assets-list')
+    model = models.Hardware
+
+    def get_queryset(self):
+        return models.Hardware.objects.undelete()

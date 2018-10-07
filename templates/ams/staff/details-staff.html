@@ -35,7 +35,7 @@
                         Date Added: {{ object.date_added }}
                         <hr>
                             <a href="{% url 'ams:staff-update' slug=staff.slug %}" class="btn btn-default">Edit</a>
-                            <a href="{% url 'ams:staff-delete' slug=staff.slug %}" class="btn btn-danger pull-right" data-target="#deleteStaff" data-toggle="modal">Archive</a>
+                            <a href="#{# {% url 'ams:staff-archive' slug=staff.slug %} #}" class="btn btn-danger pull-right" data-target="#deleteStaff" data-toggle="modal">Archive</a>
                                         <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
                     </div>
                 </div>
@@ -95,12 +95,12 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                        <h5 class="modal-title" >Delete {{ object.first_name }}</h5>
+                        <h5 class="modal-title" >Archive {{ object.first_name }}</h5>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                 </div>
                 <div class="modal-body">
-                    <form action="{% url 'ams:staff-delete' slug=staff.slug %}" method="POST" class="form-horizontal form-material">
+                    <form action="{% url 'ams:staff-archive' slug=staff.slug %}" method="POST" class="form-horizontal form-material">
                         {% csrf_token %}
                         Are you sure you want to archive {{ object.first_name }} {{ object.last_name }}? This action can be reversed later. Take Note. Capish!!
                         <hr>

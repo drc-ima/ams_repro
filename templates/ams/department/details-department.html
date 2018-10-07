@@ -63,9 +63,9 @@
                             <h5 class="card-title m-b-0">Members</h5>
                         </div><p>
                         <div class="card-text">
-                            {% if object.staff.all %}
-                                {% for staff in object.staff.all %}
-                                    {{ staff.first_name }} {{ staff.last_name }}<br>
+                            {% if department.team_lead.all %}
+                                {% for staff in department.team_lead.all %}
+                                    {{ staff.staff }} <br>
                                 {% endfor %}
                             {% else %}
                                 This department has no staff

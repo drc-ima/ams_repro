@@ -5,8 +5,9 @@ from django import template
 # import json
 from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm
 
-from ams.forms import HardwareForm, SoftwareForm, InformationForm, InfrastructureForm, StaffForm, DepartmentForm, \
-    AssignForm
+from ams import forms
+from ams.forms import HardwareForm, SoftwareForm, InformationForm, InfrastructureForm, StaffForm, DepartmentForm, DepartmentLeadForm
+from users.forms import UserProfileForm
 
 register = template.Library()
 
@@ -53,13 +54,43 @@ def password_change_form():
     return {'form': form}
 
 
-@register.inclusion_tag('user/signup.html')
+@register.inclusion_tag('users/signup.html')
 def signup_form():
     form = UserCreationForm
     return {'form': form}
 
 
 @register.inclusion_tag('ams/assets/asset_temp.html')
-def assign_form():
-    form = AssignForm
+def hardware_assign_form():
+    form = forms.HardwareAssignForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/asset_temp.html')
+def information_assign_form():
+    form = forms.InformationAssignForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/asset_temp.html')
+def infrastructure_assign_form():
+    form = forms.InfrastructureAssignForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/asset_temp.html')
+def software_assign_form():
+    form = forms.SoftwareAssignForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/settings/_profile.html')
+def profile_form():
+    form = UserProfileForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/department/_lead_form.html')
+def lead_form():
+    form = DepartmentLeadForm
     return {'form': form}
