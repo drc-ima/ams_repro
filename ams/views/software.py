@@ -57,7 +57,7 @@ class Archive(LoginRequiredMixin, generic.DeleteView):
     # template_name = 'ams/assets/details-infrastructure.html'
 
     def get_queryset(self):
-        return models.Software.objects.delete()
+        return models.Software.objects.filter()
 
 
 class Assign(LoginRequiredMixin, generic.CreateView):
@@ -73,6 +73,7 @@ class Assign(LoginRequiredMixin, generic.CreateView):
 class Restore(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy('ams:assets-list')
     model = models.Software
+    fields = ['deleted', ]
 
     def get_queryset(self):
-        return models.Software.objects.undelete()
+        return models.Software.objects.filter()

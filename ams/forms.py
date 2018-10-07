@@ -7,6 +7,7 @@ from ams import models
 # from ams.views import department
 # from ams.models import Assets, Assign
 # from ams.models import GENDER
+from ams_project import settings
 
 
 class HardwareForm(forms.ModelForm):
@@ -20,7 +21,8 @@ class HardwareForm(forms.ModelForm):
 
 
 class SoftwareForm(forms.ModelForm):
-    purchase_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+    purchase_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}),
+                                    input_formats=settings.DATE_INPUT_FORMATS)
     expiry_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
 
     class Meta:

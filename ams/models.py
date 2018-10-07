@@ -7,6 +7,7 @@ from autoslug import AutoSlugField
 # from soft_delete_it.models import SoftDeleteModel, SoftDeleteManager, SoftDeleteQuerySet
 from djangodeletes.softdeletes import SoftDeletable, SoftDeleteManager, SoftDeleteQuerySet
 # Create your models here.
+from ams_project import settings
 
 GENDER = [
     ('Male', 'Male'),
@@ -99,6 +100,7 @@ class Software(SoftDeletable, models.Model):
     status = models.CharField(choices=SOFTWARE_TYPE, max_length=255, blank=True)
     comments = models.TextField(default='', blank=True)
     # Software Fields
+    purchase_date = models.DateField(default='', blank=True)
     expiry_date = models.DateField(default='', blank=True)
     slug = AutoSlugField(populate_from='description', unique=True, default='')
     date_added = models.DateTimeField(default=timezone.now, editable=False)
