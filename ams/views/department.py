@@ -33,8 +33,8 @@ class List(LoginRequiredMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['departments'] = Department.objects.filter(dele_ted=False)
-        context_data['department_archives'] = Department.objects.filter(dele_ted=True)
+        context_data['departments'] = Department.objects.filter(deleted=False)
+        context_data['department_archives'] = Department.objects.filter(deleted=True)
         return context_data
     """    
     def get_queryset(self):
@@ -47,7 +47,7 @@ class ArchiveList(LoginRequiredMixin, generic.ListView):
     template_name = 'ams/department/department-archives.html'
 
     def get_queryset(self):
-        return Department.objects.filter(dele_ted=True)
+        return Department.objects.filter(deleted=True)
 
 
 class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
@@ -65,7 +65,7 @@ class Detail(LoginRequiredMixin, SelectRelatedMixin, generic.DetailView):
     template_name = 'ams/department/details-department.html'
 
     def get_queryset(self):
-        return Department.objects.all()
+        return Department.objects.all(self)
 
 
 class Update(LoginRequiredMixin, generic.UpdateView):
@@ -87,8 +87,8 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
 
 
 class Restore(LoginRequiredMixin, generic.UpdateView):
-    success_url = reverse_lazy('ams:departmenr-list')
+    success_url = reverse_lazy('ams:department-list')
     model = Department
 
     def get_queryset(self):
-        return Department.objects.undelete()
+        return Department.objects.restore()
