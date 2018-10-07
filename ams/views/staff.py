@@ -29,6 +29,14 @@ class List(LoginRequiredMixin, generic.ListView):
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
     model = Staff
+    template_name = 'ams/staff/staff.html'
+
+    def get_queryset(self):
+        return Staff.objects.filter(deleted=True)
+
+
+class NewList(LoginRequiredMixin, generic.ListView):
+    model = Staff
     template_name = 'ams/staff/staff-archives.html'
 
     def get_queryset(self):
@@ -47,7 +55,7 @@ class Detail(LoginRequiredMixin, generic.DetailView):
 class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
     # model = Hardware
     # select_related = ('hardware_staff',)
-    template_name = 'ams/staff/staff-archives.html'
+    template_name = 'ams/staff/staff-archive-detail.html'
 
     def get_queryset(self):
         return Staff.objects.all()

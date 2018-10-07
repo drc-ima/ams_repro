@@ -10,21 +10,21 @@ class List(LoginRequiredMixin, generic.ListView):
     model = models.Hardware
 
     def get_context_data(self, **kwargs):
-        software = models.Software.objects.filter(dele_ted=False)
-        hardware = models.Hardware.objects.filter(dele_ted=False)
-        information = models.Information.objects.filter(dele_ted=False)
-        infrastructure = models.Infrastructure.objects.filter(dele_ted=False)
+        software = models.Software.objects.filter(deleted=False)
+        hardware = models.Hardware.objects.filter(deleted=False)
+        information = models.Information.objects.filter(deleted=False)
+        infrastructure = models.Infrastructure.objects.filter(deleted=False)
         assets_list = chain(software, hardware, information, infrastructure)
         context_data = super().get_context_data(**kwargs)
         context_data['assets'] = assets_list
-        context_data['software'] = models.Software.objects.filter(dele_ted=False)
-        context_data['hardware'] = models.Hardware.objects.filter(dele_ted=False)
-        context_data['information'] = models.Information.objects.filter(dele_ted=False)
-        context_data['infrastructure'] = models.Infrastructure.objects.filter(dele_ted=False)
-        software_a = models.Software.objects.filter(dele_ted=True)
-        hardware_a = models.Hardware.objects.filter(dele_ted=True)
-        information_a = models.Information.objects.filter(dele_ted=True)
-        infrastructure_a = models.Infrastructure.objects.filter(dele_ted=True)
+        context_data['software'] = models.Software.objects.filter(deleted=False)
+        context_data['hardware'] = models.Hardware.objects.filter(deleted=False)
+        context_data['information'] = models.Information.objects.filter(deleted=False)
+        context_data['infrastructure'] = models.Infrastructure.objects.filter(deleted=False)
+        software_a = models.Software.objects.filter(deleted=True)
+        hardware_a = models.Hardware.objects.filter(deleted=True)
+        information_a = models.Information.objects.filter(deleted=True)
+        infrastructure_a = models.Infrastructure.objects.filter(deleted=True)
         archive_list = chain(software_a, hardware_a, information_a, infrastructure_a)
         context_data['archives'] = archive_list
         return context_data

@@ -63,7 +63,7 @@ urlpatterns = [
     path('staff/archive/detail/<str:slug>/', staff.ArchiveDetail.as_view(), name='staff-archive-detail'),
     path('staff/archive/<str:slug>/', staff.Archive.as_view(), name='staff-archive'),
     path('assets/staff/restore/<str:slug>/', staff.Restore.as_view(), name='staff-restore'),
-    path('staff/archive/list/', staff.ArchiveList.as_view(), name='staff-archive-list'),
+    path('staff/archive/list/', staff.NewList.as_view(), name='staff-archive-list'),
 
     # department urls
     path('department/add/', department.Add.as_view(), name='department-add'),
