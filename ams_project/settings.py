@@ -25,7 +25,7 @@ SECRET_KEY = 'dirww+^e-@*(x7f6q&7n&(&@b$k@my!f3m!v8l_-!6*xwot%x$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'ams_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ams_project',
+        'NAME': 'ams_test',
         'HOST': 'localhost',
         'USER': 'postgres',
         'PASSWORD': 'organism',

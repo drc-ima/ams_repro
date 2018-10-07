@@ -22,9 +22,17 @@ class List(LoginRequiredMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['staffs'] = Staff.objects.filter(dele_ted=False)
-        context['archive_staff'] = Staff.objects.filter(dele_ted=True)
+        context['staffs'] = Staff.objects.filter(deleted=False)
+        context['archive_staff'] = Staff.objects.filter(deleted=True)
         return context
+
+
+class ArchiveList(LoginRequiredMixin, generic.ListView):
+    model = Staff
+    template_name = 'ams/staff/staff-archives.html'
+
+    def get_queryset(self):
+        return Staff.objects.filter(deleted=True)
 
 
 class Detail(LoginRequiredMixin, generic.DetailView):
@@ -60,12 +68,13 @@ class Archive(LoginRequiredMixin, generic.DeleteView):
     # template_name = 'ams/assets/details-hardware.html'
 
     def get_queryset(self):
-        return Staff.objects.delete()
+        return Staff.objects.filter()
 
 
 class Restore(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy('ams:staff-list')
     model = Staff
+    fields = ['deleted', ]
 
     def get_queryset(self):
-        return Staff.objects.undelete()
+        return Staff.objects.filter()

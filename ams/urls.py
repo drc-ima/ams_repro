@@ -60,10 +60,10 @@ urlpatterns = [
     path('staff/list/', staff.List.as_view(), name='staff-list'),
     path('staff/update/<str:slug>/', staff.Update.as_view(), name='staff-update'),
     path('staff/detail/<str:slug>/', staff.Detail.as_view(), name='staff-detail'),
-    path('staff/archive/detail/<str:slug>/', staff.ArchiveDetail.as_view(), name='staff-archive-detail' ),
+    path('staff/archive/detail/<str:slug>/', staff.ArchiveDetail.as_view(), name='staff-archive-detail'),
     path('staff/archive/<str:slug>/', staff.Archive.as_view(), name='staff-archive'),
     path('assets/staff/restore/<str:slug>/', staff.Restore.as_view(), name='staff-restore'),
-    # path('staff/archive/', staff.ArchiveList.as_view(), name='staff-archive-list'),
+    path('staff/archive/list/', staff.ArchiveList.as_view(), name='staff-archive-list'),
 
     # department urls
     path('department/add/', department.Add.as_view(), name='department-add'),
@@ -74,7 +74,7 @@ urlpatterns = [
     path('department/archive/list', department.ArchiveList.as_view(), name='department-archive-list'),
     path('department/lead/add/', department.AddLead.as_view(), name='department-lead-add'),
     path('department/archive/detail/<str:slug>/', department.ArchiveDetail.as_view(), name='department-archive-detail'),
-    path('assets/staff/restore/<str:slug>/', department.Restore.as_view(), name='department-restore'),
+    path('assets/department/restore/<str:slug>/', department.Restore.as_view(), name='department-restore'),
 
     # settings urls
     path('settings/', setting.Details.as_view(), name='settings'),

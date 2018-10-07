@@ -1,6 +1,7 @@
 from braces.views import SelectRelatedMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
+from django.utils import timezone
 from django.views import generic
 
 from ams.forms import DepartmentForm, DepartmentLeadForm
@@ -65,7 +66,7 @@ class Detail(LoginRequiredMixin, SelectRelatedMixin, generic.DetailView):
     template_name = 'ams/department/details-department.html'
 
     def get_queryset(self):
-        return Department.objects.all(self)
+        return Department.objects.all()
 
 
 class Update(LoginRequiredMixin, generic.UpdateView):
@@ -83,12 +84,14 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
     # template_name = 'ams/assets/details-hardware.html'
 
     def get_queryset(self):
-        return Department.objects.delete()
+        return Department.objects.filter()
 
 
 class Restore(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy('ams:department-list')
     model = Department
+    fields = ['deleted', ]
 
     def get_queryset(self):
-        return Department.objects.restore()
+        return Department.objects.filter()
+

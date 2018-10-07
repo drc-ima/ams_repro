@@ -13,7 +13,7 @@
             </div>
             <div class="col-md-7 align-self-center">
                 <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#staffModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#archives"><span class="fa fa-folder-open-o"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:staff-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
             </div>
         </div>
                 <!-- ============================================================== -->
@@ -87,7 +87,7 @@
                                         {% for archive in archive_staff %}
 
                                             <tr>
-                                                <td><a href="{% url 'ams:staff-archive-detail' slug=staff.slug %}">{{ archive.first_name }} {{ archive.last_name }}</a></td>
+                                                <td><a href="{# {% url 'ams:staff-archive-detail' slug=staff.slug %} #}">{{ archive.first_name }} {{ archive.last_name }}</a></td>
                                                 <td>{{ archive.work_email }}</td>
                                                 <td>{{ archive.home_phone }}</td>
                                                 <td>{# {{ archive.deleted_at }} #}</td>

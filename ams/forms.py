@@ -53,7 +53,7 @@ class StaffForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['department'].queryset = models.Department.objects.filter(dele_ted=False)
+        self.fields['department'].queryset = models.Department.objects.filter(deleted=False)
 
 
 class DepartmentForm(forms.ModelForm):
@@ -63,7 +63,7 @@ class DepartmentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['team_leads'].queryset = models.DepartmentLead.objects.filter(dele_ted=False)
+        self.fields['team_leads'].queryset = models.DepartmentLead.objects.filter(deleted=False)
 
 
 """
@@ -117,7 +117,7 @@ class DepartmentLeadForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['staff'].queryset = models.Staff.objects.filter(dele_ted=False)
+        self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
 
 
 """        
