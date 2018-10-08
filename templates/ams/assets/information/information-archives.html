@@ -11,7 +11,7 @@
                 <!-- ============================================================== -->
         <div class="row page-titles">
             <div class="col-md-3 align-self-left">
-                <a href="{% url 'ams:information-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
+                <a href="{% url 'ams:assets-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
             </div>
             <div class="col-md-5 align-self-left"><h3>Archived Information</h3></div>
 
@@ -64,9 +64,9 @@
                             {% if object_list %}
                                 {% for information in object_list %}
                                 <tr>
-                                    <td><span class="font-15">{{ information.description }}</span></td>
+                                    <td><span class="font-15"><a href="{% url 'ams:assets-information-archive-detail' slug=information.slug %}">{{ information.description }}</a></span></td>
                                     <td><span class="font-15">{{ information.published_by }}</span></td>
-                                    <td><span class="font-15">{# {{ information.deleted_at }} #}</span></td>
+                                    <td><span class="font-15">{{ information.deleted_at }}</span></td>
                                 </tr>
 
                                 {% endfor %}

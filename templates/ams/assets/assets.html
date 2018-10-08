@@ -24,9 +24,10 @@
     <div id="home" class="tab-pane fade in active">
         <div class="row page-titles">
             <div class="col-md-5 align-self-center text-themecolor">Hardware</div>
-            <div class="col-md-7 align-self-center">
+            <div class="col-md-7 align-self-left">
                 <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#hardwareModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="#"><span class="fa fa-folder-open-o"></span></a>
+                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#assign"><span class="fa fa-plus-square"></span></i>
+                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-hardware-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
             </div>
         </div>
         <div class="card">
@@ -74,15 +75,97 @@
 
     </div>
     <div id="menu1" class="tab-pane fade">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center text-themecolor">Information</div>
+            <div class="col-md-7 align-self-center">
+                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#informationModal"><span class="fa fa-plus-square-o"></span></i>
+                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-information-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+            </div>
+        </div>
+        <div class="card">
 
+            <div class="card-body">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-11 col-xlg-12 col-md-10">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Published By</th>
+                                <th>Published Date</th>
+                                <th>File Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if information %}
+                                {% for information in information %}
+                                    <tr>
+                                        <td><a href="{% url 'ams:assets-information-detail' slug=information.slug %}">{{ information.description }}</a></td>
+                                        <td>{{ information.published_by }}</td>
+                                        <td>{{ information.publish_date }}</td>
+                                        <td>{{ information.attachment.name }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <h3>There is no information stored in the system!.</h3>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Column -->
+                </div>
+            </div>
+        </div>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <div class="row page-titles">
+            <div class="col-md-5 align-self-center text-themecolor">Infrastructure</div>
+            <div class="col-md-7 align-self-center">
+                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#infrastructureModal"><span class="fa fa-plus-square-o"></span></i>
+                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-infrastructure-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-11 col-xlg-12 col-md-10">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Comments</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if infrastructure %}
+                                {% for infrastructure in infrastructure %}
+                                    <tr>
+                                        <td><a href="{% url 'ams:assets-infrastructure-detail' slug=infrastructure.slug %}">{{ infrastructure.description }}</a></td>
+                                        <td>{{ infrastructure.status }}</td>
+                                        <td>{{ infrastructure.comments }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <h3>There is no infrastructure stored in the system!.</h3>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Column -->
+                </div>
+            </div>
+        </div>
     </div>
     <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <div class="row page-titles">
+        <div class="row page-titles">
             <div class="col-md-5 align-self-center text-themecolor">Software</div>
             <div class="col-md-7 align-self-center">
                 <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#softwareModal"><span class="fa fa-plus-square-o"></span></i>
@@ -148,7 +231,7 @@
                                 <tr>
                                     <td><a href="#{# {% url 'ams:staff-detail' slug=staff.slug %} #}" class="font-15">{{ asset.description }} {{ staff.last_name }}</a></td>
                                     <td><span class="font-15">{{ asset.asset_type }}</span></td>
-                                    <td><span class="font-15">{{ staff.status }}</span></td>
+                                    <td><span class="font-15">{{ asset.status }}</span></td>
                                 </tr>
 
                                 {% endfor %}
@@ -178,6 +261,7 @@
                                     <th><h6>Description</h6></th>
                                     <th><h6>Type</h6></th>
                                     <th><h6>Status</h6></th>
+                                    <th><h6>Achived On</h6></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -187,6 +271,7 @@
                                     <td><a href="#{# {% url 'ams:staff-detail' slug=staff.slug %} #}" class="font-15">{{ archive.description }} {{ staff.last_name }}</a></td>
                                     <td><span class="font-15">{{ archive.asset_type }}</span></td>
                                     <td><span class="font-15">{{ archive.status }}</span></td>
+                                    <td><span class="font-15">{{ archive.deleted_at }}</span></td>
                                 </tr>
 
                                 {% endfor %}
@@ -222,6 +307,22 @@
             </div>
         </div>
     </div>
+    <!--Hardware Assign-->
+    <div class="modal fade" id="assign" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Hardware Assignment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% hardware_assign_form %}
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Software-->
     <div class="modal fade" id="softwareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -234,6 +335,38 @@
                 </div>
                 <div class="modal-body">
                     {% software_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Information-->
+    <div class="modal fade" id="informationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Infrastructure</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% information_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Infrastructure-->
+    <div class="modal fade" id="infrastructureModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Infrastructure</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% infrastructure_form %}
                 </div>
             </div>
         </div>

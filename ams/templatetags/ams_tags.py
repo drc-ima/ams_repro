@@ -60,7 +60,7 @@ def signup_form():
     return {'form': form}
 
 
-@register.inclusion_tag('ams/assets/asset_temp.html')
+@register.inclusion_tag('ams/assets/assign/_hardware_assign.html')
 def hardware_assign_form():
     form = forms.HardwareAssignForm
     return {'form': form}

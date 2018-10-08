@@ -19,6 +19,9 @@ urlpatterns = [
     path('assets/hardware/restore/<str:slug>/', hardware.Restore.as_view(), name='assets-hardware-restore'),
     # path('assets/hardware/archive/', hardware.ArchiveList.as_view(), name='assets-hardware-archive'),
     path('assets/hardware/assign/', hardware.Assign.as_view(), name='assign-hardware'),
+    path('assets/hardware/archive/list', hardware.ArchiveList.as_view(), name='assets-hardware-archive-list'),
+    path('assets/hardware/archive/detail/<str:slug>/', hardware.ArchiveDetail.as_view(),
+         name='assets-hardware-archive-detail'),
 
     # software urls
     path('assets/software/add/', software.Add.as_view(), name='assets-software-add'),
@@ -29,7 +32,7 @@ urlpatterns = [
     path('assets/software/archive/<str:slug>/', software.Delete.as_view(), name='assets-software-archive'),
     path('assets/software/archive/detail/<str:slug>/', software.ArchiveDetail.as_view(),
          name='assets-software-archive-detail'),
-    path('assets/software/archive/list/', software.ArchiveList.as_view(), name='assets-software-archive-list'),
+    path('assets/software/archive/list', software.ArchiveList.as_view(), name='assets-software-archive-list'),
     path('assets/software/assign/', software.Assign.as_view(), name='assign-software'),
 
     # information urls
@@ -40,7 +43,9 @@ urlpatterns = [
     path('assets/information/archive/<str:slug>/', information.Archive.as_view(), name='assets-information-archive'),
     path('assets/information/assign/', information.Assign.as_view(), name='assign-information'),
     path('assets/information/restore/<str:slug>/', information.Restore.as_view(), name='assets-information-restore'),
-    # path('assets/information/archive/', information.ArchiveList.as_view(), name='assets-information-archive'),
+    path('assets/information/archive/list', information.ArchiveList.as_view(), name='assets-information-archive-list'),
+    path('assets/information/archive/detail/<str:slug>/', information.ArchiveDetail.as_view(),
+         name='assets-information-archive-detail'),
 
     # infrastructure urls
     path('assets/infrastructure/add/', infrastructure.Add.as_view(), name='assets-infrastructure-add'),
@@ -54,8 +59,10 @@ urlpatterns = [
          name='assets-infrastructure-restore'),
     path('assets/infrastructure/archive/<str:slug>/', infrastructure.Archive.as_view(),
          name='assets-infrastructure-archive'),
-    # path('assets/infrastructure/archive/', infrastructure.ArchiveList.as_view(),
-    # name='assets-infrastructure-archive'),
+    path('assets/infrastructure/archive/list', infrastructure.ArchiveList.as_view(),
+         name='assets-infrastructure-archive-list'),
+    path('assets/infrastructure/archive/detail/<str:slug>/', infrastructure.ArchiveDetail.as_view(),
+         name='assets-infrastructure-archive-detail'),
 
     # staff urls
     path('staff/add/', staff.Add.as_view(), name='staff-add'),
@@ -65,7 +72,7 @@ urlpatterns = [
     path('staff/archive/detail/<str:slug>/', staff.ArchiveDetail.as_view(), name='staff-archive-detail'),
     path('staff/archive/<str:slug>/', staff.Archive.as_view(), name='staff-archive'),
     path('assets/staff/restore/<str:slug>/', staff.Restore.as_view(), name='staff-restore'),
-    path('staff/archive/list/', staff.NewList.as_view(), name='staff-archive-list'),
+    path('staff/archive/list', staff.NewList.as_view(), name='staff-archive-list'),
 
     # department urls
     path('department/add/', department.Add.as_view(), name='department-add'),

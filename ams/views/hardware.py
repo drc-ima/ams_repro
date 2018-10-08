@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
 from ams import models, forms
+from ams.models import Hardware
 from ..forms import HardwareForm
 from django.views import generic
 
@@ -23,7 +24,7 @@ class List(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return Hardware.objects.filter(deleted=False)
-
+"""
 
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
@@ -31,8 +32,16 @@ class ArchiveList(LoginRequiredMixin, generic.ListView):
     template_name = 'ams/assets/hardware/hardware-archives.html'
 
     def get_queryset(self):
-        return Hardware.objects.filter(dele_ted=True)
-"""
+        return Hardware.objects.filter(deleted=True)
+
+
+class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
+    # model = Hardware
+    # select_related = ('hardware_staff',)
+    template_name = 'ams/department/department-archive-detail.html'
+
+    def get_queryset(self):
+        return Hardware.objects.all()
 
 
 class Detail(LoginRequiredMixin, generic.DetailView):

@@ -29,7 +29,7 @@
                             Date Added: {{ object.added_date }}<br>
                             <hr>
                             <a href="{% url 'ams:assets-hardware-update' slug=hardware.slug %}" class="btn btn-default">Edit</a>
-                            <a href="{% url 'ams:assets-hardware-archive' slug=hardware.slug %}" class="btn btn-danger pull-right" data-target="#deleteModal" data-toggle="modal">Archive</a>
+                            <a href="{% url 'ams:assets-hardware-archive' slug=hardware.slug %}" class="btn btn-warning pull-right" data-target="#deleteModal" data-toggle="modal">Archive</a>
                             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -44,7 +44,7 @@
                                             {% csrf_token %}
                                             Are you sure you want to archive this asset?
                                             <hr>
-                                            <button class="btn btn-danger">Yes</button>
+                                            <button class="btn btn-warning">Yes</button>
                                             <button class="btn btn-default" data-dismiss="modal">No</button>
 
                                         </form>

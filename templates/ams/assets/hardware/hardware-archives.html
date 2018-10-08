@@ -11,7 +11,7 @@
                 <!-- ============================================================== -->
         <div class="row page-titles">
             <div class="col-md-3 align-self-left">
-                <a href="{% url 'ams:assets-hardware-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
+                <a href="{% url 'ams:assets-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
             </div>
             <div class="col-md-5 align-self-left"><h3>Archived Hardware</h3></div>
 
@@ -65,9 +65,9 @@
                             {% if object_list %}
                                 {% for hardware in object_list %}
                                 <tr>
-                                    <td><span class="font-15">{{ hardware.description }}</span></td>
-                                    <td><span class="font-15">{{ hardware.purchased_date }}</span></td>
-                                    <td><span class="font-15">{# {{ hardware.deleted_at }} #}</span></td>
+                                    <td><span class="font-15"><a href="{% url 'ams:assets-hardware-archive-detail' slug=hardware.slug %}"> {{ hardware.description }} </a></span></td>
+                                    <td><span class="font-15">{{ hardware.purchase_date }}</span></td>
+                                    <td><span class="font-15">{{ hardware.deleted_at }}</span></td>
                                 </tr>
 
                                 {% endfor %}
