@@ -49,3 +49,5 @@ class Archive(LoginRequiredMixin, generic.DeleteView):
     def get_queryset(self):
         return Assets.objects.filter()
 """
+
+

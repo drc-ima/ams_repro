@@ -25,9 +25,11 @@ urlpatterns = [
     # path('assets/software/list/', software.List.as_view(), name='assets-software-list'),
     path('assets/software/update/<str:slug>/', software.Update.as_view(), name='assets-software-update'),
     path('assets/software/detail/<str:slug>/', software.Detail.as_view(), name='assets-software-detail'),
-    path('assets/hardware/restore/<str:slug>/', software.Restore.as_view(), name='assets-software-restore'),
-    path('assets/software/archive/<str:slug>/', software.Archive.as_view(), name='assets-software-archive'),
-    # path('assets/software/archive/', software.ArchiveList.as_view(), name='assets-software-archive'),
+    path('assets/software/restore/<str:slug>/', software.Restore.as_view(), name='assets-software-restore'),
+    path('assets/software/archive/<str:slug>/', software.Delete.as_view(), name='assets-software-archive'),
+    path('assets/software/archive/detail/<str:slug>/', software.ArchiveDetail.as_view(),
+         name='assets-software-archive-detail'),
+    path('assets/software/archive/list/', software.ArchiveList.as_view(), name='assets-software-archive-list'),
     path('assets/software/assign/', software.Assign.as_view(), name='assign-software'),
 
     # information urls

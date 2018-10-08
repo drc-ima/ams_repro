@@ -1,6 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from ams import models, forms
+from ams.models import Software
 from ..forms import SoftwareForm
 from django.views import generic
 
@@ -15,13 +16,12 @@ class Add(generic.CreateView):
         return super().form_valid(form)
 
 
-"""
-class List(LoginRequiredMixin, generic.ListView):
-    model = Assets
-    template_name = 'ams/assets/software/software.html'
+class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
+    # model = models.Software
+    template_name = 'ams/assets/software/software-archive-detail.html'
 
     def get_queryset(self):
-        return Software.objects.filter(deleted=False)
+        return models.Software.objects.all()
 
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
@@ -30,7 +30,6 @@ class ArchiveList(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return Software.objects.filter(deleted=True)
-"""
 
 
 class Detail(LoginRequiredMixin, generic.DetailView):
@@ -51,10 +50,9 @@ class Update(LoginRequiredMixin, generic.UpdateView):
         return models.Software.objects.all()
 
 
-class Archive(LoginRequiredMixin, generic.DeleteView):
+class Delete(LoginRequiredMixin, generic.DeleteView):
     model = models.Software
     success_url = reverse_lazy('ams:assets-list')
-    # template_name = 'ams/assets/details-infrastructure.html'
 
     def get_queryset(self):
         return models.Software.objects.filter()
