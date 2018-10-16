@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+{% load bootstrap3 %}
+{% block title %} {{ object.name }} Department Details {% endblock %}
+{% block preloader %} Department Archive Details Loading...{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-3 align-self-left">
+                <a href="{% url 'ams:department-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
+            </div>
+            <div class="col-md-5 align-self-left"><h3>{{ object.name }} Archive Details</h3></div>
+        </div>
+        <div class="row">
+                    <!-- column -->
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title m-b-0">Details</h5>
+                        </div><p>
+                        <div class="card-text">
+                            Name: {{ object.name }} <br>
+                            Description: {{ object.description }} <br>
+                            department Lead: {{ object.team_leads }}<br>
+                            Lead Start Date: {{ object.team_leads.lead_start_date }}<br>
+                            Date Added: {{ object.added_date }}<br>
+                            Archived On: {{ object.deleted_at }}<br>
+                            <hr>
+                            <a href="{% url 'ams:department-delete' slug=department.slug %}" class="btn btn-outline-danger" data-target="#deleteModal" data-toggle="modal">Delete</a>
+                            <a href="{% url 'ams:department-restore' slug=department.slug %}" class="btn btn-success pull-right" data-target="#restoreModal" data-toggle="modal">Restore</a>
+                            <div class="modal fade" id="restoreModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="restoreModal">Delete {{ object.name }} department?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="{% url 'ams:department-restore' slug=department.slug %}" method="POST" class="form-horizontal form-material">
+                                                {% csrf_token %}
+                                                You are about to restore {{ object.name }} department? This action can reserved in the Department Archive . Take Note. Capish!!
+                                                <hr>
+                                                <button class="btn btn-success">Restore</button>
+                                                <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModal">Delete {{ object.name }} department?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="{% url 'ams:department-delete' slug=department.slug %}" method="POST" class="form-horizontal form-material">
+                                                {% csrf_token %}
+                                                You are about to delete {{ object.name }} department? This action cannot reserved in the Department Archive. Take Note. Capish!!
+                                                <hr>
+                                                <button class="btn btn-danger">Delete</button>
+                                                <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title m-b-0">Members</h5>
+                        </div><p>
+                        <div class="card-text">
+                            {% if department.team_lead.all %}
+                                {% for staff in department.team_lead.all %}
+                                    {{ staff.staff }} <br>
+                                {% endfor %}
+                            {% else %}
+                                This department has no staff
+                            {% endif %}
+                                                               <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+    </div>
+{% endblock %}

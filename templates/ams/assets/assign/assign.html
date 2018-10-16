@@ -1,0 +1,162 @@
+{% extends 'layout.html' %}
+{% load ams_tags %}
+{% load static from staticfiles %}
+{% block title %} Assignments {% endblock %}
+{% block preloader %} Assignments Loading {% endblock %}
+{% block content %}
+    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Assignments</h3>
+            </div>
+            <div class="col-md-7 align-self-center">
+                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#staffModal"><span class="fa fa-plus-square-o"></span></i>
+                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:staff-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+            </div>
+        </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-11 col-xlg-12 col-md-10">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th><h6>Assets</h6></th>
+                                    <th><h6>Assigned To</h6></th>
+                                    <th><h6>Date Assigned</h6></th>
+                                    <th>Returned</th>
+                                    <th>Return Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% if assign_list %}
+                                {% for assign in assign_list %}
+                                <tr>
+                                <td><a href="{# {% url 'ams:staff-detail' slug=staff.slug %} #}" class="font-15">{{ assign.assets }} </a></td>
+
+                                    <td><span class="font-15">{{ assign.staff }}</span></td>
+                                    <td><span class="font-15">{{ assign.date_assigned }}</span></td>
+                                </tr>
+
+                                {% endfor %}
+                            {% else %}
+                                There is no assignment recorded in this system. Please click on the New+ to add.
+                            {% endif %}
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- Column -->
+                </div>
+            </div>
+        </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+        <div class="modal fade" id="approve" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Approve</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#{# {% url 'ams:assets-hardware-approve' slug=hardwareassign.slug %} #}" method="POST" class="form-horizontal form-material">
+                            {% csrf_token %}
+                            You are about to archive {{ object.name }} department. This action can reserved in the Department Archive . Take Note. Capish!!
+                            <hr>
+                            <button class="btn btn-danger">Approve</button>
+                            <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="staffModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
+            <div class="modal-dialog" role="document">
+
+          <!-- Add Staff Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Approve Assignments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    {# {% staff_form %} #}
+                    <div class="table-striped">
+                        <div class="table">
+                            <table>
+                            <thead>
+                                <tr>
+                                    <th>Assets</th>
+                                    <th>Staff</th>
+                                    <th>Assigned By</th>
+                                    <th>Assign Date</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% if hardware %}
+                                {% for approve in hardware %}
+                                <tr>
+                                    <td><a href="{% url 'ams:assign-detail' slug=hardwareassign.slug %}" class="font-15">{{ approve.assets }}</a></td>
+                                    <td>{{ approve.staff }}</td>
+                                    <td>{{ approve.assign_by }}</td>
+                                    <td>{{ approve.date_assigned }}</td>
+
+                                </tr>
+                            </tbody>
+                                {% endfor %}
+                            {% else %}
+                                <h4>There are no hardware assignments to approve</h4>
+                            {% endif %}
+                            </table>
+                        </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+            <!---Assign Hardware Modal-->
+        <div id="assignHardware" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
+            <div class="modal-dialog" role="document">
+
+          <!-- Assign Hardware Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" >Assign Hardware</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        Hello
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+  </div>
+
+{% endblock %}
