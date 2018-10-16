@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from ..models import Information
-from ..forms import InformationForm, InformationAssignForm
+from ..forms import InformationForm, InformationAssignForm, InformationOwnerForm
 from django.views import generic
 
 
@@ -72,7 +72,17 @@ class Archive(generic.DeleteView):
 class Assign(LoginRequiredMixin, generic.CreateView):
     form_class = InformationAssignForm
     success_url = reverse_lazy('ams:assets-list')
-    template_name = 'ams/assets/assign/_hardware_assign.html'
+    template_name = 'ams/assets/assign/_information_assign.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class Owner(LoginRequiredMixin, generic.CreateView):
+    form_class = InformationOwnerForm
+    success_url = reverse_lazy('ams:assets-list')
+    template_name = 'ams/assets/owner/_information_owner.html'
 
     def form_valid(self, form):
         form.instance.user = self.request.user

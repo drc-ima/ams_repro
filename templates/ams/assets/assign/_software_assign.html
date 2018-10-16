@@ -1,6 +1,6 @@
 {% load bootstrap3 %}
 {% load static from staticfiles %}
-<form action="{% url 'ams:assets-infrastructure-add' %}" method="POST" class="form-horizontal form-material"><p>
+<form action="{% url 'ams:assign-software' %}" method="post" class="form-horizontal form-material"><p>
     {% csrf_token %}
     {% bootstrap_form form %}
     <div class="form-group">
@@ -10,5 +10,5 @@
     </div>
 </form>
 {% block js %}
-<script src="{% static 'js/stretchy.js' %}" data-filter="#id_comments" async></script>
+<script src="{% static 'js/stretchy.js' %}" data-filter="#id_notes" async></script>
 {% endblock %}

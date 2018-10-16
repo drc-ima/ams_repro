@@ -12,3 +12,6 @@ class UserProfile(models.Model):
     last_name = models.CharField(max_length=255)
     email = models.EmailField()
     date_added = models.DateTimeField(default=timezone.now, editable=False)
+
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name

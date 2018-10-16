@@ -65,9 +65,10 @@
                                         <thead>
                                             <tr>
                                                 <th>Description</th>
+                                                <th>Status</th>
+                                                <th>File Type</th>
                                                 <th>Published By</th>
                                                 <th>Published Date</th>
-                                                <th>File Name</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -75,9 +76,11 @@
                                         {% for information in object_list %}
                                             <tr>
                                                 <td><a href="{% url 'ams:assets-information-detail' slug=information.slug %}">{{ information.description }}</a></td>
+                                                <td>{{ information.status }}</td>
+                                                <td>{{ information.file_type }}</td>
                                                 <td>{{ information.published_by }}</td>
                                                 <td>{{ information.publish_date }}</td>
-                                                <td>{{ information.attachment.name }}</td>
+
                                             </tr>
                                         {% endfor %}
                                         {% else %}

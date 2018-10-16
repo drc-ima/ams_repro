@@ -19,17 +19,14 @@ class Add(LoginRequiredMixin, generic.CreateView):
 class List(LoginRequiredMixin, generic.ListView):
     model = Staff
     template_name = 'ams/staff/staff.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['staffs'] = Staff.objects.filter(deleted=False)
-        context['archive_staff'] = Staff.objects.filter(deleted=True)
-        return context
+    paginate_by = 10
+    queryset = Staff.objects.filter(deleted=False)
+    context_object_name = 'staffs'
 
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
     model = Staff
-    template_name = 'ams/staff/staff.html'
+    template_name = 'ams/staff/staff-archives.html'
 
     def get_queryset(self):
         return Staff.objects.filter(deleted=True)

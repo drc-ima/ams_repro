@@ -48,7 +48,7 @@ def department_form():
     return {'form': form}
 
 
-@register.inclusion_tag('registration/password_change.html')
+@register.inclusion_tag('users/password_change.html')
 def password_change_form():
     form = PasswordChangeForm
     return {'form': form}
@@ -66,21 +66,45 @@ def hardware_assign_form():
     return {'form': form}
 
 
-@register.inclusion_tag('ams/assets/asset_temp.html')
+@register.inclusion_tag('ams/assets/owner/_hardware_owner.html')
+def hardware_owner_form():
+    form = forms.HardwareOwnerForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/assign/_information_assign.html')
 def information_assign_form():
     form = forms.InformationAssignForm
     return {'form': form}
 
 
-@register.inclusion_tag('ams/assets/asset_temp.html')
+@register.inclusion_tag('ams/assets/owner/_information_owner.html')
+def information_owner_form():
+    form = forms.InformationOwnerForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/assign/_infrastructure_assign.html')
 def infrastructure_assign_form():
     form = forms.InfrastructureAssignForm
     return {'form': form}
 
 
-@register.inclusion_tag('ams/assets/asset_temp.html')
+@register.inclusion_tag('ams/assets/owner/_infrastructure_owner.html')
+def infrastructure_owner_form():
+    form = forms.InfrastructureOwnerForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/assign/_software_assign.html')
 def software_assign_form():
     form = forms.SoftwareAssignForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/owner/_software_owner.html')
+def software_owner_form():
+    form = forms.SoftwareOwnerForm
     return {'form': form}
 
 

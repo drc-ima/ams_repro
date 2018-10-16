@@ -35,7 +35,7 @@
                         Date Added: {{ object.date_added }}
                         <hr>
                             <a href="{% url 'ams:staff-update' slug=staff.slug %}" class="btn btn-default">Edit</a>
-                            <a href="#{# {% url 'ams:staff-archive' slug=staff.slug %} #}" class="btn btn-danger pull-right" data-target="#deleteStaff" data-toggle="modal">Archive</a>
+                            <a href="#{# {% url 'ams:staff-archive' slug=staff.slug %} #}" class="btn btn-outline-warning pull-right" data-target="#deleteStaff" data-toggle="modal">Archive</a>
                                         <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
                     </div>
                 </div>
@@ -51,12 +51,25 @@
                                         <h5 class="card-title m-b-0">Assets</h5>
                                     </div><p>
                                     <div class="card-text">
-                                    {% if object.asset.all %}
-                                    {% for asset in object.asset.all %}
-                                        {{ asset.description }}<br>
+                                    {% if object.hardware_asset.all %}
+                                    {% for hardware in object.hardware_asset.all %}
+                                        {{ hardware.description }}, Assigned On {{ hardware.date_assigned }} <br>
                                     {% endfor %}
-                                    {% else %}
-                                    This staff is not assigned any asset
+                                    {% endif %}
+                                    {% if object.software_asset.all %}
+                                    {% for software in object.software_asset.all %}
+                                        {{ software.description }} <br>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% if object.information_asset.all %}
+                                    {% for information in object.information_asset.all %}
+                                        {{ information.description }} <br>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% if object.infrastructure_asset.all %}
+                                    {% for infrastructure in object.infrastructure_asset.all %}
+                                        {{ infrastructure.description }} <br>
+                                    {% endfor %}
                                     {% endif %}
                                            <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
                                     </div>
@@ -73,12 +86,12 @@
                                         <h5 class="card-title m-b-0">Hardware</h5>
                                     </div><p>
                                     <div class="card-text">
-                                    {% if object.hardware.all %}
-                                    {% for hardware in object.hardware.all %}
+                                    {% if object.hardware_asset.all %}
+                                    {% for hardware in object.hardware_asset.all %}
                                         {{ hardware.description }} <br>
                                     {% endfor %}
                                     {% else %}
-                                    There is not hardware assigned to this staff!
+                                    There is no hardware assigned to this staff!
                                     {% endif %}
                                     </div>
                                 </div>
@@ -104,7 +117,7 @@
                         {% csrf_token %}
                         Are you sure you want to archive {{ object.first_name }} {{ object.last_name }}? This action can be reversed later. Take Note. Capish!!
                         <hr>
-                        <button class="btn btn-danger">Archive</button>
+                        <button class="btn btn-warning">Archive</button>
                         <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
                     </form>
                 </div>

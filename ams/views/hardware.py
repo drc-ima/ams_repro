@@ -38,7 +38,7 @@ class ArchiveList(LoginRequiredMixin, generic.ListView):
 class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
     # model = Hardware
     # select_related = ('hardware_staff',)
-    template_name = 'ams/department/department-archive-detail.html'
+    template_name = 'ams/assets/hardware/hardware-archive-detail.html'
 
     def get_queryset(self):
         return Hardware.objects.all()
@@ -81,6 +81,25 @@ class Assign(LoginRequiredMixin, generic.CreateView):
         return super().form_valid(form)
 
 
+class Approve(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:assign-list')
+    model = models.HardwareAssign
+    fields = ['approve', ]
+
+    def get_queryset(self):
+        return models.HardwareAssign.objects.filter()
+
+
+class Owner(LoginRequiredMixin, generic.CreateView):
+    form_class = forms.HardwareOwnerForm
+    success_url = reverse_lazy('ams:assets-list')
+    template_name = 'ams/assets/owner/_hardware_owner.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
 class Restore(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy('ams:assets-list')
     model = models.Hardware
@@ -88,3 +107,13 @@ class Restore(LoginRequiredMixin, generic.UpdateView):
 
     def get_queryset(self):
         return models.Hardware.objects.filter()
+
+
+class Delete(LoginRequiredMixin, generic.DeleteView):
+    model = models
+    success_url = reverse_lazy('ams:assets-list')
+
+    # template_name = 'ams/assets/details-hardware.html'
+
+    def get_queryset(self):
+        return models.Hardware.objects.hard_delete()

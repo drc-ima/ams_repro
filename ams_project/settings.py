@@ -43,9 +43,6 @@ INSTALLED_APPS = [
     'bootstrapform',
     'users',
     'djangodeletes',
-    'easy_select2',
-    'softdelete',
-    'soft_delete_it',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +133,4 @@ STATICFILES_DIRS = [BASE_DIR, 'C:\\Users\\drc.alex\\Desktop\\Django_projects\\ne
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'users:dashboard'
 LOGOUT_REDIRECT_URL = 'users:login'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

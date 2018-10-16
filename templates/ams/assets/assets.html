@@ -9,7 +9,7 @@
     <div class="col-md-12 align-self-center">
         <h3>
          <ul class="nav nav-tabs">
-            <li><a data-toggle="tab" href="#home">Hardware</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="#home" data-toggle="tab" title="Click to expand!">Hardware</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a data-toggle="tab" href="#menu1">Information</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a data-toggle="tab" href="#menu2">Infrastructure</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a data-toggle="tab" href="#menu3">Software</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -21,13 +21,14 @@
 
 
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
+    <div id="home" class="tab-pane fade">
         <div class="row page-titles">
             <div class="col-md-5 align-self-center text-themecolor">Hardware</div>
             <div class="col-md-7 align-self-left">
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#hardwareModal"><span class="fa fa-plus-square-o"></span></i>
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#assign"><span class="fa fa-plus-square"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-hardware-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to add a hardware asset!" data-target="#hardwareModal" href="#"><span class="fa fa-plus"></span></a>
+                <a href="#" class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to assign a hardware asset to a staff!" data-target="#assignHard" ><span class="fa fa-plus-square"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all archived hardware assets!" href="{% url 'ams:assets-hardware-archive-list' %}"><span class="fa fa-archive"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#hardwareOwner" title="Click to assign a team lead ownership of a hardware!" href="#{# {% url 'ams:assets-hardware-archive-list' %} #}"><span class="fa fa-paper-plane-o"></span></a>
             </div>
         </div>
         <div class="card">
@@ -46,18 +47,20 @@
                                     <th><h6>Brand</h6></th>
                                     <th><h6>Model Number</h6></th>
                                     <th><h6>Purchase Date</h6></th>
+                                    <th><h6>Actions</h6></th>
                                 </tr>
                             </thead>
                             <tbody>
                             {% if hardware %}
                                 {% for hardware in hardware %}
                                 <tr>
-                                    <td><a href="{% url 'ams:assets-hardware-detail' slug=hardware.slug %}" class="font-15">{{ hardware.description }}</a></td>
+                                    <td><a data-toggle="tooltip" title="Click to view details of {{ hardware.description }}" href="{% url 'ams:assets-hardware-detail' slug=hardware.slug %}" class="font-15">{{ hardware.description }}</a></td>
                                     <td><span class="font-15">{{ hardware.status }}</span></td>
                                     <td><span class="font-15">{{ hardware.serial_number }}</span></td>
                                     <td><span class="font-15">{{ hardware.brand }}</span></td>
                                     <td><span class="font-15">{{ hardware.model_number }}</span></td>
                                     <td><span class="font-15">{{ hardware.purchase_date }}</span></td>
+                                    <td><a href="{% url 'ams:assets-hardware-archive' slug=hardware.slug %}" data-toggle="modal" data-target="#archiveHardware"><span class="font-15 fa fa-archive"></span></a></td>
                                 </tr>
 
                                 {% endfor %}
@@ -77,15 +80,17 @@
     <div id="menu1" class="tab-pane fade">
         <div class="row page-titles">
             <div class="col-md-5 align-self-center text-themecolor">Information</div>
-            <div class="col-md-7 align-self-center">
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#informationModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-information-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+            <div class="col-md-7 align-self-left">
+                <a href="#" class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to add an information asset!" data-target="#informationModal"><span class="fa fa-plus-square-o"></span></a>
+                <a href="#" class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to assign an information asset to a staff!" data-target="#assignInfo" ><span class="fa fa-plus-square"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to view all archived information assets!" href="{% url 'ams:assets-information-archive-list' %}"><span class="fa fa-archive"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to assign a team lead ownership of an information!" data-target="#informationOwner" href="#{# {% url 'ams:assets-hardware-archive-list' %} #}"><span class="fa fa-paper-plane-o"></span></a>
             </div>
         </div>
         <div class="card">
 
             <div class="card-body">
-                <!-- Row -->
+                       <!-- Row -->
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-11 col-xlg-12 col-md-10">
@@ -93,9 +98,10 @@
                             <thead>
                             <tr>
                                 <th>Description</th>
+                                <th>Status</th>
+                                <th>File Type</th>
                                 <th>Published By</th>
                                 <th>Published Date</th>
-                                <th>File Name</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -103,10 +109,10 @@
                                 {% for information in information %}
                                     <tr>
                                         <td><a href="{% url 'ams:assets-information-detail' slug=information.slug %}">{{ information.description }}</a></td>
+                                        <td>{{ information.status }}</td>
+                                        <td>{{ information.file_type }}</td>
                                         <td>{{ information.published_by }}</td>
-                                        <td>{{ information.publish_date }}</td>
-                                        <td>{{ information.attachment.name }}</td>
-                                    </tr>
+                                        <td>{{ information.publish_date }}</td>                                    </tr>
                                 {% endfor %}
                             {% else %}
                                 <h3>There is no information stored in the system!.</h3>
@@ -116,16 +122,18 @@
                     </div>
                     <!-- Column -->
                 </div>
+
             </div>
         </div>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <div class="row page-titles">
+          <div class="row page-titles">
             <div class="col-md-5 align-self-center text-themecolor">Infrastructure</div>
             <div class="col-md-7 align-self-center">
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#infrastructureModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-infrastructure-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" href="#" title="Click to add infrastructure assets!" data-target="#infrastructureModal"><span class="fa fa-plus-square-o"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" href="#" title="Click to assign an infrastructure to a staff" data-target="#assignInfras"><span class="fa fa-plus-square"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all archived infrastructure assets" href="{% url 'ams:assets-infrastructure-archive-list' %}"><span class="fa fa-archive"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#infrastructureOwner" title="Click to assign a team lead ownership of a infrastructure!" href="#{# {% url 'ams:assets-hardware-archive-list' %} #}"><span class="fa fa-paper-plane-o"></span></a>
             </div>
         </div>
         <div class="card">
@@ -148,7 +156,7 @@
                             {% if infrastructure %}
                                 {% for infrastructure in infrastructure %}
                                     <tr>
-                                        <td><a href="{% url 'ams:assets-infrastructure-detail' slug=infrastructure.slug %}">{{ infrastructure.description }}</a></td>
+                                        <td><a data-toggle="tooltip" title="Click to view details of {{ infrastructure.description }}" href="{% url 'ams:assets-infrastructure-detail' slug=infrastructure.slug %}">{{ infrastructure.description }}</a></td>
                                         <td>{{ infrastructure.status }}</td>
                                         <td>{{ infrastructure.comments }}</td>
                                     </tr>
@@ -168,8 +176,10 @@
         <div class="row page-titles">
             <div class="col-md-5 align-self-center text-themecolor">Software</div>
             <div class="col-md-7 align-self-center">
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#softwareModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:assets-software-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" href="#" title="Click to add software assets!" data-target="#softwareModal"><span class="fa fa-plus-square-o"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" href="#" title="Click to assign software asset to a staff!" data-target="#assignSoft"><span class="fa fa-plus-square"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all archived software assets!" href="{% url 'ams:software-assets-archive-list' %}"><span class="fa fa-archive"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#softwareOwner" title="Click to assign a team lead ownership of a software!" href="#{# {% url 'ams:assets-hardware-archive-list' %} #}"><span class="fa fa-paper-plane-o"></span></a>
             </div>
         </div>
         <div class="card">
@@ -192,7 +202,7 @@
                             {% if software %}
                                 {% for software in software %}
                                     <tr>
-                                        <td><a href="{% url 'ams:assets-software-detail' slug=software.slug %}">{{ software.description }}</a></td>
+                                        <td><a data-toggle="tooltip" title="Click to view details of {{ software.description }}" href="{% url 'ams:assets-software-detail' slug=software.slug %}">{{ software.description }}</a></td>
                                         <td>{{ software.purchase_date }}</td>
                                         <td>{{ software.expiry_date }}</td>
                                         <td>{{ software.status }}</td>
@@ -209,7 +219,7 @@
             </div>
         </div>
     </div>
-    <div id="menu4" class="tab-pane fade in active">
+    <div id="menu4" class="tab-pane active">
       <div class="card">
         <div class="card-header">All Assets</div>
             <div class="card-body">
@@ -229,17 +239,16 @@
                             {% if assets %}
                                 {% for asset in assets %}
                                 <tr>
-                                    <td><a href="#{# {% url 'ams:staff-detail' slug=staff.slug %} #}" class="font-15">{{ asset.description }} {{ staff.last_name }}</a></td>
+                                    <td><span class="font-15">{{ asset.description }}</span></td>
                                     <td><span class="font-15">{{ asset.asset_type }}</span></td>
                                     <td><span class="font-15">{{ asset.status }}</span></td>
                                 </tr>
 
                                 {% endfor %}
                             {% else %}
-                                There is no staff recorded in this system. Please click on the New+ to add.
+                                There is no staff recorded in this system. Please click on the plus icon to add.
                             {% endif %}
                             </tbody>
-
                         </table>
                     </div>
                     <!-- Column -->
@@ -261,7 +270,7 @@
                                     <th><h6>Description</h6></th>
                                     <th><h6>Type</h6></th>
                                     <th><h6>Status</h6></th>
-                                    <th><h6>Achived On</h6></th>
+                                    <th><h6>Archived On</h6></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -308,7 +317,7 @@
         </div>
     </div>
     <!--Hardware Assign-->
-    <div class="modal fade" id="assign" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade" id="assignHard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -319,6 +328,22 @@
                 </div>
                 <div class="modal-body">
                     {% hardware_assign_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Hardware Owner-->
+    <div class="modal fade" id="hardwareOwner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Assign Hardware Owner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% hardware_owner_form %}
                 </div>
             </div>
         </div>
@@ -339,18 +364,82 @@
             </div>
         </div>
     </div>
+    <!--Software Assign-->
+    <div class="modal fade" id="assignSoft" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Assign Software to Staff</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% software_assign_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Software Owner-->
+    <div class="modal fade" id="softwareOwner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Assign Software Owner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% software_owner_form %}
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Information-->
     <div class="modal fade" id="informationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Add Infrastructure</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Information</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     {% information_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Information Assign-->
+    <div class="modal fade" id="assignInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Information Assignment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% information_assign_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Information Owner-->
+    <div class="modal fade" id="informationOwner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Assign Information Owner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% information_owner_form %}
                 </div>
             </div>
         </div>
@@ -367,6 +456,60 @@
                 </div>
                 <div class="modal-body">
                     {% infrastructure_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Infrastructure Assign-->
+    <div class="modal fade" id="assignInfras" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Infrastructure</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% infrastructure_assign_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Infrastructure Owner-->
+    <div class="modal fade" id="infrastructureOwner" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Assign Infrastructure Owner</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% infrastructure_owner_form %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="archiveHardware" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="archiveHardware">Archive {{ object.description }}?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'ams:assets-list' %}" method="POST" class="form-horizontal form-material">
+                        {% csrf_token %}
+                        You are about to archive {{ hardware.description }}. This action can reserved in the Hardware Archives. Take Note. Capish!!
+                        <hr>
+                        <button class="btn btn-danger">Archive</button>
+                        <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
+
+                    </form>
                 </div>
             </div>
         </div>

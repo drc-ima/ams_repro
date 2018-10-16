@@ -1,13 +1,15 @@
 # from itertools import chain
-
+from django.contrib.auth.models import User
 from django.db import models
 # from softdelete.models import SoftDeleteObject, SoftDeleteManager, SoftDeleteQuerySet
+from django.urls import reverse
 from django.utils import timezone
 from autoslug import AutoSlugField
 # from soft_delete_it.models import SoftDeleteModel, SoftDeleteManager, SoftDeleteQuerySet
 from djangodeletes.softdeletes import SoftDeletable, SoftDeleteManager, SoftDeleteQuerySet
 # Create your models here.
-from ams_project import settings
+# from ams_project import settings
+from users.models import UserProfile
 
 GENDER = [
     ('Male', 'Male'),
@@ -37,6 +39,7 @@ class Hardware(SoftDeletable, models.Model):
     date_added = models.DateTimeField(default=timezone.now, editable=False)
     staff = models.ManyToManyField('Staff', related_name='assets_hardware_staff', through='HardwareAssign')
 
+
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
 
     def __str__(self):
@@ -46,13 +49,22 @@ class Hardware(SoftDeletable, models.Model):
         ordering = ['-date_added']
 
 
+FILE_TYPE = [
+    ('doc', 'doc'),
+    ('docx', 'docx'),
+    ('xls', 'xls'),
+    ('pptx', 'pptx'),
+    ('others', 'others'),
+]
+
+
 class Information(SoftDeletable, models.Model):
     asset_type = models.CharField(default='Information', max_length=100, editable=False)
     description = models.CharField(max_length=255)
     status = models.CharField(max_length=255, blank=True)
     comments = models.TextField(default='', blank=True)
     # Information Fields
-    attachment = models.FileField(blank=True)
+    file_type = models.CharField(choices=FILE_TYPE, max_length=255, blank=True)
     published_by = models.ForeignKey('Staff', related_name='publisher_staff', on_delete=models.SET_NULL, blank=True,
                                      null=True)
     publish_date = models.DateField(default='', blank=True)
@@ -145,13 +157,17 @@ class Staff(SoftDeletable, models.Model):
         ordering = ['-date_added']
 
 
-class HardwareAssign(SoftDeletable, models.Model):
+class HardwareAssign(models.Model):
+    assign_by = models.ForeignKey(UserProfile, related_name='hardware_assign_by', on_delete=models.SET_NULL, null=True)
     staff = models.ForeignKey(Staff, related_name='staff_hardware_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Hardware, related_name='hardware_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-
-    objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
+    approve = models.BooleanField(default=False)
+    approve_date = models.DateTimeField(default=timezone.now)
+    return_it = models.BooleanField(default=False)
+    return_on = models.DateTimeField(default=timezone.now)
+    slug = AutoSlugField(populate_from='assets', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -162,13 +178,17 @@ class HardwareAssign(SoftDeletable, models.Model):
         ordering = ['-added_date']
 
 
-class InformationAssign(SoftDeletable, models.Model):
+class InformationAssign(models.Model):
+    assign_by = models.ForeignKey(UserProfile, related_name='information_assign_by', on_delete=models.SET_NULL,
+                                  null=True)
     staff = models.ForeignKey(Staff, related_name='staff_information_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Information, related_name='information_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-
-    objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
+    approve = models.BooleanField(default=False)
+    approve_date = models.DateTimeField(default=timezone.now, editable=False)
+    return_it = models.BooleanField(default=False)
+    return_on = models.DateTimeField(default=timezone.now, editable=False)
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -179,14 +199,18 @@ class InformationAssign(SoftDeletable, models.Model):
         ordering = ['-added_date']
 
 
-class InfrastructureAssign(SoftDeletable, models.Model):
+class InfrastructureAssign(models.Model):
+    assign_by = models.ForeignKey(UserProfile, related_name='infrastructure_assign_by', on_delete=models.SET_NULL,
+                                  null=True)
     staff = models.ForeignKey(Staff, related_name='staff_infrastructure_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Infrastructure, related_name='infrastructure_assign', on_delete=models.SET_NULL,
                                null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-
-    # objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
+    approve = models.BooleanField(default=False)
+    approve_date = models.DateTimeField(default=timezone.now, editable=False)
+    return_it = models.BooleanField(default=False)
+    return_on = models.DateTimeField(default=timezone.now, editable=True)
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -197,13 +221,16 @@ class InfrastructureAssign(SoftDeletable, models.Model):
         ordering = ['-added_date']
 
 
-class SoftwareAssign(SoftDeletable, models.Model):
+class SoftwareAssign(models.Model):
+    assign_by = models.ForeignKey(UserProfile, related_name='software_assign_by', on_delete=models.SET_NULL, null=True)
     staff = models.ForeignKey(Staff, related_name='staff_software_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Software, related_name='software_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-
-    objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
+    approve = models.BooleanField(default=False)
+    approve_date = models.DateTimeField(default=timezone.now, editable=False)
+    return_it = models.BooleanField(default=False)
+    return_on = models.DateTimeField(default=timezone.now, editable=False)
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)

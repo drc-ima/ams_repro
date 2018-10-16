@@ -65,7 +65,7 @@
                             {% if object_list %}
                                 {% for software in object_list %}
                                 <tr>
-                                    <td><span class="font-15">{{ software.description }}</span></td>
+                                    <td><span class="font-15"><a href="{% url 'ams:assets-software-archive-detail' slug=software.slug %}">{{ software.description }}</a></span></td>
                                     <td><span class="font-15">{{ software.purchase_date }}</span></td>
                                     <td><span class="font-15">{{ software.deleted_at }}</span></td>
                                 </tr>

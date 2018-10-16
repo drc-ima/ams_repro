@@ -29,7 +29,7 @@
                             Date Added: {{ object.added_date }}<br>
                             <hr>
                             <a href="{% url 'ams:department-update' slug=department.slug %}" class="btn btn-default">Edit</a>
-                            <a href="{% url 'ams:department-delete' slug=department.slug %}" class="btn btn-danger pull-right" data-target="#deleteModal" data-toggle="modal">Archive</a>
+                            <a href="{% url 'ams:department-archive' slug=department.slug %}" class="btn btn-danger pull-right" data-target="#deleteModal" data-toggle="modal">Archive</a>
                             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -40,7 +40,7 @@
                                     </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="{% url 'ams:department-delete' slug=department.slug %}" method="POST" class="form-horizontal form-material">
+                                        <form action="{% url 'ams:department-archive' slug=department.slug %}" method="POST" class="form-horizontal form-material">
                                             {% csrf_token %}
                                             You are about to archive {{ object.name }} department. This action can reserved in the Department Archive . Take Note. Capish!!
                                             <hr>
@@ -63,14 +63,9 @@
                             <h5 class="card-title m-b-0">Members</h5>
                         </div><p>
                         <div class="card-text">
-                            {% if department.team_lead.all %}
-                                {% for staff in department.team_lead.all %}
-                                    {{ staff.staff }} <br>
-                                {% endfor %}
-                            {% else %}
-                                This department has no staff
-                            {% endif %}
-                                                               <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+                            {{ object.staff }} <br>
+
+                                                                                           <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
                         </div>
                     </div>
                 </div>

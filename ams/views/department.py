@@ -31,6 +31,7 @@ class AddLead(LoginRequiredMixin, generic.CreateView):
 class List(LoginRequiredMixin, generic.ListView):
     model = Department
     template_name = 'ams/department/department.html'
+    paginate_by = 5
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
@@ -95,3 +96,10 @@ class Restore(LoginRequiredMixin, generic.UpdateView):
     def get_queryset(self):
         return Department.objects.filter()
 
+
+class HardDelete(LoginRequiredMixin, generic.DeleteView):
+    model = Department
+    success_url = reverse_lazy('ams:department-archive-list')
+
+    def get_queryset(self):
+        return Department.objects.filter()

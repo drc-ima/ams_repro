@@ -17,11 +17,12 @@ class Add(generic.CreateView):
 
 
 class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
-    # model = models.Software
+    # model = Hardware
+    # select_related = ('hardware_staff',)
     template_name = 'ams/assets/software/software-archive-detail.html'
 
     def get_queryset(self):
-        return models.Software.objects.all()
+        return Software.objects.all()
 
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
@@ -50,7 +51,7 @@ class Update(LoginRequiredMixin, generic.UpdateView):
         return models.Software.objects.all()
 
 
-class Delete(LoginRequiredMixin, generic.DeleteView):
+class Archive(LoginRequiredMixin, generic.DeleteView):
     model = models.Software
     success_url = reverse_lazy('ams:assets-list')
 
@@ -61,7 +62,17 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
 class Assign(LoginRequiredMixin, generic.CreateView):
     form_class = forms.SoftwareAssignForm
     success_url = reverse_lazy('ams:assets-list')
-    template_name = 'ams/assets/assign/_hardware_assign.html'
+    template_name = 'ams/assets/assign/_software_assign.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class Owner(LoginRequiredMixin, generic.CreateView):
+    form_class = forms.SoftwareOwnerForm
+    success_url = reverse_lazy('ams:assets-list')
+    template_name = 'ams/assets/owner/_software_owner.html'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
