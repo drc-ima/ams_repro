@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
-from ams import forms
+from ams import forms, models
 from ..models import Infrastructure
 from ..forms import InfrastructureForm, InfrastructureAssignForm
 from django.views import generic
@@ -15,16 +15,6 @@ class Add(LoginRequiredMixin, generic.CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
-
-
-"""
-class List(generic.ListView):
-    model = Infrastructure
-    template_name = 'ams/assets/infrastructure/infrastructure.html'
-
-    def get_queryset(self):
-        return Infrastructure.objects.filter(deleted=False)
-"""
 
 
 class ArchiveList(generic.ListView):
@@ -86,8 +76,8 @@ class Assign(LoginRequiredMixin, generic.CreateView):
     template_name = 'ams/assets/assign/_infrastructure_assign.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+        form.instance.assign_by = self.request.user
+        return super(Assign, self).form_valid(form)
 
 
 class Owner(LoginRequiredMixin, generic.CreateView):
@@ -98,3 +88,23 @@ class Owner(LoginRequiredMixin, generic.CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+class ApproveDetail(LoginRequiredMixin, generic.DetailView):
+    # model = Hardware
+    # select_related = ('hardware_staff',)
+    template_name = 'ams/assets/infrastructure/approve-details-infrastructure.html'
+    slug_url_kwarg = 'slug'
+
+    def get_queryset(self):
+        return models.InfrastructureAssign.objects.all()
+
+
+class Approve(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:assign-list')
+    form_class = forms.InfrastructureApproveForm
+    # fields = ['approve', ]
+    template_name = 'ams/assets/infrastructure/approve-details-infrastructure.html'
+
+    def get_queryset(self):
+        return models.SoftwareAssign.objects.filter()

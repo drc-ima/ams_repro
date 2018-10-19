@@ -134,4 +134,4 @@ STATICFILES_DIRS = [BASE_DIR, 'C:\\Users\\drc.alex\\Desktop\\Django_projects\\ne
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'users:dashboard'
 LOGOUT_REDIRECT_URL = 'users:login'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

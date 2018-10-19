@@ -13,8 +13,8 @@
                 <h3 class="text-themecolor">Assignments</h3>
             </div>
             <div class="col-md-7 align-self-center">
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#staffModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:staff-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all assignments pending approvals!" href="{% url 'ams:approve-list' %}"><span class="glyphicon glyphicon-tasks"></span></a>
             </div>
         </div>
                 <!-- ============================================================== -->
@@ -118,7 +118,7 @@
                             {% if hardware %}
                                 {% for approve in hardware %}
                                 <tr>
-                                    <td><a href="{% url 'ams:assign-detail' slug=hardwareassign.slug %}" class="font-15">{{ approve.assets }}</a></td>
+                                    <td><a href="#{# {% url 'ams:assign-detail' slug=hardwareassign.slug %} #}" class="font-15">{{ approve.assets }}</a></td>
                                     <td>{{ approve.staff }}</td>
                                     <td>{{ approve.assign_by }}</td>
                                     <td>{{ approve.date_assigned }}</td>

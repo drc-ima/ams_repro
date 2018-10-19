@@ -2,162 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34b5d87e-320a-4325-840b-6c469eb293e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/180c2b27-94f8-4962-a458-351ed4ca88e9/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/48d96f4e-c383-4959-b44e-1fa411cf73d4/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ce3238f-cb25-42f7-abf4-b5c7c799fe4e/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5dd33ba0-0cd1-4e02-a9a6-ed5e7d44bd9e/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/79b58fd3-4caa-4b9c-993c-a0dec747c27b/storage_v2/_src_/database/ams_new.KBe-yw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b15f5761-ec8e-4419-b45e-64d22303f4a2/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/ams.x3kBAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b2f0da4e-dd87-4f57-be67-c2c78e9f9b64/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b7a37890-5492-4207-b145-f53203804d38/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d386798a-f706-4493-b032-c4fbfe695207/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/dc2fe47d-4335-4df3-8465-56d98c1d342e/storage_v2/_src_/database/ams_project.obTKgg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_toast.33HYYw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e54c3ffd-b398-4dea-a226-c482a027e074/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ams/views/assign.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ams/views/dashboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ams/views/owner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/a_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/rho.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/sokopay_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/sokopay_logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/a_js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/bootstrap-notify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/_assets_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/assign/_hardware_assign.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/assign/_information_assign.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/assign/_infrastructure_assign.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/hardware/approve.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/hardware/hardware-archive-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/information/information-archive-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/infrastructure/infrastructure-archive-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/owner/_hardware_owner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/owner/_information_owner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/owner/_infrastructure_owner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/owner/_software_owner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/assets/software/software-archive-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/department/_lead_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/settings/_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/users/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/migrations/0009_auto_20181018_1228.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/migrations/0010_auto_20181018_1304.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/migrations/0011_auto_20181018_1450.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/migrations/0012_auto_20181018_2039.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/assign.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/assign.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/hardware.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/hardware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/information.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/information.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/infrastructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/infrastructure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/software.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/software.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ams_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams_project/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams_project/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/assets/hardware/approve.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/assets/hardware/approve.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -232,26 +93,32 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5801394">
+    <splitter split-orientation="horizontal" split-proportion="0.3897824">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+                <state relative-caret-position="256">
+                  <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams_project/wsgi.py">
+          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/forms.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-                  <folding>
-                    <element signature="e#227#236#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="223">
+                  <caret line="234" column="23" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="software.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/views/software.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="59">
+                  <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -259,8 +126,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ams/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="11" column="36" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="36" />
+                <state relative-caret-position="255">
+                  <caret line="195" column="25" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="25" />
                   <folding>
                     <element signature="e#30#73#0" expanded="true" />
                   </folding>
@@ -271,8 +138,8 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/users/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+                <state relative-caret-position="186">
+                  <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -280,11 +147,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ams/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1734">
-                  <caret line="102" column="71" selection-start-line="7" selection-start-column="4" selection-end-line="102" selection-end-column="71" />
+                <state relative-caret-position="731">
+                  <caret line="114" selection-start-line="114" selection-end-line="114" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -292,11 +159,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams_project/urls.py">
+          <file leaf-file-name="details-hardware.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/details-hardware.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="200" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="200" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="assign.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/views/assign.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-35">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
+                  <folding>
+                    <element signature="e#0#43#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -305,7 +184,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="staff.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="staff.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/ams/staff/staff.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-1751">
@@ -314,14 +193,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="department.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/views/department.py">
+          <file leaf-file-name="ams_tags.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/templatetags/ams_tags.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1785">
-                  <caret line="105" selection-start-line="105" selection-end-line="105" />
-                  <folding>
-                    <element signature="e#0#43#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="51">
+                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -329,47 +205,8 @@
           <file leaf-file-name="hardware.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ams/views/hardware.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-                  <folding>
-                    <element signature="e#0#57#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ams_tags.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/templatetags/ams_tags.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_hardware_form.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_form.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" lean-forward="true" selection-end-line="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="121">
-                  <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="staff.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/views/staff.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="264">
+                  <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#57#0" expanded="true" />
                   </folding>
@@ -380,8 +217,17 @@
           <file leaf-file-name="assign.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/assign.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2176">
-                  <caret line="128" column="38" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
+                <state relative-caret-position="142">
+                  <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="approve.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/approve.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="155" column="49" selection-start-line="155" selection-start-column="49" selection-end-line="155" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -389,8 +235,8 @@
           <file leaf-file-name="assign.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ams/views/assign.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+                <state relative-caret-position="204">
+                  <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#43#0" expanded="true" />
                   </folding>
@@ -398,11 +244,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="approve.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve.html">
+          <file leaf-file-name="approve-details-hardware.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="71" selection-end-column="30" />
+                <state>
+                  <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -420,9 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hardwar</find>
-      <find>Assign</find>
-      <find>through</find>
       <find>slug</find>
       <find>staff-delete</find>
       <find>staff_archive</find>
@@ -450,6 +293,9 @@
       <find>newLead</find>
       <find>assign</find>
       <find>pagi</find>
+      <find>assign-</find>
+      <find>Hardware</find>
+      <find>detail</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -463,11 +309,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/ams/assets/assign/_information_assign.html" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/assign/_infrastructure_assign.html" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/software/software-archives.html" />
-        <option value="$PROJECT_DIR$/templates/registration/password_change.html" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/ams/views/asign.py" />
         <option value="$PROJECT_DIR$/templates/ams/department/details-department.html" />
         <option value="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" />
@@ -478,9 +319,6 @@
         <option value="$PROJECT_DIR$/templates/ams/assets/owner/_information_owner.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/owner/_infrastructure_owner.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/owner/_software_owner.html" />
-        <option value="$PROJECT_DIR$/ams/views/information.py" />
-        <option value="$PROJECT_DIR$/ams/views/infrastructure.py" />
-        <option value="$PROJECT_DIR$/ams/views/software.py" />
         <option value="$PROJECT_DIR$/ams/views/owner.py" />
         <option value="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" />
         <option value="$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/contrib/auth/forms.py" />
@@ -489,11 +327,9 @@
         <option value="$PROJECT_DIR$/templates/ams/settings/setting.html" />
         <option value="$PROJECT_DIR$/templates/ams/settings/_profile.html" />
         <option value="$PROJECT_DIR$/users/forms.py" />
-        <option value="$PROJECT_DIR$/ams/forms.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/templates/ams/department/department.html" />
-        <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/ams/staff/staff.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/information/information.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/assets.html" />
@@ -501,12 +337,6 @@
         <option value="$PROJECT_DIR$/ams/views/department.py" />
         <option value="$PROJECT_DIR$/ams/views/dashboard.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/ams/models.py" />
-        <option value="$PROJECT_DIR$/ams/views/assign.py" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/hardware/approve.html" />
-        <option value="$PROJECT_DIR$/ams/urls.py" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" />
-        <option value="$PROJECT_DIR$/ams/views/hardware.py" />
         <option value="$PROJECT_DIR$/Procfile.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/ams_project/Procfile.py" />
@@ -514,6 +344,22 @@
         <option value="$PROJECT_DIR$/ams_project/requirements.txt" />
         <option value="$PROJECT_DIR$/ams_project/wsgi.py" />
         <option value="$PROJECT_DIR$/ams_project/settings.py" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/hardware/approve.html" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" />
+        <option value="$PROJECT_DIR$/ams/views/assign.py" />
+        <option value="$PROJECT_DIR$/ams/models.py" />
+        <option value="$PROJECT_DIR$/ams/forms.py" />
+        <option value="$PROJECT_DIR$/ams/urls.py" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/information/approve-details-information.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/infrastructure/approve-details-infrastructure.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/software/approve-details-software.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html" />
+        <option value="$PROJECT_DIR$/ams/views/hardware.py" />
+        <option value="$PROJECT_DIR$/ams/views/information.py" />
+        <option value="$PROJECT_DIR$/ams/views/infrastructure.py" />
+        <option value="$PROJECT_DIR$/ams/views/software.py" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/assign/approve.html" />
       </list>
     </option>
   </component>
@@ -524,10 +370,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/ams_repro/assets/node_modules" />
     <handled-path value="$PROJECT_DIR$/assets/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/ams_repro/assets/package.json" />
       <path value="$PROJECT_DIR$/assets/package.json" />
     </packageJsonPaths>
   </component>
@@ -559,12 +407,46 @@
               <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ams_project" type="462c0819:PsiDirectoryNode" />
               <item name="ams" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ams_project" type="462c0819:PsiDirectoryNode" />
               <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ams" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ams" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ams" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="assign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ams" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
@@ -583,20 +465,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="settings.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;models&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/models.py&#10;urls&#9;null&#9;null&#10;ams_tags&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;setti&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;Procfile&#9;null&#9;null&#10;de&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;deta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;assign&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/assign.py&#10;assign.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assign/assign.html&#10;views&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;staff.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.py&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/staff.py&#10;dash&#9;null&#9;null&#10;layout.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;assets&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assets.html&#10;information&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/information/information.html&#10;staf&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;la&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;req&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/requirements.txt&#10;department&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/department.py&#10;departmen&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;department.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;setting&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;ams_tag&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;model&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/models.py&#10;staff&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/details-staff.html&#10;layout&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;details-depa&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;department.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;layou&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;forms.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;software&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/software.py&#10;infr&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/infrastructure.py&#10;view.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;setting.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/setting.py&#10;setting.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;update-dep&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/update-department.html&#10;_hardware_form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/hardware/_hardware_form.html&#10;forms&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;_infrastructure_for&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/infrastructure/_infrastructure_form.html&#10;_department_form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/_department_form.html&#10;ams&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;details-sta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/details-staff.html&#10;settin&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;das&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/dashboard.py&#10;information.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/information/information.html" />
+    <property name="SearchEverywhereHistoryKey" value="lay&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;settin&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;forms&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;settings.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;models&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/models.py&#10;urls&#9;null&#9;null&#10;ams_tags&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;setti&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;Procfile&#9;null&#9;null&#10;de&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;deta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;assign&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/assign.py&#10;assign.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assign/assign.html&#10;views&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;staff.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.py&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/staff.py&#10;dash&#9;null&#9;null&#10;layout.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;assets&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assets.html&#10;information&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/information/information.html&#10;staf&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;la&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;req&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/requirements.txt&#10;department&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/department.py&#10;departmen&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;department.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;setting&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;ams_tag&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;model&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/models.py&#10;staff&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/details-staff.html&#10;layout&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;details-depa&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;department.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;layou&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;forms.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;software&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/software.py&#10;infr&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/infrastructure.py&#10;view.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;setting.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/setting.py&#10;setting.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;update-dep&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/update-department.html&#10;_hardware_form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/hardware/_hardware_form.html&#10;_infrastructure_for&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/infrastructure/_infrastructure_form.html&#10;_department_form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/_department_form.html&#10;ams&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;details-sta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/details-staff.html&#10;das&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/dashboard.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../django-feelings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ams/assets/assign" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\hardware" />
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\assign" />
       <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project" />
       <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\ams\views" />
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\assign" />
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\hardware" />
       <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\infrastructure" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -730,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539689707136</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="lets see how heroku will respond">
+      <created>1539708079898</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1539708079898</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -747,15 +636,16 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50075644" side_tool="true" weight="0.3403909" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50226927" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.1921824" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.3403909" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.32899022" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49876544" visible="true" weight="0.13161875" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.30456027" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977307" weight="0.32899022" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49876544" visible="true" weight="0.20045386" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.3290469" />
+      <window_info anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" weight="0.33713356" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.5012346" side_tool="true" weight="0.1301059" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -764,7 +654,6 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" weight="0.33713356" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32736155" />
@@ -805,7 +694,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is my first push" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="lets see how heroku will respond" />
+    <option name="LAST_COMMIT_MESSAGE" value="lets see how heroku will respond" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,45 +703,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_infrastructureassign" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_informationowner" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_informationassign" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_information" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_hardwareowner" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_hardwareassign" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_hardware" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_departmentlead" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/users_userprofile" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/softdelete_softdeleterecord" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_staff" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_softwareowner" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_department" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_infrastructure" />
-    <entry file="das://e54c3ffd-b398-4dea-a226-c482a027e074/database/ams_test/schema/public/table/ams_softwareassign" />
-    <entry file="file://$PROJECT_DIR$/ams/views/assets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/password_change.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="26" column="30" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ams/views/dashboard.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -883,22 +734,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_hardwareowner">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../django-feelings/feelings/groups/models.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/details-hardware.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="90" column="14" lean-forward="true" selection-end-line="90" selection-end-column="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/hardware.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -909,30 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/assign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="128" column="38" selection-start-line="128" selection-start-column="38" selection-end-line="128" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/assign.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_hardwareassign">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -974,16 +787,6 @@
     <entry file="file://$PROJECT_DIR$/requirement.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/hardware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ams/views/department.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
@@ -994,34 +797,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="71" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-end-line="10" />
+          <caret line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ams_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="24" column="47" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1035,30 +821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ams/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" column="71" selection-start-line="7" selection-start-column="4" selection-end-line="102" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#30#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ams/templatetags/ams_tags.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1066,13 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1086,17 +845,235 @@
     <entry file="file://$PROJECT_DIR$/ams_project/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#227#236#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/rest_framework/static/rest_framework/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="4" column="105938" selection-start-line="4" selection-start-column="105938" selection-end-line="4" selection-end-column="105938" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/forms/widgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="607" selection-start-line="607" selection-end-line="607" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/forms/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="688" column="20" selection-start-line="688" selection-start-column="20" selection-end-line="688" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/forms/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/djangodeletes/softdeletes/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/information/approve-details-information.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/infrastructure/approve-details-infrastructure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="86" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/software/approve-details-software.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="195" column="25" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="25" />
+          <folding>
+            <element signature="e#30#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="256">
+          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_hardwareassign">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_hardwareowner">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_informationassign">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_hardware">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_information">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_staff">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/details-hardware.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="200" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/hardware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/information.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="106" column="27" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/infrastructure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="234" column="23" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/software.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/assign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/approve.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="155" column="49" selection-start-line="155" selection-start-column="49" selection-end-line="155" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/assign.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
     </entry>

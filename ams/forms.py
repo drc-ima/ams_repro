@@ -105,6 +105,14 @@ class HardwareAssignForm(forms.ModelForm, forms.SelectMultiple):
         self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
 
 
+class HardwareApproveForm(forms.ModelForm):
+    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+
+    class Meta:
+        model = models.HardwareAssign
+        fields = ('approve', )
+
+
 class HardwareOwnerForm(forms.ModelForm, forms.SelectMultiple):
     # date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
     # assets = forms.ChoiceField(widget=forms.SelectMultiple)
@@ -130,6 +138,14 @@ class SoftwareAssignForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['assets'].queryset = models.Software.objects.filter(deleted=False)
         self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+
+
+class SoftwareApproveForm(forms.ModelForm):
+    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+
+    class Meta:
+        model = models.SoftwareAssign
+        fields = ('approve', )
 
 
 class SoftwareOwnerForm(forms.ModelForm, forms.SelectMultiple):
@@ -159,6 +175,14 @@ class InformationAssignForm(forms.ModelForm):
         self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
 
 
+class InformationApproveForm(forms.ModelForm):
+    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+
+    class Meta:
+        model = models.InformationAssign
+        fields = ('approve', )
+
+
 class InformationOwnerForm(forms.ModelForm, forms.SelectMultiple):
     # date_assigned = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
     # assets = forms.ChoiceField(widget=forms.SelectMultiple)
@@ -184,6 +208,14 @@ class InfrastructureAssignForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['assets'].queryset = models.Infrastructure.objects.filter(deleted=False)
         self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+
+
+class InfrastructureApproveForm(forms.ModelForm):
+    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+
+    class Meta:
+        model = models.InfrastructureAssign
+        fields = ('approve', )
 
 
 class InfrastructureOwnerForm(forms.ModelForm, forms.SelectMultiple):

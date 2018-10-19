@@ -1,5 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
+
+from ams import models, forms
 from ..models import Information
 from ..forms import InformationForm, InformationAssignForm, InformationOwnerForm
 from django.views import generic
@@ -75,8 +77,8 @@ class Assign(LoginRequiredMixin, generic.CreateView):
     template_name = 'ams/assets/assign/_information_assign.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+        form.instance.assign_by = self.request.user
+        return super(Assign, self).form_valid(form)
 
 
 class Owner(LoginRequiredMixin, generic.CreateView):
@@ -96,4 +98,24 @@ class Restore(LoginRequiredMixin, generic.UpdateView):
 
     def get_queryset(self):
         return Information.objects.filter()
+
+
+class ApproveDetail(LoginRequiredMixin, generic.DetailView):
+    # model = Hardware
+    # select_related = ('hardware_staff',)
+    template_name = 'ams/assets/information/approve-details-information.html'
+    slug_url_kwarg = 'slug'
+
+    def get_queryset(self):
+        return models.InformationAssign.objects.all()
+
+
+class Approve(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:assign-list')
+    form_class = forms.InformationApproveForm
+    # fields = ['approve', ]
+    template_name = 'ams/assets/information/approve-details-information.html'
+
+    def get_queryset(self):
+        return models.InformationAssign.objects.filter()
 

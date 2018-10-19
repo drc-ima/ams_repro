@@ -65,8 +65,8 @@ class Assign(LoginRequiredMixin, generic.CreateView):
     template_name = 'ams/assets/assign/_software_assign.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+        form.instance.assign_by = self.request.user
+        return super(Assign, self).form_valid(form)
 
 
 class Owner(LoginRequiredMixin, generic.CreateView):
@@ -86,3 +86,23 @@ class Restore(LoginRequiredMixin, generic.UpdateView):
 
     def get_queryset(self):
         return models.Software.objects.filter()
+
+
+class ApproveDetail(LoginRequiredMixin, generic.DetailView):
+    # model = Hardware
+    # select_related = ('hardware_staff',)
+    template_name = 'ams/assets/software/approve-details-software.html'
+    slug_url_kwarg = 'slug'
+
+    def get_queryset(self):
+        return models.SoftwareAssign.objects.all()
+
+
+class Approve(LoginRequiredMixin, generic.UpdateView):
+    success_url = reverse_lazy('ams:assign-list')
+    form_class = forms.SoftwareApproveForm
+    # fields = ['approve', ]
+    template_name = 'ams/assets/software/approve-details-software.html'
+
+    def get_queryset(self):
+        return models.SoftwareAssign.objects.filter()

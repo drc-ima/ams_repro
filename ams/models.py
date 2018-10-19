@@ -2,7 +2,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 # from softdelete.models import SoftDeleteObject, SoftDeleteManager, SoftDeleteQuerySet
-from django.urls import reverse
+# from django.urls import reverse
 from django.utils import timezone
 from autoslug import AutoSlugField
 # from soft_delete_it.models import SoftDeleteModel, SoftDeleteManager, SoftDeleteQuerySet
@@ -157,17 +157,29 @@ class Staff(SoftDeletable, models.Model):
         ordering = ['-date_added']
 
 
-class HardwareAssign(models.Model):
-    assign_by = models.ForeignKey(UserProfile, related_name='hardware_assign_by', on_delete=models.SET_NULL, null=True)
+class Approve(models.Model):
+    approve = models.BooleanField(default=False)
+    approve_date = models.DateTimeField(blank=True, null=True, default=None)
+
+    class Meta:
+        abstract = True
+
+
+class Return(models.Model):
+    return_it = models.BooleanField(default=False)
+    return_on = models.DateTimeField(blank=True, null=True, default=None)
+
+    class Meta:
+        abstract = True
+
+
+class HardwareAssign(Approve, Return, models.Model):
+    assign_by = models.ForeignKey(User, related_name='hardware_assign_by', on_delete=models.SET_NULL, null=True)
     staff = models.ForeignKey(Staff, related_name='staff_hardware_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Hardware, related_name='hardware_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    approve = models.BooleanField(default=False)
-    approve_date = models.DateTimeField(default=timezone.now)
-    return_it = models.BooleanField(default=False)
-    return_on = models.DateTimeField(default=timezone.now)
-    slug = AutoSlugField(populate_from='assets', unique=True, default='')
+    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -178,17 +190,14 @@ class HardwareAssign(models.Model):
         ordering = ['-added_date']
 
 
-class InformationAssign(models.Model):
-    assign_by = models.ForeignKey(UserProfile, related_name='information_assign_by', on_delete=models.SET_NULL,
+class InformationAssign(Approve, Return, models.Model):
+    assign_by = models.ForeignKey(User, related_name='information_assign_by', on_delete=models.SET_NULL,
                                   null=True)
     staff = models.ForeignKey(Staff, related_name='staff_information_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Information, related_name='information_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    approve = models.BooleanField(default=False)
-    approve_date = models.DateTimeField(default=timezone.now, editable=False)
-    return_it = models.BooleanField(default=False)
-    return_on = models.DateTimeField(default=timezone.now, editable=False)
+    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -199,18 +208,15 @@ class InformationAssign(models.Model):
         ordering = ['-added_date']
 
 
-class InfrastructureAssign(models.Model):
-    assign_by = models.ForeignKey(UserProfile, related_name='infrastructure_assign_by', on_delete=models.SET_NULL,
+class InfrastructureAssign(Approve, Return, models.Model):
+    assign_by = models.ForeignKey(User, related_name='infrastructure_assign_by', on_delete=models.SET_NULL,
                                   null=True)
     staff = models.ForeignKey(Staff, related_name='staff_infrastructure_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Infrastructure, related_name='infrastructure_assign', on_delete=models.SET_NULL,
                                null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    approve = models.BooleanField(default=False)
-    approve_date = models.DateTimeField(default=timezone.now, editable=False)
-    return_it = models.BooleanField(default=False)
-    return_on = models.DateTimeField(default=timezone.now, editable=True)
+    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -221,16 +227,13 @@ class InfrastructureAssign(models.Model):
         ordering = ['-added_date']
 
 
-class SoftwareAssign(models.Model):
-    assign_by = models.ForeignKey(UserProfile, related_name='software_assign_by', on_delete=models.SET_NULL, null=True)
+class SoftwareAssign(Approve, Return, models.Model):
+    assign_by = models.ForeignKey(User, related_name='software_assign_by', on_delete=models.SET_NULL, null=True)
     staff = models.ForeignKey(Staff, related_name='staff_software_assign', on_delete=models.SET_NULL, null=True)
     assets = models.ForeignKey(Software, related_name='software_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    approve = models.BooleanField(default=False)
-    approve_date = models.DateTimeField(default=timezone.now, editable=False)
-    return_it = models.BooleanField(default=False)
-    return_on = models.DateTimeField(default=timezone.now, editable=False)
+    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)

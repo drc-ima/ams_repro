@@ -40,7 +40,7 @@
                                     <div class="modal-body">
                                         <form action="{% url 'ams:assets-hardware-approve' slug=hardwareassign.slug %}" method="POST" class="form-horizontal form-material">
                                             {% csrf_token %}
-                                            Are you sure you want to archive this asset?
+                                            {{ form }}
                                             <hr>
                                             <button class="btn btn-outline-secondary">Yes</button>
                                             <button class="btn btn-default" data-dismiss="modal">No</button>
