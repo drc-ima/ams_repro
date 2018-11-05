@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-7 align-self-center">
 
-                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all assignments pending approvals!" href="{% url 'ams:approve-list' %}"><span class="glyphicon glyphicon-tasks"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all assignments pending approvals!" href="{% url 'ams:approve-list' %}"><span class="fa fa-tasks"></span></a>
             </div>
         </div>
                 <!-- ============================================================== -->
@@ -36,8 +36,8 @@
                                     <th><h6>Assets</h6></th>
                                     <th><h6>Assigned To</h6></th>
                                     <th><h6>Date Assigned</h6></th>
-                                    <th>Returned</th>
-                                    <th>Return Date</th>
+                                    <th><h6>Returned</h6></th>
+                                    <th><h6>Return Date</h6></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,6 +48,8 @@
 
                                     <td><span class="font-15">{{ assign.staff }}</span></td>
                                     <td><span class="font-15">{{ assign.date_assigned }}</span></td>
+                                    <td><span class="font-15">{{ assign.return_it }}</span></td>
+                                    <td><span class="font-15">{{ assign.return_on }}</span></td>
                                 </tr>
 
                                 {% endfor %}

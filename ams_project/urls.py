@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from braces.views import LoginRequiredMixin
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
@@ -20,9 +21,14 @@ from django.views.generic import TemplateView
 import ams.urls as ams_urls
 import users.urls as users_urls
 
+
+class LayoutView(LoginRequiredMixin, TemplateView):
+    template_name = 'layout.html'
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ams/', include(ams_urls, namespace='ams')),
-    path('', TemplateView.as_view(template_name='layout.html'), name='home'),
+    path('', LayoutView.as_view(), name='home'),
     path('users/', include(users_urls, namespace='users')),
 ]

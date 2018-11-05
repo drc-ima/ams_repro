@@ -39,7 +39,6 @@ class Hardware(SoftDeletable, models.Model):
     date_added = models.DateTimeField(default=timezone.now, editable=False)
     staff = models.ManyToManyField('Staff', related_name='assets_hardware_staff', through='HardwareAssign')
 
-
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
 
     def __str__(self):
@@ -179,7 +178,7 @@ class HardwareAssign(Approve, Return, models.Model):
     assets = models.ForeignKey(Hardware, related_name='hardware_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
+    slug = AutoSlugField(populate_from='assets', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -197,7 +196,7 @@ class InformationAssign(Approve, Return, models.Model):
     assets = models.ForeignKey(Information, related_name='information_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
+    slug = AutoSlugField(populate_from='assets', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -216,7 +215,7 @@ class InfrastructureAssign(Approve, Return, models.Model):
                                null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
+    slug = AutoSlugField(populate_from='assets', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)
@@ -233,7 +232,7 @@ class SoftwareAssign(Approve, Return, models.Model):
     assets = models.ForeignKey(Software, related_name='software_assign', on_delete=models.SET_NULL, null=True)
     date_assigned = models.DateField(default=timezone.now)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
-    slug = AutoSlugField(populate_from='date_assigned', unique=True, default='')
+    slug = AutoSlugField(populate_from='assets', unique=True, default='')
 
     def __str__(self):
         return str(self.assets) + ' is assigned to ' + str(self.staff)

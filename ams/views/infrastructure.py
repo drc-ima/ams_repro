@@ -107,4 +107,4 @@ class Approve(LoginRequiredMixin, generic.UpdateView):
     template_name = 'ams/assets/infrastructure/approve-details-infrastructure.html'
 
     def get_queryset(self):
-        return models.SoftwareAssign.objects.filter()
+        return models.InfrastructureAssign.objects.filter()

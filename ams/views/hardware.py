@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
 from django.urls import reverse_lazy
 
 from ams import models, forms
@@ -57,7 +58,6 @@ class ApproveDetail(LoginRequiredMixin, generic.DetailView):
     # model = Hardware
     # select_related = ('hardware_staff',)
     template_name = 'ams/assets/hardware/approve-details-hardware.html'
-    slug_url_kwarg = 'slug'
 
     def get_queryset(self):
         return models.HardwareAssign.objects.all()
@@ -129,3 +129,17 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
 
     def get_queryset(self):
         return models.Hardware.objects.hard_delete()
+
+
+def approval(request):
+    approve = request.GET.get('approve', False)
+    hardware_slug = request.GET.get('hardwareassign_slug', False)
+    # first you get your Job model
+    hardware = models.HardwareAssign.objects.get(slug=hardware_slug)
+    try:
+        hardware.active = approve
+        hardware.save()
+        return JsonResponse({"success": True})
+    except Exception as e:
+        return JsonResponse({"success": False})
+    return JsonResponse(data)

@@ -24,8 +24,7 @@ urlpatterns = [
     path('assets/hardware/archive/detail/<str:slug>/', hardware.ArchiveDetail.as_view(),
          name='assets-hardware-archive-detail'),
     path('assets/hardware/assign/approve/<str:slug>/', hardware.Approve.as_view(), name='assets-hardware-approve'),
-    path('assets/hardware/assign/approve/detail/<str:slug>/', hardware.ApproveDetail.as_view(),
-         name='assets-hardware-approve-detail'),
+    path('hardware/approve/detail/<int:pk>/', hardware.ApproveDetail.as_view(), name='hardware-approve-detail'),
 
     # software urls
     path('assets/software/add/', software.Add.as_view(), name='assets-software-add'),
@@ -40,7 +39,7 @@ urlpatterns = [
          name='assets-software-archive-detail'),
     path('assets/software/assign/', software.Assign.as_view(), name='assign-software'),
     path('assets/software/owner/', software.Owner.as_view(), name='own-software'),
-    path('assets/Software/assign/approve/<str:slug>/', software.Approve.as_view(), name='assets-software-approve'),
+    path('assets/software/assign/approve/<str:slug>/', software.Approve.as_view(), name='assets-software-approve'),
     path('assets/software/assign/approve/detail/<str:slug>/', software.ApproveDetail.as_view(),
          name='assets-software-approve-detail'),
 
@@ -111,7 +110,7 @@ urlpatterns = [
     # assign urls
     path('assets/assignment/', assign.List.as_view(), name='assign-list'),
     path('assets/approvals/', assign.ApproveList.as_view(), name='approve-list'),
-    path('assets/assignment/approve/detail/<str:slug>/', assign.ApproveDetail.as_view(), name='assign-detail'),
+    # path('assets/assignment/approve/detail/<str:slug>/', assign.ApproveDetail.as_view(), name='assign-detail'),
 
     # owner urls
     path('assets/ownership/', owner.List.as_view(), name='owner-list'),
