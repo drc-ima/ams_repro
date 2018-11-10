@@ -1,10 +1,11 @@
-from braces.views import SelectRelatedMixin
+# from braces.views import SelectRelatedMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from django.utils import timezone
+# from django.utils import timezone
 from django.views import generic
 
-from ams.forms import DepartmentForm, DepartmentLeadForm
+from ams import models
+from ams.forms import DepartmentForm, DepartmentLeadForm, AllocateDepartmentForm
 from ams.models import Department
 
 
@@ -16,6 +17,16 @@ class Add(LoginRequiredMixin, generic.CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+class Allocate(LoginRequiredMixin, generic.CreateView):
+    form_class = AllocateDepartmentForm
+    template_name = 'ams/department/_allocate_form.html'
+    success_url = reverse_lazy('ams:department-list')
+
+    def form_valid(self, form):
+        form.instance.allocated_by = self.request.user
+        return super(Allocate, self).form_valid(form)
 
 
 class AddLead(LoginRequiredMixin, generic.CreateView):
@@ -61,10 +72,14 @@ class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
         return Department.objects.all()
 
 
-class Detail(LoginRequiredMixin, SelectRelatedMixin, generic.DetailView):
-    model = 'department'
-    select_related = ('department_staff', 'team_lead')
+class Detail(LoginRequiredMixin, generic.DetailView):
+    model = models.Allocation
     template_name = 'ams/department/details-department.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['members'] = models.Allocation.objects.all()
+        return context
 
     def get_queryset(self):
         return Department.objects.all()

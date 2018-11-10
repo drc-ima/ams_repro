@@ -26,6 +26,7 @@ ASSET_TYPE = [
 
 
 class Hardware(SoftDeletable, models.Model):
+    image = models.ImageField(upload_to='hard_photo', blank=True)
     asset_type = models.CharField(default='Hardware', max_length=100, editable=False)
     description = models.CharField(max_length=255)
     status = models.CharField(max_length=255, blank=True)
@@ -37,6 +38,7 @@ class Hardware(SoftDeletable, models.Model):
     purchase_date = models.DateField(default='', blank=True)
     slug = AutoSlugField(populate_from='description', unique=True, default='')
     date_added = models.DateTimeField(default=timezone.now, editable=False)
+    added_by = models.ForeignKey(User, related_name='hardware_admin', on_delete=models.SET_NULL, null=True)
     staff = models.ManyToManyField('Staff', related_name='assets_hardware_staff', through='HardwareAssign')
 
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
@@ -59,6 +61,7 @@ FILE_TYPE = [
 
 class Information(SoftDeletable, models.Model):
     asset_type = models.CharField(default='Information', max_length=100, editable=False)
+    added_by = models.ForeignKey(User, related_name='information_admin', on_delete=models.SET_NULL, null=True)
     description = models.CharField(max_length=255)
     status = models.CharField(max_length=255, blank=True)
     comments = models.TextField(default='', blank=True)
@@ -81,12 +84,14 @@ class Information(SoftDeletable, models.Model):
 
 
 class Infrastructure(SoftDeletable, models.Model):
+    image = models.ImageField(upload_to='infras_photo', blank=True)
     asset_type = models.CharField(default='Infrastructure', max_length=100)
     description = models.CharField(max_length=255)
     status = models.CharField(max_length=255, blank=True)
     comments = models.TextField(default='', blank=True)
     slug = AutoSlugField(populate_from='description', unique=True, default='')
     date_added = models.DateTimeField(default=timezone.now, editable=False)
+    added_by = models.ForeignKey(User, related_name='infrastructure_admin', on_delete=models.SET_NULL, null=True)
     staff = models.ManyToManyField('Staff', related_name='assets_infrastructure_staff', through='InfrastructureAssign')
 
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
@@ -106,6 +111,7 @@ SOFTWARE_TYPE = [
 
 
 class Software(SoftDeletable, models.Model):
+    image = models.ImageField(upload_to='soft_photo', blank=True)
     asset_type = models.CharField(default='Software', max_length=100, editable=False)
     description = models.CharField(max_length=255)
     status = models.CharField(choices=SOFTWARE_TYPE, max_length=255, blank=True)
@@ -115,6 +121,7 @@ class Software(SoftDeletable, models.Model):
     expiry_date = models.DateField(default='', blank=True)
     slug = AutoSlugField(populate_from='description', unique=True, default='')
     date_added = models.DateTimeField(default=timezone.now, editable=False)
+    added_by = models.ForeignKey(User, related_name='software_admin', on_delete=models.SET_NULL, null=True)
     staff = models.ManyToManyField('Staff', related_name='assets_software_staff', through='SoftwareAssign')
 
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
@@ -135,8 +142,7 @@ class Staff(SoftDeletable, models.Model):
     gender = models.CharField(choices=GENDER, max_length=100)
     residential_address = models.CharField(max_length=255, default='', blank=True)
     date_of_birth = models.DateField(default=timezone.now)
-    department = models.ForeignKey('Department', related_name='staff_department', on_delete=models.SET_NULL,
-                                   null=True, blank=True)
+    department = models.ManyToManyField('Department', related_name='staff_department', through='Allocation')
     date_added = models.DateTimeField(default=timezone.now, editable=False)
     slug = AutoSlugField(populate_from='first_name', unique=True, default='')
     hardware_asset = models.ManyToManyField(Hardware, related_name='staff_hardware', through='HardwareAssign')
@@ -149,7 +155,8 @@ class Staff(SoftDeletable, models.Model):
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
 
     def __str__(self):
-        return self.first_name + ' ' + self.last_name
+        full_name = self.first_name + ' ' + self.last_name
+        return full_name
 
     class Meta:
         verbose_name_plural = 'Staff'
@@ -162,6 +169,11 @@ class Approve(models.Model):
 
     class Meta:
         abstract = True
+
+    def _approve(self):
+        self.approve = True
+        self.approve_date = timezone.now()
+        self.save()
 
 
 class Return(models.Model):
@@ -266,7 +278,7 @@ class Department(SoftDeletable, models.Model):
                                    null=True)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
     slug = AutoSlugField(populate_from='name', unique=True, default='')
-    staff = models.ForeignKey(Staff, related_name='department_staff', on_delete=models.SET_NULL, blank=True, null=True)
+    staff = models.ManyToManyField(Staff, related_name='department_staff', through='Allocation')
 
     objects = SoftDeleteManager.from_queryset(SoftDeleteQuerySet)
 
@@ -275,6 +287,13 @@ class Department(SoftDeletable, models.Model):
 
     class Meta:
         ordering = ['-added_date']
+
+
+class Allocation(models.Model):
+    staff = models.ForeignKey(Staff, related_name='allocate_staff', on_delete=models.SET_NULL, null=True)
+    department = models.ForeignKey(Department, related_name='allocate_department', on_delete=models.SET_NULL, null=True)
+    date_allocated = models.DateTimeField(default=timezone.now, editable=False)
+    allocated_by = models.ForeignKey(User, related_name='allocated', on_delete=models.SET_NULL, null=True)
 
 
 class SoftwareOwner(SoftDeletable, models.Model):

@@ -25,15 +25,15 @@ class ApproveList(LoginRequiredMixin, generic.ListView):
     model = models.HardwareAssign
 
     def get_context_data(self, **kwargs):
-        software = models.SoftwareAssign.objects.filter(approve=False)
-        hardware = models.HardwareAssign.objects.filter(approve=False)
-        information = models.InformationAssign.objects.filter(approve=False)
-        infrastructure = models.InfrastructureAssign.objects.filter(approve=False)
+        software = models.SoftwareAssign.objects.all()
+        hardware = models.HardwareAssign.objects.all()
+        information = models.InformationAssign.objects.all()
+        infrastructure = models.InfrastructureAssign.objects.all()
         approve_list = chain(software, hardware, information, infrastructure)
         context = super().get_context_data(**kwargs)
         context['approve_list'] = approve_list
-        context['hardware'] = models.HardwareAssign.objects.filter(approve=False)
-        context['software'] = models.SoftwareAssign.objects.filter(approve=False)
-        context['information'] = models.InformationAssign.objects.filter(approve=False)
-        context['infrastructure'] = models.InfrastructureAssign.objects.filter(approve=False)
+        context['hardware'] = models.HardwareAssign.objects.all()
+        context['software'] = models.SoftwareAssign.objects.all()
+        context['information'] = models.InformationAssign.objects.all()
+        context['infrastructure'] = models.InfrastructureAssign.objects.all()
         return context

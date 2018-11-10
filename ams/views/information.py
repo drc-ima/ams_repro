@@ -13,8 +13,8 @@ class Add(LoginRequiredMixin, generic.CreateView):
     template_name = 'ams/assets/information/_information_form.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+        form.instance.added_by = self.request.user
+        return super(Add, self).form_valid(form)
 
 
 """
@@ -98,6 +98,14 @@ class Restore(LoginRequiredMixin, generic.UpdateView):
 
     def get_queryset(self):
         return Information.objects.filter()
+
+
+class Delete(LoginRequiredMixin, generic.DeleteView):
+    model = Information
+    success_url = reverse_lazy('ams:assets-information-archive-list')
+
+    def get_queryset(self):
+        return Information.objects.filter().delete()
 
 
 class ApproveDetail(LoginRequiredMixin, generic.DetailView):

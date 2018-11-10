@@ -1,6 +1,6 @@
 {% load bootstrap3 %}
 {% load static from staticfiles %}
-<form action="{% url 'ams:assets-infrastructure-add' %}" method="POST" class="form-horizontal form-material"><p>
+<form action="{% url 'ams:assets-infrastructure-add' %}" method="POST" class="form-horizontal form-material" enctype='multipart/form-data'><p>
     {% csrf_token %}
     {% bootstrap_form form %}
     <div class="form-group">

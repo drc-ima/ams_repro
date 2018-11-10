@@ -12,8 +12,8 @@ class Add(generic.CreateView):
     template_name = 'ams/assets/software/_software_form.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+        form.instance.added_by = self.request.user
+        return super(Add, self).form_valid(form)
 
 
 class ArchiveDetail(LoginRequiredMixin, generic.DetailView):

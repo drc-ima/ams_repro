@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views import generic
 
+from ams import models
 from ams.forms import StaffForm
 from ams.models import Staff
 
@@ -44,6 +45,16 @@ class Detail(LoginRequiredMixin, generic.DetailView):
     # model = Hardware
     # select_related = ('hardware_staff',)
     template_name = 'ams/staff/details-staff.html'
+    model = models.InformationAssign
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['information'] = models.InformationAssign.objects.all()
+        context['infrastructure'] = models.InfrastructureAssign.objects.all()
+        context['hardware'] = models.HardwareAssign.objects.all()
+        context['software'] = models.SoftwareAssign.objects.all()
+        context['department'] = models.Allocation.objects.all()
+        return context
 
     def get_queryset(self):
         return Staff.objects.all()

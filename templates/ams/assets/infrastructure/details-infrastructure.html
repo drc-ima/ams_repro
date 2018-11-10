@@ -20,16 +20,33 @@
                         <div>
                             <h5 class="card-title m-b-0">Details</h5>
                         </div><p>
-                        <div class="card-text">
-                            Description: {{ object.description }} <br>
-                            Status: {{ object.status }} <br>
-                            Comments: {{ object.comments }}<br>
-
-                            Date Added: {{ object.date_added }}<br>
+                        <div class="row card-text">
+                            <div class="col-md-6">
+                                Description: {{ object.description }} <br>
+                                Status: {{ object.status }} <br>
+                                Comments: {{ object.comments }}<br>
+                                Date Added: {{ object.date_added }}<br>
+                                {% if object.added_by.is_superuser %}
+                                    Added By: {{ object.added_by }}, Super Admin<br>
+                                {% else %}
+                                    Added By: {{ object.added_by }}, Admin<br>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-4">
+                                {% if object.image %}
+                                <img src="{{ object.image.url }}" height="150" width="200" border="3" alt="{{ object.description }}'s image" />
+                                {% else %}
+                                <img src="#" height="150" width="200" border="3" alt="{{ object.description }}'s image" />
+                                {% endif %}
+                            </div>
                             <hr>
+                        </div>
+                        <div class="col-md-10">
                             <a href="{% url 'ams:assets-infrastructure-update' slug=infrastructure.slug %}" class="btn btn-default">Edit</a>
                             <a href="{% url 'ams:assets-infrastructure-archive' slug=infrastructure.slug %}" class="btn btn-warning pull-right" data-target="#deleteModal" data-toggle="modal">Archive</a>
-                            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
+
+                        </div>
+                        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -50,7 +67,6 @@
                                     </div>
                                 </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>

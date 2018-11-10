@@ -21,7 +21,7 @@ class HardwareForm(forms.ModelForm):
     class Meta:
         model = models.Hardware
         fields = ('description', 'serial_number', 'brand', 'model_number', 'status', 'purchase_date',
-                  'comments')
+                  'comments', 'image')
 
 
 class SoftwareForm(forms.ModelForm):
@@ -32,7 +32,7 @@ class SoftwareForm(forms.ModelForm):
 
     class Meta:
         model = models.Software
-        fields = ('description', 'purchase_date', 'expiry_date', 'status', 'comments')
+        fields = ('description', 'purchase_date', 'expiry_date', 'status', 'comments', 'image')
 
 
 class InformationForm(forms.ModelForm):
@@ -53,7 +53,7 @@ class InfrastructureForm(forms.ModelForm):
 
     class Meta:
         model = models.Infrastructure
-        fields = ('description', 'status', 'comments')
+        fields = ('description', 'status', 'comments', 'image')
 
 
 class StaffForm(forms.ModelForm):
@@ -106,7 +106,8 @@ class HardwareAssignForm(forms.ModelForm, forms.SelectMultiple):
 
 
 class HardwareApproveForm(forms.ModelForm):
-    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    approve = forms.BooleanField(required=True, label='Check to confirm this!',
+                                 widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
 
     class Meta:
         model = models.HardwareAssign
@@ -141,7 +142,8 @@ class SoftwareAssignForm(forms.ModelForm):
 
 
 class SoftwareApproveForm(forms.ModelForm):
-    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    approve = forms.BooleanField(required=True, label='Check to confirm this!',
+                                 widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
 
     class Meta:
         model = models.SoftwareAssign
@@ -176,7 +178,8 @@ class InformationAssignForm(forms.ModelForm):
 
 
 class InformationApproveForm(forms.ModelForm):
-    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    approve = forms.BooleanField(required=True, label='Check to confirm this!',
+                                 widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
 
     class Meta:
         model = models.InformationAssign
@@ -211,7 +214,8 @@ class InfrastructureAssignForm(forms.ModelForm):
 
 
 class InfrastructureApproveForm(forms.ModelForm):
-    approve = forms.BooleanField(required=True, label='Check to confirm this!', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    approve = forms.BooleanField(required=True, label='Check to confirm this!',
+                                 widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
 
     class Meta:
         model = models.InfrastructureAssign
@@ -244,3 +248,14 @@ class DepartmentLeadForm(forms.ModelForm):
         already_a_lead = models.Staff.objects.filter(deleted=False)
         self.fields['staff'].queryset = already_a_lead
         self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+
+
+class AllocateDepartmentForm(forms.ModelForm):
+    class Meta:
+        model = models.Allocation
+        fields = ('staff', 'department')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+        self.fields['department'].queryset = models.Department.objects.filter(deleted=False)

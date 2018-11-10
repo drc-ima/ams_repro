@@ -20,6 +20,8 @@ from django.views.generic import TemplateView
 
 import ams.urls as ams_urls
 import users.urls as users_urls
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 class LayoutView(LoginRequiredMixin, TemplateView):
@@ -31,4 +33,4 @@ urlpatterns = [
     path('ams/', include(ams_urls, namespace='ams')),
     path('', LayoutView.as_view(), name='home'),
     path('users/', include(users_urls, namespace='users')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

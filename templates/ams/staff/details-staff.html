@@ -26,11 +26,17 @@
                         Gender: {{ object.gender }}<br>
                         Residential Address: {{ object.residential_address }}<br>
                         Date of Birth: {{ object.date_of_birth }}<br>
-                        Department: {{ object.department }}<br>
-                        {% if object.department.team_leads %}
-                        Team Lead: {{ object.department.team_leads }}<br>
-                        {% else %}
-                        Department has no Lead<br>
+                        {% if department %}
+                            {% for department in department %}
+                                {% if department.staff == object %}
+                                    Department: {{ department.department }}<br>
+                                    {% if department.department.team_leads %}
+                                    Team Lead: {{ department.department.team_leads }}<br>
+                                    {% else %}
+                                    Department has no Lead<br>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                         Date Added: {{ object.date_added }}
                         <hr>
@@ -51,24 +57,32 @@
                                         <h5 class="card-title m-b-0">Assets</h5>
                                     </div><p>
                                     <div class="card-text">
-                                    {% if object.hardware_asset.all %}
-                                    {% for hardware in object.hardware_asset.all %}
-                                        {{ hardware.description }}, Assigned On {{ hardware.date_assigned }} <br>
-                                    {% endfor %}
+                                    {% if hardware %}
+                                        {% for hardware in hardware %}
+                                            {% if hardware.staff == object %}
+                                            {{ hardware.assets }} || {{ hardware.assets.asset_type }} || Assigned By: {{ hardware.assign_by }} || Assigned On: {{ hardware.date_assigned }}<br>
+                                            {% endif %}
+                                        {% endfor %}
                                     {% endif %}
-                                    {% if object.software_asset.all %}
-                                    {% for software in object.software_asset.all %}
-                                        {{ software.description }} <br>
-                                    {% endfor %}
+                                    {% if software %}
+                                        {% for software in software %}
+                                            {% if software.staff == object %}
+                                            {{ software.assets }} || {{ software.assets.asset_type }} || Assigned By: {{ software.assign_by }} || Assigned On: {{ software.date_assigned }}<br>
+                                            {% endif %}
+                                        {% endfor %}
                                     {% endif %}
-                                    {% if object.information_asset.all %}
-                                    {% for information in object.information_asset.all %}
-                                        {{ information.description }} <br>
-                                    {% endfor %}
+                                    {% if information %}
+                                        {% for information in information %}
+                                            {% if information.staff == object %}
+                                            {{ information.assets }} || {{ information.assets.asset_type }} || Assigned By: {{ information.assign_by }} || Assigned On: {{ information.date_assigned }}<br>
+                                            {% endif %}
+                                        {% endfor %}
                                     {% endif %}
-                                    {% if object.infrastructure_asset.all %}
-                                    {% for infrastructure in object.infrastructure_asset.all %}
-                                        {{ infrastructure.description }} <br>
+                                    {% if infrastructure %}
+                                    {% for infrastructure in infrastructure %}
+                                        {% if infrastructure.staff == object %}
+                                        {{ infrastructure.assets }} || {{ infrastructure.assets.asset_type }} || Assigned By: {{ infrastructure.assigned_by }} || Assigned On: {{ infrastructure.date_assigned }}<br>
+                                        {% endif %}
                                     {% endfor %}
                                     {% endif %}
                                            <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
@@ -77,27 +91,7 @@
                             </div>
                         </div>
                 </div>
-                <div class="row">
-                        <!-- column -->
-                        <div class="col-9">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div>
-                                        <h5 class="card-title m-b-0">Hardware</h5>
-                                    </div><p>
-                                    <div class="card-text">
-                                    {% if object.hardware_asset.all %}
-                                    {% for hardware in object.hardware_asset.all %}
-                                        {{ hardware.description }} <br>
-                                    {% endfor %}
-                                    {% else %}
-                                    There is no hardware assigned to this staff!
-                                    {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

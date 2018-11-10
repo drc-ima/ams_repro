@@ -41,6 +41,7 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+                                    <th><h6></h6></th>
                                     <th><h6>Description</h6></th>
                                     <th><h6>Status</h6></th>
                                     <th><h6>Serial Number</h6></th>
@@ -54,6 +55,11 @@
                             {% if hardware %}
                                 {% for hardware in hardware %}
                                 <tr>
+                                    {% if hardware.image %}
+                                        <td><img src="{{ hardware.image.url }}" height="40" width="50" border="1" alt="no image to show" /></td>
+                                        {% else %}
+                                        <td><img src="#" height="40" width="50" border="1" /></td>
+                                        {% endif %}
                                     <td><a data-toggle="tooltip" title="Click to view details of {{ hardware.description }}" href="{% url 'ams:assets-hardware-detail' slug=hardware.slug %}" class="font-15">{{ hardware.description }}</a></td>
                                     <td><span class="font-15">{{ hardware.status }}</span></td>
                                     <td><span class="font-15">{{ hardware.serial_number }}</span></td>
@@ -83,7 +89,7 @@
             <div class="col-md-7 align-self-left">
                 <a href="#" class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to add an information asset!" data-target="#informationModal"><span class="fa fa-plus-square-o"></span></a>
                 <a href="#" class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to assign an information asset to a staff!" data-target="#assignInfo" ><span class="fa fa-plus-square"></span></a>
-                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to view all archived information assets!" href="{% url 'ams:assets-information-archive-list' %}"><span class="fa fa-archive"></span></a>
+                <a class="btn waves-effect waves-light pull-right font-20" data-toggle="tooltip" title="Click to view all archived information assets!" href="{% url 'ams:assets-information-archive-list' %}"><span class="fa fa-archive"></span></a>
                 <a class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" title="Click to assign a team lead ownership of an information!" data-target="#informationOwner" href="#{# {% url 'ams:assets-hardware-archive-list' %} #}"><span class="fa fa-paper-plane-o"></span></a>
             </div>
         </div>
@@ -146,6 +152,7 @@
                         <table class="table">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>Description</th>
                                 <th>Status</th>
                                 <th>Comments</th>
@@ -156,6 +163,11 @@
                             {% if infrastructure %}
                                 {% for infrastructure in infrastructure %}
                                     <tr>
+                                        {% if infrastructure.image %}
+                                        <td><img src="{{ infrastructure.image.url }}" height="40" width="50" border="1" /></td>
+                                        {% else %}
+                                        <td><img src="#" height="40" width="50" border="1" alt="no image to show" /></td>
+                                        {% endif %}
                                         <td><a data-toggle="tooltip" title="Click to view details of {{ infrastructure.description }}" href="{% url 'ams:assets-infrastructure-detail' slug=infrastructure.slug %}">{{ infrastructure.description }}</a></td>
                                         <td>{{ infrastructure.status }}</td>
                                         <td>{{ infrastructure.comments }}</td>
@@ -192,6 +204,7 @@
                         <table class="table">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>Description</th>
                                 <th>Purchased On</th>
                                 <th>Expires On</th>
@@ -202,6 +215,11 @@
                             {% if software %}
                                 {% for software in software %}
                                     <tr>
+                                        {% if software.image %}
+                                        <td><img src="{{ software.image.url }}" height="40" width="50" border="1" /></td>
+                                        {% else %}
+                                        <td><img src="#" height="40" width="50" border="1" alt="no image to show!" /></td>
+                                        {% endif %}
                                         <td><a data-toggle="tooltip" title="Click to view details of {{ software.description }}" href="{% url 'ams:assets-software-detail' slug=software.slug %}">{{ software.description }}</a></td>
                                         <td>{{ software.purchase_date }}</td>
                                         <td>{{ software.expiry_date }}</td>
@@ -230,6 +248,7 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+                                    <th><h6></h6></th>
                                     <th><h6>Description</h6></th>
                                     <th><h6>Type</h6></th>
                                     <th><h6>Status</h6></th>
@@ -239,6 +258,11 @@
                             {% if assets %}
                                 {% for asset in assets %}
                                 <tr>
+                                    {% if asset.image %}
+                                        <td><img src="{{ asset.image.url }}" height="40" width="50" border="1" /></td>
+                                    {% else %}
+                                        <td><img src="#" height="40" width="50" border="1" alt="no image to show!" /></td>
+                                    {% endif %}
                                     <td><span class="font-15">{{ asset.description }}</span></td>
                                     <td><span class="font-15">{{ asset.asset_type }}</span></td>
                                     <td><span class="font-15">{{ asset.status }}</span></td>
@@ -267,6 +291,7 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+                                    <th><h6></h6></th>
                                     <th><h6>Description</h6></th>
                                     <th><h6>Type</h6></th>
                                     <th><h6>Status</h6></th>
@@ -277,6 +302,11 @@
                             {% if assets %}
                                 {% for archive in archives %}
                                 <tr>
+                                    {% if archive.image %}
+                                        <td><img src="{{ archive.image.url }}" height="40" width="50" border="1" /></td>
+                                    {% else %}
+                                        <td><img src="#" height="40" width="50" border="1" alt="No image to show!" /></td>
+                                    {% endif %}
                                     <td><a href="#{# {% url 'ams:staff-detail' slug=staff.slug %} #}" class="font-15">{{ archive.description }} {{ staff.last_name }}</a></td>
                                     <td><span class="font-15">{{ archive.asset_type }}</span></td>
                                     <td><span class="font-15">{{ archive.status }}</span></td>

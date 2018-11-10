@@ -6,7 +6,8 @@ from django import template
 from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm
 
 from ams import forms
-from ams.forms import HardwareForm, SoftwareForm, InformationForm, InfrastructureForm, StaffForm, DepartmentForm, DepartmentLeadForm
+from ams.forms import HardwareForm, SoftwareForm, InformationForm, InfrastructureForm, StaffForm, DepartmentForm, \
+    DepartmentLeadForm, AllocateDepartmentForm
 from users.forms import UserProfileForm
 
 register = template.Library()
@@ -45,6 +46,12 @@ def staff_form():
 @register.inclusion_tag('ams/department/_department_form.html')
 def department_form():
     form = DepartmentForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/department/_allocate_form.html')
+def allocate_form():
+    form = AllocateDepartmentForm
     return {'form': form}
 
 

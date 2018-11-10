@@ -14,8 +14,8 @@ class Add(LoginRequiredMixin, generic.CreateView):
     template_name = 'ams/assets/hardware/_hardware_form.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+        form.instance.added_by = self.request.user
+        return super(Add, self).form_valid(form)
 
 
 """
@@ -55,8 +55,6 @@ class Detail(LoginRequiredMixin, generic.DetailView):
 
 
 class ApproveDetail(LoginRequiredMixin, generic.DetailView):
-    # model = Hardware
-    # select_related = ('hardware_staff',)
     template_name = 'ams/assets/hardware/approve-details-hardware.html'
 
     def get_queryset(self):
@@ -93,10 +91,10 @@ class Assign(LoginRequiredMixin, generic.CreateView):
 
 
 class Approve(LoginRequiredMixin, generic.UpdateView):
-    success_url = reverse_lazy('ams:assign-list')
+    success_url = reverse_lazy('ams:approve-list')
     form_class = forms.HardwareApproveForm
     # fields = ['approve', ]
-    template_name = 'ams/assets/hardware/approve-details-hardware.html'
+    template_name = 'ams/assets/hardware/approve.html'
 
     def get_queryset(self):
         return models.HardwareAssign.objects.filter()
@@ -129,17 +127,3 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
 
     def get_queryset(self):
         return models.Hardware.objects.hard_delete()
-
-
-def approval(request):
-    approve = request.GET.get('approve', False)
-    hardware_slug = request.GET.get('hardwareassign_slug', False)
-    # first you get your Job model
-    hardware = models.HardwareAssign.objects.get(slug=hardware_slug)
-    try:
-        hardware.active = approve
-        hardware.save()
-        return JsonResponse({"success": True})
-    except Exception as e:
-        return JsonResponse({"success": False})
-    return JsonResponse(data)

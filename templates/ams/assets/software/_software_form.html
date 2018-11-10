@@ -1,5 +1,5 @@
 {% load bootstrap3 %}
-<form action="{% url 'ams:assets-software-add' %}" method="POST" class="form-horizontal form-material"><p>
+<form action="{% url 'ams:assets-software-add' %}" method="POST" class="form-horizontal form-material" enctype='multipart/form-data'><p>
     {% csrf_token %}
     {% bootstrap_form form %}
     <div class="form-group">
