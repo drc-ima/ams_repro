@@ -24,11 +24,8 @@ urlpatterns = [
     path('assets/hardware/archive/detail/<str:slug>/', hardware.ArchiveDetail.as_view(),
          name='assets-hardware-archive-detail'),
     path('assets/hardware/assign/approve/<str:slug>/', hardware.Approve.as_view(), name='assets-hardware-approve'),
-    path('hardware/approve/detail/<str:slug>/', hardware.ApproveDetail.as_view(), name='hardware-approve-detail'),
-    path('assets/hardware/assign/approve/detail/<int:pk>/', hardware.ApproveDetail.as_view(),
-         name='assets-hardware-approve-detail'),
-    path('assets/hardware/approve-detail/<str:slug>/', hardware.ApproveDetail.as_view(),
-         name='approve-hardware-detail'),
+    path('assets/hardware/assign/detail/<str:slug>/', hardware.ApproveDetail.as_view(),
+         name='assets-hardware-assign-detail'),
 
     # software urls
     path('assets/software/add/', software.Add.as_view(), name='assets-software-add'),
