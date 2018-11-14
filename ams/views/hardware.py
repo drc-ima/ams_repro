@@ -92,9 +92,8 @@ class Assign(LoginRequiredMixin, generic.CreateView):
 
 class Approve(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy('ams:approve-list')
-    form_class = forms.HardwareApproveForm
-    # fields = ['approve', ]
-    template_name = 'ams/assets/hardware/approve.html'
+    model = models.HardwareAssign
+    fields = ['approve', ]
 
     def get_queryset(self):
         return models.HardwareAssign.objects.filter()
