@@ -24,13 +24,24 @@ class List(LoginRequiredMixin, generic.ListView):
     queryset = Staff.objects.filter(deleted=False)
     context_object_name = 'staffs'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['lead'] = models.DepartmentLead.objects.all()
+        context['department'] = models.Allocation.objects.all()
+        return context
+
 
 class ArchiveList(LoginRequiredMixin, generic.ListView):
     model = Staff
     template_name = 'ams/staff/staff-archives.html'
+    paginate_by = 10
+    queryset = Staff.objects.filter(deleted=True)
+    context_object_name = 'staff_archives'
 
-    def get_queryset(self):
-        return Staff.objects.filter(deleted=True)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['department'] = models.Allocation.objects.all()
+        return context
 
 
 class NewList(LoginRequiredMixin, generic.ListView):
@@ -61,9 +72,12 @@ class Detail(LoginRequiredMixin, generic.DetailView):
 
 
 class ArchiveDetail(LoginRequiredMixin, generic.DetailView):
-    # model = Hardware
-    # select_related = ('hardware_staff',)
     template_name = 'ams/staff/staff-archive-detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['department'] = models.Allocation.objects.all()
+        return context
 
     def get_queryset(self):
         return Staff.objects.all()

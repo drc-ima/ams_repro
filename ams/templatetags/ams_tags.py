@@ -7,7 +7,7 @@ from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm
 
 from ams import forms
 from ams.forms import HardwareForm, SoftwareForm, InformationForm, InfrastructureForm, StaffForm, DepartmentForm, \
-    DepartmentLeadForm, AllocateDepartmentForm
+    DepartmentLeadForm, AllocateDepartmentForm, HardwareApproveForm
 from users.forms import UserProfileForm
 
 register = template.Library()
@@ -124,4 +124,10 @@ def profile_form():
 @register.inclusion_tag('ams/department/_lead_form.html')
 def lead_form():
     form = DepartmentLeadForm
+    return {'form': form}
+
+
+@register.inclusion_tag('ams/assets/hardware/_hardware_approve_form.html')
+def hardware_approve_form():
+    form = HardwareApproveForm
     return {'form': form}

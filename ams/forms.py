@@ -1,6 +1,8 @@
 # from itertools import chain
 
 # from bootstrap_select import BootstrapSelect
+from itertools import chain
+
 from django import forms
 # from easy_select2 import select2_modelform, Select2, Select2Multiple
 from ams import models
@@ -70,11 +72,7 @@ class StaffForm(forms.ModelForm):
     class Meta:
         model = models.Staff
         fields = ('first_name', 'last_name', 'work_email', 'work_phone', 'home_phone', 'gender', 'residential_address',
-                  'date_of_birth', 'department')
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['department'].queryset = models.Department.objects.filter(deleted=False)
+                  'date_of_birth')
 
 
 class DepartmentForm(forms.ModelForm):
@@ -106,8 +104,7 @@ class HardwareAssignForm(forms.ModelForm, forms.SelectMultiple):
 
 
 class HardwareApproveForm(forms.ModelForm):
-    approve = forms.BooleanField(required=True, label='Check to confirm this!',
-                                 widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    approve = forms.BooleanField(required=True, label='Toggle to confirm this!')
 
     class Meta:
         model = models.HardwareAssign
@@ -245,9 +242,8 @@ class DepartmentLeadForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        already_a_lead = models.Staff.objects.filter(deleted=False)
-        self.fields['staff'].queryset = already_a_lead
-        self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+        staff = models.Staff.objects.filter(deleted=False)
+        self.fields['staff'].queryset = staff
 
 
 class AllocateDepartmentForm(forms.ModelForm):
@@ -257,5 +253,5 @@ class AllocateDepartmentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False)
+        self.fields['staff'].queryset = models.Staff.objects.filter(deleted=False, department=None)
         self.fields['department'].queryset = models.Department.objects.filter(deleted=False)

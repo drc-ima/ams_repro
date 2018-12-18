@@ -17,4 +17,5 @@ class List(LoginRequiredMixin, generic.ListView):
         owner_list = chain(software, hardware, information, infrastructure)
         context = super().get_context_data(**kwargs)
         context['owner_list'] = owner_list
+        context['department'] = models.Allocation.objects.all()
         return context

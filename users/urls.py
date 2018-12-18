@@ -14,4 +14,5 @@ urlpatterns = [
     path('dashboard/', dashboard.Count.as_view(template_name='users/dashboard.html'), name='dashboard'),
     path('profile-create/', CreateProfile.as_view(), name='profile'),
     path('password-change/', views.change_password, name='change_password'),
+    path('dashboard_bi/', dashboard.Bi.as_view(), name='dashboard_bi'),
 ]

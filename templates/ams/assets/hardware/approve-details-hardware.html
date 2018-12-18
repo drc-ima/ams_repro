@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% load bootstrap3 %}
+{% load ams_tags %}
+{% block title %} {{ object.assets }}'s Assignment Details {% endblock %}
+{% block preloader %} Hardware Assign Details Loading...{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-8 align-self-left">
+                <a href="{% url 'ams:approve-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;<h3 class="text-themecolor pull-left">{{ object.staff }}'s {{ object.assets }} Assignment Details</h3>
+            </div>
+        </div>
+        <div class="row">
+                    <!-- column -->
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title m-b-0">Details</h5>
+                        </div><p>
+                        <div class="card-text">
+                            Asset: {{ object.assets }} <br>
+                            Staff: {{ object.staff }} <br>
+                            Assigned By: {{ object.assign_by }}, {% if object.assign_by.is_superuser %}Super Admin {% else %}Admin{% endif %}<br>
+                            Date Assigned: {{ object.date_assigned }}<br>
+                            <hr>
+                            {% hardware_approve_form %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+{% endblock %}

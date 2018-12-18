@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% load bootstrap3 %}
+{% block title %} {{ object.staff }}'s {{ object.assets }} Details {% endblock %}
+{% block preloader %} Infrastructure Assign Details Loading...{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <div class="col-md-8 align-self-left">
+                <a href="{% url 'ams:approve-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;<h3 class="text-themecolor pull-left">{{ object.staff }}'s {{ object.assets }} Assignment Details</h3>
+            </div>
+        </div>
+        <div class="row">
+                    <!-- column -->
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="card-title m-b-0">Details</h5>
+                        </div><p>
+                        <div class="card-text">
+                            Asset: {{ object.assets }} <br>
+                            Staff: {{ object.staff }} <br>
+                            Assigned By: {{ object.assign_by }}<br>
+                            Date Assigned: {{ object.date_assigned }}<br>
+                            <hr>
+                            {% if approve == False %}
+                            <a href="{% url 'ams:assets-infrastructure-approve' slug=infrastructureassign.slug %}" class="btn btn-outline-secondary pull-right" data-target="#deleteModal" data-toggle="modal">Approve</a>
+                            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModal">Approve {{ object.assets }} to {{ object.staff }}?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="{% url 'ams:assets-infrastructure-approve' slug=infrastructureassign.slug %}" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" name="{{ form.approve.name }}" class="form-check-input" id="{{ form.approve.id_for_label }}">
+                                                <label class="form-check-label" for="{{ form.approve.id_for_label }}">{{ form.approve.label }}</label>
+                                            </div>
+                                            <hr>
+                                            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            {% else %}
+                            <a href="{% url 'ams:assets-infrastructure-approve' slug=infrastructureassign.slug %}" class="btn btn-outline-secondary pull-right" data-target="#deleteModal" data-toggle="modal">Unapprove</a>
+                            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModal">Unapprove {{ object.assets }} to {{ object.staff }}?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                   <form action="{% url 'ams:assets-infrastructure-approve' slug=infrastructureassign.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" name="{{ form.approve.name }}" class="form-check-input" id="{{ form.approve.id_for_label }}">
+                                            <label class="form-check-label" for="{{ form.approve.id_for_label }}">{{ form.approve.label }}</label>
+                                        </div>
+                                        <hr>
+                                        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                                        <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

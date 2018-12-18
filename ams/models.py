@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db import models
 # from softdelete.models import SoftDeleteObject, SoftDeleteManager, SoftDeleteQuerySet
 # from django.urls import reverse
+from django.urls import reverse
 from django.utils import timezone
 from autoslug import AutoSlugField
 # from soft_delete_it.models import SoftDeleteModel, SoftDeleteManager, SoftDeleteQuerySet
@@ -48,6 +49,7 @@ class Hardware(SoftDeletable, models.Model):
 
     class Meta:
         ordering = ['-date_added']
+        get_latest_by = ['date_added']
 
 
 FILE_TYPE = [
@@ -81,6 +83,7 @@ class Information(SoftDeletable, models.Model):
 
     class Meta:
         ordering = ['-date_added']
+        get_latest_by = ['date_added']
 
 
 class Infrastructure(SoftDeletable, models.Model):
@@ -101,6 +104,7 @@ class Infrastructure(SoftDeletable, models.Model):
 
     class Meta:
         ordering = ['-date_added']
+        get_latest_by = ['date_added']
 
 
 SOFTWARE_TYPE = [
@@ -131,6 +135,7 @@ class Software(SoftDeletable, models.Model):
 
     class Meta:
         ordering = ['-date_added']
+        get_latest_by = ['date_added']
 
 
 class Staff(SoftDeletable, models.Model):
@@ -158,9 +163,13 @@ class Staff(SoftDeletable, models.Model):
         full_name = self.first_name + ' ' + self.last_name
         return full_name
 
+    def full_name(self):
+        return '''{} {}'''.format(self.first_name, self.last_name)
+
     class Meta:
         verbose_name_plural = 'Staff'
         ordering = ['-date_added']
+        get_latest_by = ['date_added']
 
 
 class Approve(models.Model):
@@ -258,6 +267,7 @@ class SoftwareAssign(Approve, Return, models.Model):
 class DepartmentLead(SoftDeletable, models.Model):
     staff = models.ForeignKey(Staff, related_name='team_lead', on_delete=models.SET_NULL, null=True)
     lead_start_date = models.DateField(default=timezone.now, blank=True, null=True)
+    is_lead = models.BooleanField(default=True, editable=False)
     added_date = models.DateTimeField(default=timezone.now, editable=False)
     slug = AutoSlugField(populate_from='staff', unique=True, default='')
 
@@ -287,6 +297,7 @@ class Department(SoftDeletable, models.Model):
 
     class Meta:
         ordering = ['-added_date']
+        get_latest_by = ['added_date']
 
 
 class Allocation(models.Model):

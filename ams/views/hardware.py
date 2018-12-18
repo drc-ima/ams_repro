@@ -1,10 +1,10 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from ams import models, forms
 from ams.models import Hardware
-from ..forms import HardwareForm
+from ..forms import HardwareForm, HardwareApproveForm
 from django.views import generic
 
 
@@ -91,12 +91,15 @@ class Assign(LoginRequiredMixin, generic.CreateView):
 
 
 class Approve(LoginRequiredMixin, generic.UpdateView):
-    success_url = reverse_lazy('ams:approve-list')
-    model = models.HardwareAssign
-    fields = ['approve', ]
+    form_class = forms.HardwareApproveForm
+    success_url = reverse_lazy('ams:assets-hardware-assign-detail')
+    template_name = 'ams/assets/hardware/_hardware_approve_form.html'
 
     def get_queryset(self):
-        return models.HardwareAssign.objects.filter()
+        return models.HardwareAssign.objects.all()
+
+    def get_absolute_url(self):
+        return reverse('ams:assets-hardware-approve', kwargs={"slug": self.slug})
 
 
 class Owner(LoginRequiredMixin, generic.CreateView):
@@ -126,3 +129,17 @@ class Delete(LoginRequiredMixin, generic.DeleteView):
 
     def get_queryset(self):
         return models.Hardware.objects.hard_delete()
+
+
+def approve(request):
+    active = request.GET.get('active', False)
+    slug = request.GET.get('slug', False)
+    # first you get your Job model
+    hardware_approve = Hardware.objects.get(slug=slug)
+    try:
+        hardware_approve.active = active
+        slug.save()
+        return JsonResponse({"success": True})
+    except Exception as e:
+        return JsonResponse({"success": False})
+    return JsonResponse(data)

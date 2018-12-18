@@ -36,12 +36,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            {% if object_list %}
+                            {% if owner_list %}
                                 {% for owner in owner_list %}
                                 <tr>
                                 <td><a href="{# {% url 'ams:staff-detail' slug=staff.slug %} #}" class="font-15">{{ owner.assets }} </a></td>
                                     <td><span class="font-15">{{ owner.department_lead }}</span></td>
-                                    <td><span class="font-15">{{ owner.department_lead.staff.department }}</span></td>
+                                    {% if department %}
+                                        {% for department in department %}
+                                            {% if department.department.team_leads == owner.department_lead %}
+                                                <td><span class="font-15">{{ department.department }}</span></td>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
                                     <td><span class="font-15">{{ owner.added_date }}</span></td>
                                 </tr>
 

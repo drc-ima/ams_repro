@@ -28,8 +28,17 @@
                             Lead Start Date: {{ object.team_leads.lead_start_date }}<br>
                             Date Added: {{ object.added_date }}<br>
                             <hr>
-                            <a href="{% url 'ams:department-update' slug=department.slug %}" class="btn btn-default">Edit</a>
-                            <a href="{% url 'ams:department-archive' slug=department.slug %}" class="btn btn-outline-warning pull-right" data-target="#deleteModal" data-toggle="modal">Archive</a>
+                            <div class="row">
+                                <div class="col-md-8 align-self-center">
+                                    <a href="{% url 'ams:department-update' slug=department.slug %}" class="btn btn-default">Edit</a>
+                                </div>
+                                <div class="col-md-4 align-self-center">
+                                    <form action="{% url 'ams:department-archive' slug=department.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        <button class="btn btn-outline-warning pull-right"><span class="fa fa-archive"></span> Archive</button>
+                                     </form>
+                                </div>
+                            </div>
                             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModaTitle" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">

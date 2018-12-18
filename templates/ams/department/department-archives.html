@@ -14,31 +14,28 @@
                 <a href="{% url 'ams:department-list' %}" class="btn btn-primary pull-left" role="button">Go Back</a>&nbsp;&nbsp;
             </div>
             <div class="col-md-5 align-self-left"><h3>Archived Departments</h3></div>
-            <!--
-            <div class="col-md-7 align-self-left">
-                <i class="btn waves-effect waves-light pull-right font-30" data-toggle="modal" data-target="#newdepartment"><span class="fa fa-plus-circle"></span></i>
-                                        Modal
-                <div class="modal fade" id="newdepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Add Department</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                {# {% depar_form %} #}
-                            </div>
-                                    <!--<div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                        </div>
-                    </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-5 align-self-center">
+
+            </div>
+            <div class="col-md-7 align-self-center">
+                <div class="pull-right pagination">
+                    <span class="page-links">
+                        {% if page_obj.has_previous %}
+                            <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" title="click to previous"><span class="fa fa-arrow-left"></span></a>
+                        {% endif %}
+                        <span class="page-current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                        </span>
+                        {% if page_obj.has_next %}
+                            <a href="{{ request.path }}?page={{ page_obj.next_page_number }}" title="click to next"><span class="fa fa-arrow-right"></span></a>
+                        {% endif %}
+                    </span>
                 </div>
-            </div>-->
-                </div>
+            </div>
+        </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
@@ -47,29 +44,36 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- column -->
-                    {% if object_list %}
-                        {% for department in object_list %}
-                            <div class="col-3">
-
-                                    <div class="card border border-info">
-                                        <div class="card-body">
-                                            <div>
-                                                <h5 class="card-title m-b-0 text-center"><a href="{% url 'ams:department-archive-detail' slug=department.slug %}">{{ department.name }}</a></h5>
-                                            </div><p>
-                                            <div class="ml-auto">
-                                                    <h6 class="nav-item dropdown card-subtitle text-center">
-                                                            {{ department.team_leads }}
-                                                    </h6>
-                                                    <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                                            </div>
-                                            <p class="card-text">{{ department.description }}</p>
-                                            <hr>
-                                            <h6 class="align-left">{# {{ department.deleted_at }} #}</h6>
-
-
+                    {% if department_archives %}
+                        {% for department in department_archives %}
+                            <div class="col-lg-3 col-sm-6">
+                        <a href="{% url 'ams:department-archive-detail' slug=department.slug %}">
+                            <div class="card">
+                                <div class="card-body" data-toggle="tooltip" title="Click to View {{ department.name }}'s Details">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h1 class="jq-icon-warning text-center"><i class="fa fa-group"></i></h1>
                                         </div>
+                                        <div class="col-md-8 pull-right">
+                                            <h6 class="pull-right">
+                                                {{ department.name |truncatechars:15 }}
+                                            </h6>
+                                        </div>
+                                     </div><p>
+                                    <div class="ml-auto">
                                     </div>
+                                    <hr>
+                                    <div class=" pull-left">
+                                        <h6>Lead: {{ department.team_leads|truncatechars:10 }}</h6>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span title="Date Archived: {{ department.deleted_at }}">Date: {{ department.deleted_at | truncatechars:5 }}</span>
+                                    </div>
+
+                                </div>
                             </div>
+                        </a>
+                    </div>
                         {% endfor %}
                     {% else %}
                     <div class="col-6">

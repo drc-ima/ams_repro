@@ -17,7 +17,7 @@ class List(LoginRequiredMixin, generic.ListView):
         assign_list = chain(software, hardware, information, infrastructure)
         context = super().get_context_data(**kwargs)
         context['assign_list'] = assign_list
-        context['hardware'] = models.HardwareAssign.objects.filter(approve=False)
+        context['hardware'] = models.HardwareAssign.objects.filter(approve=True)
         return context
 
 

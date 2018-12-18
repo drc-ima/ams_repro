@@ -26,91 +26,35 @@
                         Gender: {{ object.gender }}<br>
                         Residential Address: {{ object.residential_address }}<br>
                         Date of Birth: {{ object.date_of_birth }}<br>
-                        Department: {{ object.department }}<br>
-                        {% if object.department.team_leads %}
-                        Team Lead: {{ object.department.team_leads }}<br>
-                        {% else %}
-                        Department has no Lead<br>
+                        {% if department %}
+                            {% for department in department %}
+                                {% if department.staff == object %}
+                                    Department: {{ department.department }}<br>
+                                    {% if department.department.team_leads %}
+                                    Team Lead: {{ department.department.team_leads }}<br>
+                                    {% else %}
+                                    Department has no Lead<br>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
-                        Date Added: {{ object.date_added }}
+                        Date Added: {{ object.date_added }}<br>
+                        Archived On: {{ object.deleted_at }}
                         <hr>
-                            <a href="{% url 'ams:staff-update' slug=staff.slug %}" class="btn btn-default">Edit</a>
-                            <a href="#{# {% url 'ams:staff-archive' slug=staff.slug %} #}" class="btn btn-success pull-right" data-target="#deleteStaff" data-toggle="modal">Restore</a>
-                                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+                            <div class="row">
+                            <div class="col-md-8 align-self-center">
+
+                            </div>
+                            <div class="col-md-4 align-self-center">
+                                <form action="{% url 'ams:staff-restore' slug=staff.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    <button title="click to restore {{ object.full_name }}" class="btn btn-outline-success pull-right"><span class="fa fa-undo"></span> Restore</button>
+                                 </form>
+                            </div>
+                        </div>          <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-                <div class="row">
-                        <!-- column -->
-                        <div class="col-9">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div>
-                                        <h5 class="card-title m-b-0">Assets</h5>
-                                    </div><p>
-                                    <div class="card-text">
-                                    {% if object.asset.all %}
-                                    {% for asset in object.asset.all %}
-                                        {{ asset.description }}<br>
-                                    {% endfor %}
-                                    {% else %}
-                                    This staff is not assigned any asset
-                                    {% endif %}
-                                           <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="row">
-                        <!-- column -->
-                        <div class="col-9">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div>
-                                        <h5 class="card-title m-b-0">Hardware</h5>
-                                    </div><p>
-                                    <div class="card-text">
-                                    {% if object.hardware.all %}
-                                    {% for hardware in object.hardware.all %}
-                                        {{ hardware.description }} <br>
-                                    {% endfor %}
-                                    {% else %}
-                                    There is not hardware assigned to this staff!
-                                    {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- Delete Staff Modal -->
-        <div id="deleteStaff" class="modal" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
-            <div class="modal-dialog" role="document">
-
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                        <h5 class="modal-title" >Archive {{ object.first_name }}</h5>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                </div>
-                <div class="modal-body">
-                    <form action="{% url 'ams:staff-restore' slug=staff.slug %}" method="POST" class="form-horizontal form-material">
-                        {% csrf_token %}
-                        Are you sure you want to archive {{ object.first_name }} {{ object.last_name }}? This action can be reversed later. Take Note. Capish!!
-                        <hr>
-                        <button class="btn btn-success">Restore</button>
-                        <button class="btn btn-default" data-dismiss="modal">Dismiss</button>
-                    </form>
-                </div>
-
-              </div>
-              </div>
-
-            </div>
 {% endblock %}

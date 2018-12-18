@@ -14,99 +14,78 @@
             <div class="col-md-5 align-self-center">
                 <h3 class="text-themecolor">Staff Archives</h3>
             </div>
-            <!--
+        </div>
+        <div class="row">
+            <div class="col-md-5 align-self-center">
+
+            </div>
             <div class="col-md-7 align-self-center">
-                <i class="btn waves-effect waves-light pull-right font-20" data-toggle="modal" data-target="#staffModal"><span class="fa fa-plus-square-o"></span></i>
-                <a class="btn waves-effect waves-light pull-right font-20" href="{% url 'ams:staff-archive-list' %}"><span class="fa fa-folder-open-o"></span></a>
+                <div class="pull-right pagination">
+                    <span class="page-links">
+                        {% if page_obj.has_previous %}
+                            <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" title="click to previous"><span class="fa fa-arrow-left"></span></a>
+                        {% endif %}
+                        <span class="page-current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                        </span>
+                        {% if page_obj.has_next %}
+                            <a href="{{ request.path }}?page={{ page_obj.next_page_number }}" title="click to next"><span class="fa fa-arrow-right"></span></a>
+                        {% endif %}
+                    </span>
+                </div>
             </div>
-            -->
         </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
 
-        <div class="card">
-            <div class="card-body">
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-11 col-xlg-12 col-md-10">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th><h6>First Name</h6></th>
-                                    <th><h6>Work Email</h6></th>
-                                    <th><h6>Work Phone</h6></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            {% if object_list %}
-                                {% for staff in object_list %}
-                                <tr>
-                                    <td><a href="{% url 'ams:staff-archive-detail' slug=staff.slug %}" class="font-15">{{ staff.first_name }} {{ staff.last_name }}</a></td>
-                                    <td><span class="font-15">{{ staff.work_email }}</span></td>
-                                    <td><span class="font-15">{{ staff.work_phone }}</span></td>
+        <div class="row">
+            {% if staff_archives %}
+                {% for staff in staff_archives %}
+                    <div class="col-lg-3 col-sm-6">
+                        <a href="{% url 'ams:staff-archive-detail' slug=staff.slug %}">
+                            <div class="card">
+                                <div class="card-body" data-toggle="tooltip" title="Click to view {{ staff.first_name }}'s details">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h1 class="jq-icon-success text-center"><i class="fa fa-user-circle-o"></i></h1>
+                                        </div>
+                                        <div class="col-md-8 pull-right">
+                                            <h6 class="pull-right">
+                                                {{ staff.full_name | truncatechars:10 }}
+                                            </h6>
+                                        </div>
+                                    </div><p>
+                                    <hr>
+                                    <div class="pull-left">
+                                        <h7>Dept:
+                                        {% if department %}
+                                            {% for department in department %}
+                                                {% if department.staff == staff %}
+                                                     {{ department.department | truncatechars:10 }}</h7>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                    <div class="pull-right">
+                                        <span title="Date Archived: {{ staff.deleted_at }}">Date: {{ staff.deleted_at | truncatechars:5 }}</span>
+                                    </div>
+                                </div>
 
-                                </tr>
-
-                                {% endfor %}
-                            {% else %}
-                                There is no staff recorded in this system. Please click on the New+ to add.
-                            {% endif %}
-                            </tbody>
-
-                        </table>
+                            </div>
+                        </a>
                     </div>
-                    <!-- Column -->
-                </div>
-            </div>
-        </div>
-                <!-- Row -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-
-        <div id="staffModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
-            <div class="modal-dialog" role="document">
-
-          <!-- Add Staff Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" >Add Staff</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                </div>
-                <div class="modal-body">
-                    {% staff_form %}
-
-                </div>
-            </div>
-            </div>
-        </div>
-            <!---Assign Hardware Modal-->
-        <div id="assignHardware" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" role="dialog">
-            <div class="modal-dialog" role="document">
-
-          <!-- Assign Hardware Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" >Assign Hardware</h5>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    </div>
-                    <div class="modal-body">
-                        Hello
-
+                {% endfor %}
+            {% else %}
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Nothing Yet!</div>
+                            <h6 class="card-text">
+                                There are no archives here yet!
+                            </h6>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
-
-
-
-  </div>
+    </div>
 
 {% endblock %}

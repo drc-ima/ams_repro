@@ -42,12 +42,14 @@ class AddLead(LoginRequiredMixin, generic.CreateView):
 class List(LoginRequiredMixin, generic.ListView):
     model = Department
     template_name = 'ams/department/department.html'
-    paginate_by = 5
+    paginate_by = 10
+    queryset = Department.objects.filter(deleted=False)
+    context_object_name = 'departments'
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['departments'] = Department.objects.filter(deleted=False)
         context_data['department_archives'] = Department.objects.filter(deleted=True)
+        context_data['member'] = models.Allocation.objects.all()
         return context_data
     """    
     def get_queryset(self):
@@ -58,6 +60,9 @@ class List(LoginRequiredMixin, generic.ListView):
 class ArchiveList(LoginRequiredMixin, generic.ListView):
     model = Department
     template_name = 'ams/department/department-archives.html'
+    paginate_by = 10
+    queryset = Department.objects.filter(deleted=True)
+    context_object_name = 'department_archives'
 
     def get_queryset(self):
         return Department.objects.filter(deleted=True)

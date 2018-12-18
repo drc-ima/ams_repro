@@ -1,0 +1,7 @@
+ {% load bootstrap3 %}
+<form action="{% url 'ams:assets-hardware-approve' slug=hardwareassign.slug %}" method="POST" class="pull-right">
+     {% csrf_token %}
+     <input type="checkbox" data-toggle="toggle" name="{{ form.approve.name }}"  id="{{ form.approve.id_for_label }}">
+     <label class="form-check-label" for="{{ form.approve.id_for_label }}">{{ form.approve.label }}</label>
+     <button class="btn btn-outline-secondary">Approve</button>
+</form>

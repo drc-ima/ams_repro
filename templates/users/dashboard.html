@@ -1,295 +1,185 @@
 {% extends 'layout.html' %}
+{% load static from staticfiles %}
 {% block title %} Dashboard {% endblock %}
 {% block preloader %} Dashboard Loading {% endblock %}
 
 {% block content %}
-    <div class="align-self-center">
-            <h3 class="text-themecolor"> Staff </h3>
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor"> Dashboard </h3>
         </div>
+        <div class="col-md-7 align-self-center">
+            <a href="{% url 'users:dashboard_bi' %}" title="Click for Power Bi Analytics"><img class="pull-right" src="{% static 'assets/images/bi.png' %}" height="35" width="60" ></a>
+        </div>
+    </div>
+
+
     <hr>
     <div class="row">
-        <div class="col-md-3">
-        <a href="{% url 'ams:staff-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Staff({{ staffs }})</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if staffs %}
-                                    {{ staffs }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+        <div class="col-lg-3 col-sm-6">
+            <a href="{% url 'ams:staff-list' %}">
+                <div class="card">
+                    <div class="card-body" data-toggle="tooltip" title="Click to View All Staff">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="jq-icon-success text-center"><i class="fa fa-user-circle-o"></i></h1>
+                            </div>
+                            <div class="col-md-8 pull-right">
+                                <h6 class="pull-right">
+                                    Staff: {{ staffs }}
+                                </h6>
+                            </div>
+                        </div><p>
+                        <div class="ml-auto">
+                        </div>
+                        <hr>
+                            <div class=" pull-left">
+                                <h7>New: {{ staff_r|truncatechars:10 }}</h7>
+                            </div>
+                            <div class="pull-right">
+                                <a href="{% url 'ams:staff-archive-list' %}" data-toggle="tooltip" title="Staff Archives"><span class="fa fa-archive"></span> {{ staffs_archive }} </a>
+                            </div>
+
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
         </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:staff-archive-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Archived Staff</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if staffs_archive %}
-                                    {{ staffs_archive }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
+        <div class="col-lg-3 col-sm-6">
+            <a href="{% url 'ams:department-list' %}">
+                <div class="card">
+                    <div class="card-body" data-toggle="tooltip" title="Click to View All Departments">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="jq-icon-warning text-center"><i class="fa fa-users"></i></h1>
+                            </div>
+                            <div class="col-md-8 pull-right">
+                                <h6 class="pull-right">
+                                    Departments: {{ departments }}
+                                </h6>
+                            </div>
+                        </div><p>
+                        <div class="ml-auto">
+                        </div>
+                        <hr>
+                        <div class="pull-left">
+                            <h7>New: {{ departments_r|truncatechars:10 }}</h7>
+                        </div>
+                        <div class="pull-right">
+                            <a href="{% url 'ams:department-archive-list' %}" data-toggle="tooltip" title="Department Archives"><span class="fa fa-archive"></span> {{ departments_archive }} </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <a href="{% url 'ams:assets-list' %}">
+                <div class="card">
+                    <div class="card-body" data-toggle="tooltip" title="Click to View All Assets">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="jq-icon-error text-center"><i class="fa fa-table"></i></h1>
+                            </div>
+                            <div class="col-md-8 pull-right">
+                                <h6 class="pull-right">
+                                    Assets: {{ assets }}
+                                </h6>
+                            </div>
+                        </div><p>
+                        <div class="ml-auto">
+                        </div>
+                        <hr>
+                        <div class="pull-left">
+                            <a href="{% url 'ams:assign-list' %}" data-toggle="tooltip" title="Assigned Assets"><span class="fa fa-tasks"></span> {{ assets_assigned }} </a>
+                            <a href="{% url 'ams:assign-list' %}" data-toggle="tooltip" title="Returned Assets"><span class="fa fa-mail-reply-all"></span> {{ assets_returned }} </a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="{% url 'ams:assets-list' %}" data-toggle="tooltip" title="Assets Archives"><span class="fa fa-archive"></span> {{ assets_archive }} </a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <a href="{% url 'ams:settings' %}">
+                <div class="card">
+                    <div class="card-body" data-toggle="tooltip" title="Click to View All Users">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1 class="jq-icon-info text-center"><i class="fa fa-user-secret"></i></h1>
+                            </div>
+                            <div class="col-md-8 pull-right">
+                                <h6 class="pull-right">
+                                    Users: {{ users }}
+                                </h6>
+                            </div>
+                        </div><p>
+                        <div class="ml-auto">
+                        </div>
+                        <hr>
+                        <div class="pull-left">
+                            <h7>New: {{ users_r|truncatechars:10 }}</h7>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
-    <div class="align-self-center">
-            <h3 class="text-themecolor">Departments({{ departments }}) </h3>
-        </div>
     <hr>
     <div class="row">
-        <div class="col-md-3">
-        <a href="{% url 'ams:department-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Departments</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if departments %}
-                                    {{ departments }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:department-archive-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Archived Departments</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if departments_archive %}
-                                    {{ departments_archive }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-    </div>
-    <div class="align-self-center">
-            <h3 class="text-themecolor"> Assets ({{ assets }})</h3>
-        </div>
-    <hr>
-    <!--- Assets Count --->
-    <div class="row">
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Hardware</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if hardware %}
-                                    {{ hardware }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Software</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if software %}
-                                    {{ software }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Information</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if information %}
-                                    {{ information }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Infrastructure</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if infrastructure %}
-                                    {{ infrastructure }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
+        <div class="col-lg-12 col-xlg-13 col-md-11">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Images</th>
+                        <th>Assets</th>
+                        <th>Staff</th>
+                        <th>Department</th>
+                        <th>Check</th>
+                        <th>Check At</th>
+                        <th>Approved</th>
+                        <th>At</th>
+                        <th>Returned</th>
+                        <th>At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for all_a in all_a %}
+                    <tr>
+                        {% if all_a.assets.image %}
+                            <td><img src="{{ all_a.assets.image.url }}" height="40" width="50" border="1" /></td>
+                        {% else %}
+                            <td><img src="#" height="40" width="50" border="1" alt="no image" /></td>
+                        {% endif %}
+                        <td>{{ all_a.assets }}</td>
+                        <td>{{ all_a.staff }}</td>
+                        {% for depart_a in depart_a %}
+                            {% if depart_a.staff == all_a.staff %}
+                                <td>{{ depart_a.department }}</td>
+                            {% else %}
+                                <td>Not Allocated</td>
+                            {% endif %}
+                        {% endfor %}
+                        <td>{{ all_a.assign_by }}</td>
+                        <td>{{ all_a.date_assigned }}</td>
+                        {% if all_a.approve == False %}
+                        <td class="font-20 text-center"><span class="fa fa-thumbs-o-down"></span></td>
+                        {% else %}
+                        <td class="font-20 text-center"><span class="fa fa-thumbs-o-up"></span></td>
+                        {% endif %}
+                        <td>{{ all_a.approve_date }}</td>
+                        {% if all_a.return_it == False %}
+                        <td class="font-20 text-center"><span class="fa fa-thumbs-o-down"></span></td>
+                        {% else %}
+                        <td class="font-20 text-center"><span class="fa fa-thumbs-o-up"></span></td>
+                        {% endif %}
+                        <td>{{ all_a.return_on }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="align-self-center">
-            <h3 class="text-themecolor"> Archived Assets ({{ assets_archive }})</h3>
-        </div>
-    <hr>
-    <!--- Archived Assets Count --->
-    <div class="row">
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-hardware-archive-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Hardware</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if hardware_a %}
-                                    {{ hardware_a }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:software-assets-archive-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Software</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if software_a %}
-                                    {{ software_a }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-information-archive-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Information</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if information_a %}
-                                    {{ information_a }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-        <div class="col-md-3">
-        <a href="{% url 'ams:assets-infrastructure-archive-list' %}">
-            <div class="card border border-info">
-                <div class="card-body">
-                    <div>
-                        <h5 class="card-title m-b-0 text-center">Infrastructure</h5>
-                    </div><p>
-                    <div class="ml-auto">
-                        <h3 class="nav-item dropdown card-text text-center">
-                                {% if infrastructure_a %}
-                                    {{ infrastructure_a }}
-                                {% else %}
-                                    0
-                                {% endif %}
-                        </h3>
-                        <!--<h6 class="card-subtitle list-inline text-right font-12"><a href="#"> Export to PDF</a></h6>-->
-                    </div>
-                </div>
-            </div>
-        </a>
-        </div>
-    </div>
-    <div class="modal fade" tabindex="-1" role="dialog" id="profileModal" aria-hidden="true" style="z-index:999999">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-                <div class="modal-body">POPUP OPEN</div>
-            </div>
-        </div>
-    </div>
+
 {% endblock %}
 

@@ -2,8 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34b5d87e-320a-4325-840b-6c469eb293e3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/ams/migrations/0014_auto_20181117_1035.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/bootstrap-toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/bootstrap-toggle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/templatetags/ams_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/templatetags/ams_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ams/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/assign.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/assign.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/hardware.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/hardware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/owner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/owner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ams/views/staff.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/staff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/department/department-archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/department-archives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/department/department.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/department.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/department/details-department.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/details-department.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/staff/details-staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/details-staff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/staff/staff-archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/staff-archives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ams/staff/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/staff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,17 +97,23 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8733927">
+    <splitter split-orientation="horizontal" split-proportion="0.41622576">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="hardware.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/views/hardware.py">
+          <file leaf-file-name="department-archives.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/department/department-archives.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="387">
-                  <caret line="70" selection-start-line="70" selection-end-line="70" />
-                  <folding>
-                    <element signature="e#0#57#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1173">
+                  <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="staff-archive-detail.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="799">
+                  <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -89,38 +122,16 @@
             <entry file="file://$PROJECT_DIR$/ams/views/assign.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+                  <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="approve-details-hardware.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-                  <folding>
-                    <element signature="e#452#458#0#HTML" expanded="true" />
-                    <element signature="e#458#464#0#HTML" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="assets.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/assets.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="986">
-                  <caret line="58" column="136" selection-start-line="58" selection-start-column="136" selection-end-line="58" selection-end-column="136" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ams/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="27" column="44" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="44" />
+                <state relative-caret-position="119">
+                  <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -128,29 +139,50 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="assets.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/views/assets.py">
+          <file leaf-file-name="hardware.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/views/hardware.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="302">
-                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+                <state relative-caret-position="1615">
+                  <caret line="102" selection-start-line="102" selection-end-line="102" />
+                  <folding>
+                    <element signature="e#0#57#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="assign.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/assign.html">
+          <file leaf-file-name="details-department.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/department/details-department.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="120" column="44" selection-start-line="120" selection-start-column="44" selection-end-line="120" selection-end-column="44" />
+                <state relative-caret-position="561">
+                  <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="approve.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/approve.html">
+          <file leaf-file-name="owner.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/views/owner.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="158" column="209" selection-start-line="158" selection-start-column="209" selection-end-line="158" selection-end-column="209" />
+                <state relative-caret-position="204">
+                  <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="owner.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/assets/owner/owner.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="765">
+                  <caret line="45" column="107" selection-start-line="45" selection-start-column="107" selection-end-line="45" selection-end-column="107" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="approve-details-hardware.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -159,38 +191,14 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="staff.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ams/views/staff.py">
+          <file leaf-file-name="dashboard.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/views/dashboard.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="setting.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/settings/setting.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ams/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="93" selection-start-line="93" selection-end-line="93" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="details-software.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/software/details-software.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+                <state relative-caret-position="901">
+                  <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#0#27#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -198,8 +206,8 @@
           <file leaf-file-name="department.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ams/views/department.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1411">
-                  <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="51" />
+                <state relative-caret-position="867">
+                  <caret line="58" selection-start-line="58" selection-end-line="58" />
                   <folding>
                     <element signature="e#46#103#0" expanded="true" />
                   </folding>
@@ -207,11 +215,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_allocate_form.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/department/_allocate_form.html">
+          <file leaf-file-name="_hardware_approve_form.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_approve_form.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -219,8 +227,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ams/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="186" column="15" selection-start-line="186" selection-start-column="15" selection-end-line="186" selection-end-column="15" />
+                <state relative-caret-position="5219">
+                  <caret line="318" column="21" selection-start-line="318" selection-start-column="21" selection-end-line="318" selection-end-column="21" />
                   <folding>
                     <element signature="e#30#73#0" expanded="true" />
                   </folding>
@@ -231,17 +239,53 @@
           <file leaf-file-name="details-staff.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/ams/staff/details-staff.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1054">
-                  <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+                <state relative-caret-position="748">
+                  <caret line="44" column="119" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="119" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="details-hardware.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/details-hardware.html">
+          <file leaf-file-name="department-archive-detail.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/department/department-archive-detail.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="697">
-                  <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+                  <caret line="41" column="34" selection-start-line="31" selection-start-column="28" selection-end-line="41" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="staff.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/views/staff.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ams_tags.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ams/templatetags/ams_tags.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="149">
+                  <caret line="73" column="10" lean-forward="true" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="staff.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/ams/staff/staff.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="850">
+                  <caret line="50" column="107" selection-start-line="50" selection-start-column="107" selection-end-line="50" selection-end-column="107" />
                 </state>
               </provider>
             </entry>
@@ -303,24 +347,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/templates/ams/staff/staff.html" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/information/information.html" />
-        <option value="$PROJECT_DIR$/templates/users/dashboard.html" />
-        <option value="$PROJECT_DIR$/ams/views/dashboard.py" />
-        <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/Procfile.txt" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/ams_project/Procfile.py" />
-        <option value="$PROJECT_DIR$/ams_project/runtime.txt" />
-        <option value="$PROJECT_DIR$/ams_project/requirements.txt" />
-        <option value="$PROJECT_DIR$/ams_project/wsgi.py" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/hardware/approve.html" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/information/approve-details-information.html" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/software/approve-details-software.html" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/infrastructure/approve-details-infrastructure.html" />
-        <option value="$PROJECT_DIR$/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/information/information-archive-detail.html" />
         <option value="$PROJECT_DIR$/ams_project/settings.py" />
         <option value="$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_form.html" />
@@ -334,26 +360,44 @@
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/templates/ams/department/_allocate_form.html" />
-        <option value="$PROJECT_DIR$/ams/templatetags/ams_tags.py" />
-        <option value="$PROJECT_DIR$/templates/ams/department/department.html" />
-        <option value="$PROJECT_DIR$/ams/views/department.py" />
-        <option value="$PROJECT_DIR$/ams/views/staff.py" />
-        <option value="$PROJECT_DIR$/templates/ams/staff/details-staff.html" />
-        <option value="$PROJECT_DIR$/templates/ams/department/details-department.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/infrastructure/details-infrastructure.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/hardware/details-hardware.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/software/details-software.html" />
         <option value="$PROJECT_DIR$/templates/ams/assets/assets.html" />
         <option value="$PROJECT_DIR$/ams/views/assets.py" />
-        <option value="$PROJECT_DIR$/ams/models.py" />
         <option value="$PROJECT_DIR$/ams/admin.py" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/information/approve-details-information.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/infrastructure/approve-details-infrastructure.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/software/approve-details-software.html" />
+        <option value="$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/contrib/auth/models.py" />
+        <option value="$PROJECT_DIR$/users/models.py" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/assign/approve.html" />
+        <option value="$PROJECT_DIR$/ams/views/assign.py" />
         <option value="$PROJECT_DIR$/ams/forms.py" />
         <option value="$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html" />
-        <option value="$PROJECT_DIR$/ams/views/hardware.py" />
-        <option value="$PROJECT_DIR$/ams/views/assign.py" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/assign/assign.html" />
         <option value="$PROJECT_DIR$/ams/urls.py" />
-        <option value="$PROJECT_DIR$/templates/ams/assets/assign/approve.html" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_approve_form.html" />
+        <option value="$PROJECT_DIR$/ams/views/hardware.py" />
+        <option value="$PROJECT_DIR$/users/urls.py" />
+        <option value="$PROJECT_DIR$/templates/users/dashboard.html" />
+        <option value="$PROJECT_DIR$/templates/users/dashboard_bi.html" />
+        <option value="$PROJECT_DIR$/ams/models.py" />
+        <option value="$PROJECT_DIR$/templates/ams/staff/staff-archives.html" />
+        <option value="$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html" />
+        <option value="$PROJECT_DIR$/templates/ams/department/department.html" />
+        <option value="$PROJECT_DIR$/ams/views/department.py" />
+        <option value="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" />
+        <option value="$PROJECT_DIR$/templates/ams/department/department-archives.html" />
+        <option value="$PROJECT_DIR$/ams/views/dashboard.py" />
+        <option value="$PROJECT_DIR$/templates/ams/staff/details-staff.html" />
+        <option value="$PROJECT_DIR$/templates/ams/department/details-department.html" />
+        <option value="$PROJECT_DIR$/ams/views/owner.py" />
+        <option value="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" />
+        <option value="$PROJECT_DIR$/ams/views/staff.py" />
+        <option value="$PROJECT_DIR$/templates/ams/staff/staff.html" />
+        <option value="$PROJECT_DIR$/ams/templatetags/ams_tags.py" />
       </list>
     </option>
   </component>
@@ -372,10 +416,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="24" />
-    <option name="width" value="1382" />
-    <option name="height" value="752" />
+    <option name="x" value="-7" />
+    <option name="y" value="32" />
+    <option name="width" value="697" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -383,7 +427,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -399,6 +442,18 @@
             <path>
               <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="ams" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="ams" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
               <item name="ams_project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,7 +480,12 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="ams" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="assign" type="462c0819:PsiDirectoryNode" />
+              <item name="owner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ams_project" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ams_project" type="b2602c69:ProjectViewProjectNode" />
@@ -435,29 +495,30 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ams_tags&#9;null&#9;null&#10;urls&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/urls.py&#10;settings&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;forms&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;layou&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;layout.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;lay&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;settin&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;settings.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;models&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/models.py&#10;setti&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;Procfile&#9;null&#9;null&#10;de&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;deta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;assign&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/assign.py&#10;assign.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assign/assign.html&#10;views&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;staff.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.py&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/staff.py&#10;dash&#9;null&#9;null&#10;layout.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;assets&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assets.html&#10;information&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/information/information.html&#10;staf&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;la&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;req&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/requirements.txt&#10;department&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/department.py&#10;departmen&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;department.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;setting&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;ams_tag&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;model&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/models.py&#10;staff&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/details-staff.html&#10;layout&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;details-depa&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;department.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;forms.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;software&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/software.py&#10;infr&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/infrastructure.py&#10;view.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;setting.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/setting.py&#10;setting.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;update-dep&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/update-department.html&#10;_hardware_form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/hardware/_hardware_form.html&#10;_infrastructure_for&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/infrastructure/_infrastructure_form.html&#10;_department_form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/_department_form.html&#10;ams&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py" />
+    <property name="SearchEverywhereHistoryKey" value="settings.py&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;ams_&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;ams_tag&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;models&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/models.py&#10;ams_ta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/templatetags/ams_tags.py&#10;layout&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;layout.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;dashboard.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/users/dashboard.html&#10;ams_tags&#9;null&#9;null&#10;urls&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/urls.py&#10;settings&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;forms&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;layou&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;lay&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;settin&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;settings.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;setti&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams_project/settings.py&#10;Procfile&#9;null&#9;null&#10;de&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;deta&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;assign&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/assign.py&#10;assign.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assign/assign.html&#10;views&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;staff.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.py&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/staff.py&#10;dash&#9;null&#9;null&#10;layout.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;assets&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/assets.html&#10;information&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/assets/information/information.html&#10;staf&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;la&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/layout.html&#10;req&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/requirements.txt&#10;department&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/department.py&#10;departmen&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;department.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;setting&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;form&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;model&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/models.py&#10;staff&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.h&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/staff.html&#10;staff.html&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/staff/details-staff.html&#10;details-depa&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/details-department.html&#10;department.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/department.html&#10;forms.&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/forms.py&#10;software&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/software.py&#10;infr&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/infrastructure.py&#10;view.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/users/views.py&#10;setting.p&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/ams/views/setting.py&#10;setting.htm&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/settings/setting.html&#10;update-dep&#9;FILE&#9;file://C:/Users/drc.alex/Desktop/Django_projects/ams_project/templates/ams/department/update-department.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ams/assets/assign" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\hardware" />
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\assign" />
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project" />
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\ams\views" />
-      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\infrastructure" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project" />
       <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\ams_project" />
       <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\users" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\assets\css" />
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\assets\js" />
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\hardware" />
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project\templates\ams\assets\assign" />
+      <recent name="C:\Users\drc.alex\Desktop\Django_projects\ams_project" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -481,7 +542,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="ams_project.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\drc.alex\PycharmProjects\untitled\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -620,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542204846952</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Approvals url does not suck anymore but approval button is a pain in my code">
+      <created>1542207615677</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542207615677</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -641,14 +709,14 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4977307" weight="0.1921824" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.23615634" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.28175896" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977307" weight="0.32899022" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49876544" visible="true" weight="0.2344932" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4968017" visible="true" weight="0.07715582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
-      <window_info anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" weight="0.33713356" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.5012346" side_tool="true" weight="0.1301059" />
+      <window_info active="true" anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" visible="true" weight="0.33713356" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info id="Structure" order="1" sideWeight="0.50319827" side_tool="true" weight="0.2344932" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -661,29 +729,29 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49876544" visible="true" weight="0.23071104" />
       <window_info id="Structure" order="1" sideWeight="0.5012346" side_tool="true" weight="0.1301059" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" weight="0.33713356" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3290469" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977307" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4977307" weight="0.1921824" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32736155" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3290469" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +767,8 @@
     <MESSAGE value="assignment approvals working fine but approvals route still sucks! arghh!!!!!" />
     <MESSAGE value="Now Approvals suck and approval urls is killing my sprint plan" />
     <MESSAGE value="Details of assets, staff and department well polished and referenced. Still Approvals sucks." />
-    <option name="LAST_COMMIT_MESSAGE" value="Details of assets, staff and department well polished and referenced. Still Approvals sucks." />
+    <MESSAGE value="Approvals url does not suck anymore but approval button is a pain in my code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Approvals url does not suck anymore but approval button is a pain in my code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -707,295 +776,117 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/db/models/manager.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2252">
-          <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/djangodeletes/softdeletes/mixins.py">
+    <entry file="file://$PROJECT_DIR$/ams_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="319">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/djangodeletes/softdeletes/managers.py">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/information/approve-details-information.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/db/models/base.py">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/infrastructure/approve-details-infrastructure.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="654" column="8" selection-start-line="654" selection-start-column="8" selection-end-line="654" selection-end-column="8" />
+        <state relative-caret-position="238">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/djangodeletes/softdeletes/models.py">
+    <entry file="file://$PROJECT_DIR$/ams/views/assets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="90" column="14" lean-forward="true" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/urls/base.py">
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/conf/urls/static.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/information.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/infrastructure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/software.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/infrastructure/_infrastructure_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="138" selection-start-line="2" selection-start-column="138" selection-end-line="2" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/software/_software_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/settings/_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1002">
+          <caret line="333" column="23" lean-forward="true" selection-start-line="333" selection-start-column="23" selection-end-line="333" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="323">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_infrastructureassign">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/assign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="107" column="43" selection-start-line="107" selection-start-column="43" selection-end-line="107" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/pages/pages.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="814" column="1" selection-start-line="814" selection-start-column="1" selection-end-line="814" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_department">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_softwareassign">
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_allocation">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/forms.py">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/software/approve-details-software.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/department/_lead_form.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-toggle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap-toggle.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="3553">
+          <caret line="209" column="67" selection-start-line="209" selection-start-column="67" selection-end-line="209" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ams/templatetags/ams_tags.py">
+    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/djangodeletes/softdeletes/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+        <state relative-caret-position="67">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/department/department.html">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/approve.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="62" column="26" lean-forward="true" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/department/_allocate_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/information/details-information.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/department.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="51" />
-          <folding>
-            <element signature="e#46#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/department/details-department.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="74" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_infrastructure">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/staff/details-staff.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/infrastructure/details-infrastructure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="39" column="43" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="39" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/details-hardware.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/software/details-software.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="136" selection-start-line="58" selection-start-column="136" selection-end-line="58" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_informationassign">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/untitled/venv/Lib/site-packages/django/urls/resolvers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="631" selection-start-line="631" selection-end-line="631" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/settings/setting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="186" column="15" selection-start-line="186" selection-start-column="15" selection-end-line="186" selection-end-column="15" />
-          <folding>
-            <element signature="e#30#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ams/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1006,89 +897,243 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/update-hardware.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-          <folding>
-            <element signature="e#452#458#0#HTML" expanded="true" />
-            <element signature="e#458#464#0#HTML" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-153" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ams_project/urls.py">
+    <entry file="file://$PROJECT_DIR$/ams/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#635#678#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="223">
+          <caret line="108" column="15" lean-forward="true" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ams/views/assign.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/staff.py">
+    <entry file="file://$PROJECT_DIR$/templates/ams/staff/update-staff.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/approve-details-hardware.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ams/views/assets.py">
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/hardware.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="-1207" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="161" column="22" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/assign.html">
+    <entry file="file://$PROJECT_DIR$/templates/users/dashboard_bi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="120" column="44" selection-start-line="120" selection-start-column="44" selection-end-line="120" selection-end-column="44" />
+        <state relative-caret-position="34">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ams/views/hardware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="1615">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/software/details-software.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="95" column="173" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/department/department.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="86" column="14" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="86" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/staff/staff-archives.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="145" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/department/department-archives.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/dashboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/hardware/_hardware_approve_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/department/department-archive-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="34" selection-start-line="31" selection-start-column="28" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/staff/details-staff.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="119" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/department.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#46#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_hardwareowner">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/department/details-department.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/views/owner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/assets/owner/owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="107" selection-start-line="45" selection-start-column="107" selection-end-line="45" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5219">
+          <caret line="318" column="21" selection-start-line="318" selection-start-column="21" selection-end-line="318" selection-end-column="21" />
+          <folding>
+            <element signature="e#30#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1dec5a89-fca5-4130-8c11-bfe5f431b7c9/database/ams_test/schema/public/table/ams_departmentlead">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ams/staff/staff.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="107" selection-start-line="50" selection-start-column="107" selection-end-line="50" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ams/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="119">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ams/assets/assign/approve.html">
+    <entry file="file://$PROJECT_DIR$/ams/views/staff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="158" column="209" selection-start-line="158" selection-start-column="209" selection-end-line="158" selection-end-column="209" />
+        <state relative-caret-position="221">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams/templatetags/ams_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="73" column="10" lean-forward="true" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
         </state>
       </provider>
     </entry>
