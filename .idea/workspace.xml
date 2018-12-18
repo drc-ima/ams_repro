@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34b5d87e-320a-4325-840b-6c469eb293e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ams/migrations/0014_auto_20181117_1035.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/bootstrap-toggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/bootstrap-toggle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dec5a89-fca5-4130-8c11-bfe5f431b7c9/storage_v2/_src_/database/ams_test.CogHrA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/templatetags/ams_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/templatetags/ams_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/views/assign.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/assign.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/views/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/views/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/department.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/views/hardware.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/hardware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/views/owner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/owner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ams/views/staff.py" beforeDir="false" afterPath="$PROJECT_DIR$/ams/views/staff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/assets/owner/owner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/department-archive-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/department/department-archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/department-archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/department/department.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/department.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/department/details-department.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/department/details-department.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/staff/details-staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/details-staff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/staff-archive-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/staff/staff-archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/staff-archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ams/staff/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ams/staff/staff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="34b5d87e-320a-4325-840b-6c469eb293e3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +246,7 @@
             <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="149">
-                  <caret line="73" column="10" lean-forward="true" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+                  <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -702,7 +672,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="24" width="1382" height="752" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.32899022" />
@@ -710,11 +679,10 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4977307" weight="0.1921824" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.28175896" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977307" weight="0.32899022" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4968017" visible="true" weight="0.07715582" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4977307" visible="true" weight="0.32899022" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4968017" visible="true" weight="0.077912256" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
-      <window_info active="true" anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" visible="true" weight="0.33713356" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
       <window_info id="Structure" order="1" sideWeight="0.50319827" side_tool="true" weight="0.2344932" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -723,35 +691,36 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" visible="true" weight="0.33713356" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32736155" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49876544" visible="true" weight="0.23071104" />
       <window_info id="Structure" order="1" sideWeight="0.5012346" side_tool="true" weight="0.1301059" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4977307" weight="0.1921824" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="manage.py@ams_project" order="10" sideWeight="0.49924356" weight="0.33713356" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="right" id="Database" order="4" weight="0.3290469" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4977307" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4977307" weight="0.1921824" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32736155" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899022" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1133,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/ams_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
-          <caret line="73" column="10" lean-forward="true" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
         </state>
       </provider>
     </entry>
