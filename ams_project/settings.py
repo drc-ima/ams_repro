@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'ams_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ams_test',
-        'HOST': 'localhost',
-        'USER': 'postgres',
-        'PASSWORD': 'organism',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
